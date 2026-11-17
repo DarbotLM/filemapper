@@ -1,1575 +1,1610 @@
 {
   "schema": "filemapper.public-source-export/1",
-  "internalBuildRevision": "b204dface47ef9b23083e788aface4ca69eeafc2",
-  "publicationManifestSha256": "153a34f1e50e10772052a022cbdc244213fa740fabb9334a2bcd69b44bcdc220",
-  "releaseManifestSha256": "1986c050123ff77cf9c6a7d8728277c5f5a26657b89efab0c0a1423f1e2cfc56",
-  "releaseArchiveSha256": "96b5f6fb571abda42ce0c15cdbcce66953ffa3e991053581dfa7693bcacde30c",
+  "internalBuildRevision": "a64ec30d64bf7dfb5556adadabf50bfa6c986498",
+  "publicationManifestSha256": "aefdc4957803283d7c345ded300433cde0721c8e82d3066b514f4b711aac1acf",
+  "releaseManifestSha256": "36f5fdec2b927e74181c5f364abaf6054044f50e0b21bcddc4cdb0a6ce77a090",
+  "releaseArchiveSha256": "96e0e31f5f11f26e120cc7a0e89c3615309e3df9d365c8501f96bd4b45fe48bf",
   "historyIncluded": false,
-  "scope": "Public initial commit differs from internal build revision. Exported source file hashes bind this history-free tree to reviewed release inputs; private local history is excluded.",
+  "scope": "Curated public source update; existing public history preserved. Internal private history and local data are excluded. Public commit differs from the internal build revision; file hashes bind the exported source.",
   "files": [
     {
-      "sha256": "7b5b8ab2db0c97385b9a539b61b69633858470be98a1c41c934206e0e7048302",
       "length": 108,
+      "sha256": "7b5b8ab2db0c97385b9a539b61b69633858470be98a1c41c934206e0e7048302",
       "path": ".gitattributes"
     },
     {
-      "sha256": "ce41140c19a51350e92a0575faf3c71458c0c2ebb0831556ca40540c8214e1e1",
       "length": 2980,
+      "sha256": "ce41140c19a51350e92a0575faf3c71458c0c2ebb0831556ca40540c8214e1e1",
       "path": ".github/workflows/build.yml"
     },
     {
-      "sha256": "9f53ef8dd672ea8f10d5a41067b21f9fae70e9e8fd21be8e90752e4958b6eaa4",
       "length": 927,
+      "sha256": "9f53ef8dd672ea8f10d5a41067b21f9fae70e9e8fd21be8e90752e4958b6eaa4",
       "path": ".github/workflows/pages.yml"
     },
     {
-      "sha256": "8cc404944840093c0a2f51a35bcb1e4c00d15ac1b1e46c4c025a3b0a6c792c3a",
       "length": 67,
+      "sha256": "8cc404944840093c0a2f51a35bcb1e4c00d15ac1b1e46c4c025a3b0a6c792c3a",
       "path": ".gitignore"
     },
     {
-      "sha256": "f021901dee93ba184b29ce24c910314678205903321bf8c11e4ec2d99bdac774",
       "length": 466,
+      "sha256": "f021901dee93ba184b29ce24c910314678205903321bf8c11e4ec2d99bdac774",
       "path": "AGENTS.md"
     },
     {
-      "sha256": "39df07cfcfc6c5b2fae3a3be9a7f269d775b10aec6c029017c615909d9f4829e",
       "length": 20228,
+      "sha256": "39df07cfcfc6c5b2fae3a3be9a7f269d775b10aec6c029017c615909d9f4829e",
       "path": "benchmarks/FileMapper.Acceptance/ContentHashingAcceptance.cs"
     },
     {
-      "sha256": "7d4cfbcec9f22e506494f33c18a78ffcecdafc57f7d3d1354fc2ee2b000d86de",
       "length": 232,
+      "sha256": "7d4cfbcec9f22e506494f33c18a78ffcecdafc57f7d3d1354fc2ee2b000d86de",
       "path": "benchmarks/FileMapper.Acceptance/FileMapper.Acceptance.csproj"
     },
     {
-      "sha256": "e648c7b0226da7b8b7996b991b89515d99d5a8944e4b63f242ce1df6d581b060",
       "length": 19162,
+      "sha256": "e648c7b0226da7b8b7996b991b89515d99d5a8944e4b63f242ce1df6d581b060",
       "path": "benchmarks/FileMapper.Acceptance/packages.lock.json"
     },
     {
-      "sha256": "39d2cd39ed7f7c34957d8f5ecef28d065ad997eac890e4cf75d91b6ad63dd7ec",
       "length": 7819,
+      "sha256": "39d2cd39ed7f7c34957d8f5ecef28d065ad997eac890e4cf75d91b6ad63dd7ec",
       "path": "benchmarks/FileMapper.Acceptance/Program.cs"
     },
     {
-      "sha256": "2a586a5bf3878cc42500ae67cc1956f4b03d736f17b10f82016afbe530508c09",
       "length": 7206,
+      "sha256": "2a586a5bf3878cc42500ae67cc1956f4b03d736f17b10f82016afbe530508c09",
       "path": "benchmarks/FileMapper.Acceptance/SemanticIntegration.cs"
     },
     {
-      "sha256": "915044019ae5ddb8070a42b5c9770d30dec3c8f5343e7d9194738c64f9ecba95",
       "length": 23296,
+      "sha256": "915044019ae5ddb8070a42b5c9770d30dec3c8f5343e7d9194738c64f9ecba95",
       "path": "benchmarks/FileMapper.Acceptance/StorageBenchmark.cs"
     },
     {
-      "sha256": "45aa7e6dcb92106d72719476d3054f6efda6963f4e5cf91004a27f58df74563f",
-      "length": 11812,
+      "length": 12608,
+      "sha256": "a00dc51b58e37311e059f344f35d6b432304295086a49bceaced59e1a81d84dd",
       "path": "benchmarks/FileMapper.Acceptance/WindowsCorpus.cs"
     },
     {
-      "sha256": "626d37a68fdf1e1a41cbe1b9be5e743a4ae0899b8813c9930cbeb9c85d198e4e",
       "length": 8578,
+      "sha256": "626d37a68fdf1e1a41cbe1b9be5e743a4ae0899b8813c9930cbeb9c85d198e4e",
       "path": "benchmarks/README.md"
     },
     {
-      "sha256": "cce571c1b7a53ca34130989cae9923dc452d1b7010553790d646c6b567bef6e4",
-      "length": 559,
+      "length": 573,
+      "sha256": "822e0934f91a9b7f2a253922cbd9f6e742b320706e70a1138475f74d2f2ba60d",
       "path": "Directory.Build.props"
     },
     {
-      "sha256": "1a11567a997ad12ece804c324bbcfdb767205da56a2c5497943c101ba3eaf5c7",
       "length": 6158,
+      "sha256": "1a11567a997ad12ece804c324bbcfdb767205da56a2c5497943c101ba3eaf5c7",
       "path": "docs/adaptive-computer.md"
     },
     {
-      "sha256": "fc475606858bea60a94bf18c34edb4d874d5e018a54f7b811d1e29b0058051c1",
       "length": 3327,
+      "sha256": "fc475606858bea60a94bf18c34edb4d874d5e018a54f7b811d1e29b0058051c1",
       "path": "docs/bounded-materialization.md"
     },
     {
-      "sha256": "00a0edc0ce4a539cfa352c85164901a52da5b2025b960f41cafed67a70064e38",
       "length": 4644,
+      "sha256": "00a0edc0ce4a539cfa352c85164901a52da5b2025b960f41cafed67a70064e38",
       "path": "docs/context-workspace.md"
     },
     {
-      "sha256": "02d65dd42046e6ae284f14048665f514ab80ce9ddaf076b6c46320bf7eda95ac",
       "length": 5462,
+      "sha256": "02d65dd42046e6ae284f14048665f514ab80ce9ddaf076b6c46320bf7eda95ac",
       "path": "docs/csharp-rules.md"
     },
     {
-      "sha256": "fab1ca1dd588164126f33b91b271ddc96545c1a7e48306c992cb8c7b1777fa51",
-      "length": 3355,
+      "length": 6133,
+      "sha256": "06d60973227ab13f264d2e6f7c77d6bf36e26dde1fa8015ebd95a82be88ee846",
       "path": "docs/edition-practice.md"
     },
     {
-      "sha256": "b11c32d91a30c06cbf776645804c8bf9363d4416b847e0e5109bc3777abce4cd",
       "length": 10498,
+      "sha256": "b11c32d91a30c06cbf776645804c8bf9363d4416b847e0e5109bc3777abce4cd",
       "path": "docs/learning-workspace.md"
     },
     {
-      "sha256": "127f0258d65c575f0df7dc4986e138f756f5a4e9f2f64c9dc3ab9cc1b8bef407",
       "length": 12800,
+      "sha256": "127f0258d65c575f0df7dc4986e138f756f5a4e9f2f64c9dc3ab9cc1b8bef407",
       "path": "docs/native-mcp.md"
     },
     {
-      "sha256": "b9f95d7722e53fa7ec7c24a20586ec33880c7543a2e7e4becba39227a1d735a7",
       "length": 13924,
+      "sha256": "b9f95d7722e53fa7ec7c24a20586ec33880c7543a2e7e4becba39227a1d735a7",
       "path": "docs/pattern-learning.md"
     },
     {
-      "sha256": "4369a9dafa25ca26a5a97544b0c1b03fa31e49b2a4d19dc821ed464752503399",
       "length": 8158,
+      "sha256": "4369a9dafa25ca26a5a97544b0c1b03fa31e49b2a4d19dc821ed464752503399",
       "path": "docs/public-word-library.md"
     },
     {
-      "sha256": "ec6da9b109ad5a48a0ade41b13bedb34f3df220d366704ab3a14d901e9732447",
       "length": 10015,
+      "sha256": "ec6da9b109ad5a48a0ade41b13bedb34f3df220d366704ab3a14d901e9732447",
       "path": "docs/semantic-game.md"
     },
     {
-      "sha256": "1cf63cf6d1c15a0067b5bdb8538eca30896ad388c6d4b0370b125dbbc3dc68ad",
       "length": 10423,
+      "sha256": "1cf63cf6d1c15a0067b5bdb8538eca30896ad388c6d4b0370b125dbbc3dc68ad",
       "path": "docs/semantic-object-model.md"
     },
     {
-      "sha256": "8044c25766b0670ec97e4d04c89ed6c83e3646ad71eccd56261a027666dcfd7a",
       "length": 9124,
+      "sha256": "8044c25766b0670ec97e4d04c89ed6c83e3646ad71eccd56261a027666dcfd7a",
       "path": "docs/semantic-workspace.md"
     },
     {
-      "sha256": "74d3d07d54737318df48ad4d2e6fb2229e2d60effc372451e274c3ea37401bc0",
       "length": 14780,
+      "sha256": "74d3d07d54737318df48ad4d2e6fb2229e2d60effc372451e274c3ea37401bc0",
       "path": "docs/source-harvesting.md"
     },
     {
-      "sha256": "bd5663165ae67ab5a4157c365ef39d70b13056ae260fffcdec981cef01a70f83",
       "length": 10897,
+      "sha256": "bd5663165ae67ab5a4157c365ef39d70b13056ae260fffcdec981cef01a70f83",
       "path": "docs/source-semantics.md"
     },
     {
-      "sha256": "06acf5e2257b1fff829641e9f0c7f36f560f9a462871aa5387cbe2feadfd6f67",
       "length": 6434,
+      "sha256": "06acf5e2257b1fff829641e9f0c7f36f560f9a462871aa5387cbe2feadfd6f67",
       "path": "docs/source-service.md"
     },
     {
-      "sha256": "5e0888356b8cfe778e3b87d0a04b2a6a0c9aeba2e521eea9188a2a85f9f23e96",
       "length": 12360,
+      "sha256": "5e0888356b8cfe778e3b87d0a04b2a6a0c9aeba2e521eea9188a2a85f9f23e96",
       "path": "docs/spatial-tetrid.md"
     },
     {
-      "sha256": "69366d4f64a11eee97af3f95715a6030e6ec406c4a7a49635989a843eb62b7bf",
       "length": 3394,
+      "sha256": "69366d4f64a11eee97af3f95715a6030e6ec406c4a7a49635989a843eb62b7bf",
       "path": "docs/staged-content-acceptance.md"
     },
     {
-      "sha256": "bbc1de5cafc144435e85a5cdc7bf9d69be611b6d873585f884871f7c8b4f58e6",
       "length": 21069,
+      "sha256": "bbc1de5cafc144435e85a5cdc7bf9d69be611b6d873585f884871f7c8b4f58e6",
       "path": "docs/staged-hashing.md"
     },
     {
-      "sha256": "acd702c53631b5142aed953338648a64b28ad89366d2a761fa8fbc926689cf95",
+      "length": 1722,
+      "sha256": "1246ae20a150b1206d118c8ce4141ea68976952021363264d606b7e29eed2c3c",
+      "path": "docs/storage-landscape.md"
+    },
+    {
       "length": 12454,
+      "sha256": "acd702c53631b5142aed953338648a64b28ad89366d2a761fa8fbc926689cf95",
       "path": "docs/storage-projections.md"
     },
     {
-      "sha256": "7857cc15ce2aaac23822bbbf98a6c2425dfc66be3988b456bca68c5590a454c2",
       "length": 2770,
+      "sha256": "7857cc15ce2aaac23822bbbf98a6c2425dfc66be3988b456bca68c5590a454c2",
       "path": "docs/THREAT-MODEL.md"
     },
     {
-      "sha256": "c55e9b3d84d8fd144e1fb19b0f09b6d95e2d58f1bb69f5eaf89b4a8502c3fc69",
       "length": 3333,
+      "sha256": "c55e9b3d84d8fd144e1fb19b0f09b6d95e2d58f1bb69f5eaf89b4a8502c3fc69",
       "path": "docs/validation-edition-practice.md"
     },
     {
-      "sha256": "cdac7824f4b0511f8c17df0f0045ca73a9974fb89335d0edb5103a5ec92e6484",
       "length": 2973,
+      "sha256": "cdac7824f4b0511f8c17df0f0045ca73a9974fb89335d0edb5103a5ec92e6484",
       "path": "docs/validation-heldout-computer.md"
     },
     {
-      "sha256": "1609030ef9cebeb3e0e3c988a74a64b41f4fcdbca886f4b0bbfb8f58d2dfb6ec",
       "length": 3930,
+      "sha256": "1609030ef9cebeb3e0e3c988a74a64b41f4fcdbca886f4b0bbfb8f58d2dfb6ec",
       "path": "docs/validation-observation-links.md"
     },
     {
-      "sha256": "0f18a9d6d20c4b8d22f61b9899dbbf05aa7ad850bd7ec063066ecfc38e32fba4",
       "length": 1570,
+      "sha256": "0f18a9d6d20c4b8d22f61b9899dbbf05aa7ad850bd7ec063066ecfc38e32fba4",
       "path": "docs/validation-snapshot-finalization.md"
     },
     {
-      "sha256": "bac630098ed8ccbe2ec1e1dfb414799628b1d189002c49a82aa469cf7dca9f97",
       "length": 208,
+      "sha256": "bac630098ed8ccbe2ec1e1dfb414799628b1d189002c49a82aa469cf7dca9f97",
       "path": "eng/Boundary.Acceptance/Boundary.Acceptance.csproj"
     },
     {
-      "sha256": "f492ee1a999efeee26deaa701c0ba537257d52e23654e57ee02e7d061054caf6",
       "length": 18761,
+      "sha256": "f492ee1a999efeee26deaa701c0ba537257d52e23654e57ee02e7d061054caf6",
       "path": "eng/Boundary.Acceptance/packages.lock.json"
     },
     {
-      "sha256": "8a35b86f2715dda9d480c9f0a64dcb65fbdf20d802f2bf694d0c1832e3c3e215",
       "length": 6173,
+      "sha256": "8a35b86f2715dda9d480c9f0a64dcb65fbdf20d802f2bf694d0c1832e3c3e215",
       "path": "eng/Boundary.Acceptance/Program.cs"
     },
     {
-      "sha256": "0f769d95f8e39ac7e0bf26e450c44a9323620348617e27ab2e501e4b26575241",
       "length": 332,
+      "sha256": "0f769d95f8e39ac7e0bf26e450c44a9323620348617e27ab2e501e4b26575241",
       "path": "eng/BoundedCapture.Acceptance/BoundedCapture.Acceptance.csproj"
     },
     {
-      "sha256": "db5fb2bd8f85c766e6f0c29ca4f03ca72b79e6a28d6f97bf705bdc156c1c7c5a",
       "length": 19162,
+      "sha256": "db5fb2bd8f85c766e6f0c29ca4f03ca72b79e6a28d6f97bf705bdc156c1c7c5a",
       "path": "eng/BoundedCapture.Acceptance/packages.lock.json"
     },
     {
-      "sha256": "c57d93bf6b3a2bdf32da474a3b4eb27ace42d16e42a295f1a31103786b65e36c",
       "length": 12638,
+      "sha256": "c57d93bf6b3a2bdf32da474a3b4eb27ace42d16e42a295f1a31103786b65e36c",
       "path": "eng/BoundedCapture.Acceptance/Program.cs"
     },
     {
-      "sha256": "a62186555659e21b991f791a534633ec08e0736bddc4e84f294c70a5085867c6",
       "length": 2663,
+      "sha256": "a62186555659e21b991f791a534633ec08e0736bddc4e84f294c70a5085867c6",
       "path": "eng/Build-Pages.ps1"
     },
     {
-      "sha256": "ff263e53825449066c9a7e3d5c32f9e74121997445c0c14874daddc97283b4cd",
       "length": 6794,
+      "sha256": "ff263e53825449066c9a7e3d5c32f9e74121997445c0c14874daddc97283b4cd",
       "path": "eng/Build-Publication.ps1"
     },
     {
-      "sha256": "1bc3a9784b99e189810c4922773ab750ad731c369a69e75439b7fc29aae2f6bd",
       "length": 13563,
+      "sha256": "1bc3a9784b99e189810c4922773ab750ad731c369a69e75439b7fc29aae2f6bd",
       "path": "eng/Build-PublicWordLibrary.ps1"
     },
     {
-      "sha256": "1e9d0706c0f58ffb79843eacacbd9cb1f9a0f572fca59c549e895fbfd21bdac8",
       "length": 14956,
+      "sha256": "1e9d0706c0f58ffb79843eacacbd9cb1f9a0f572fca59c549e895fbfd21bdac8",
       "path": "eng/Build-Release.ps1"
     },
     {
-      "sha256": "cebfd82a5f9be7f7b63ecbbd0bc3d0ea342c15019723643bda368146fdd803ca",
       "length": 598,
+      "sha256": "cebfd82a5f9be7f7b63ecbbd0bc3d0ea342c15019723643bda368146fdd803ca",
       "path": "eng/Compare-FileBytes.cs"
     },
     {
-      "sha256": "7d4cfbcec9f22e506494f33c18a78ffcecdafc57f7d3d1354fc2ee2b000d86de",
       "length": 232,
+      "sha256": "7d4cfbcec9f22e506494f33c18a78ffcecdafc57f7d3d1354fc2ee2b000d86de",
       "path": "eng/Context.Acceptance/Context.Acceptance.csproj"
     },
     {
-      "sha256": "e648c7b0226da7b8b7996b991b89515d99d5a8944e4b63f242ce1df6d581b060",
       "length": 19162,
+      "sha256": "e648c7b0226da7b8b7996b991b89515d99d5a8944e4b63f242ce1df6d581b060",
       "path": "eng/Context.Acceptance/packages.lock.json"
     },
     {
-      "sha256": "caad3a1954ad43feececb58af0a4ce29b9dbd39c8cb31639226f36a9c286727e",
       "length": 18786,
+      "sha256": "caad3a1954ad43feececb58af0a4ce29b9dbd39c8cb31639226f36a9c286727e",
       "path": "eng/Context.Acceptance/Program.cs"
     },
     {
-      "sha256": "a9cc596e82d67b4aff0bc9a58d86fddcf19b71ae48bad8dfe556e450444d15d3",
       "length": 1495,
+      "sha256": "a9cc596e82d67b4aff0bc9a58d86fddcf19b71ae48bad8dfe556e450444d15d3",
       "path": "eng/Context.Acceptance/README.md"
     },
     {
-      "sha256": "0b482f2cab199241786b8fd5f50e7bd402d3f7e0a3f914bea7f11d612faf8c80",
       "length": 291,
+      "sha256": "0b482f2cab199241786b8fd5f50e7bd402d3f7e0a3f914bea7f11d612faf8c80",
       "path": "eng/EditionPractice.Acceptance/EditionPractice.Acceptance.csproj"
     },
     {
-      "sha256": "13da92314b64b30a92f1c41d45b8d30bb255305b985a21f6a7c2835860b0ff22",
       "length": 19179,
+      "sha256": "13da92314b64b30a92f1c41d45b8d30bb255305b985a21f6a7c2835860b0ff22",
       "path": "eng/EditionPractice.Acceptance/packages.lock.json"
     },
     {
-      "sha256": "2e35622f4aff6227c469d7c2ca00484ba6f88ec5c63ebda39fa3fda8cde565a9",
       "length": 3357,
+      "sha256": "2e35622f4aff6227c469d7c2ca00484ba6f88ec5c63ebda39fa3fda8cde565a9",
       "path": "eng/EditionPractice.Acceptance/Program.cs"
     },
     {
-      "sha256": "c5e78b742e561ed520da90e80aee1dc32965e56f8623b8d83c62b6cd53e0a2aa",
       "length": 2362,
+      "sha256": "c5e78b742e561ed520da90e80aee1dc32965e56f8623b8d83c62b6cd53e0a2aa",
       "path": "eng/Get-Diagnostics.ps1"
     },
     {
-      "sha256": "0895a2e35b61e80c5d87587a1f552a3fe2a6c6040fd7d5cab20f345d6063257f",
       "length": 11569,
+      "sha256": "0895a2e35b61e80c5d87587a1f552a3fe2a6c6040fd7d5cab20f345d6063257f",
       "path": "eng/Install-Local.ps1"
     },
     {
-      "sha256": "9f53ef8dd672ea8f10d5a41067b21f9fae70e9e8fd21be8e90752e4958b6eaa4",
       "length": 927,
+      "sha256": "9f53ef8dd672ea8f10d5a41067b21f9fae70e9e8fd21be8e90752e4958b6eaa4",
       "path": "eng/pages-workflow.yml.template"
     },
     {
-      "sha256": "6ebd79b1aef1e17b5b84b4c5502a2b45a996310909389364773c0250d268c217",
       "length": 18331,
+      "sha256": "6ebd79b1aef1e17b5b84b4c5502a2b45a996310909389364773c0250d268c217",
       "path": "eng/PowerShell.Acceptance/packages.lock.json"
     },
     {
-      "sha256": "937fa67ee742b69d9c53e5b99218b081184d5111c9555bebea4d90b393b022b7",
       "length": 316,
+      "sha256": "937fa67ee742b69d9c53e5b99218b081184d5111c9555bebea4d90b393b022b7",
       "path": "eng/PowerShell.Acceptance/PowerShell.Acceptance.csproj"
     },
     {
-      "sha256": "34b379626328eaa974a5718ae43561202756783c7b7ceab17532ef43ba8d0dd7",
       "length": 8583,
+      "sha256": "34b379626328eaa974a5718ae43561202756783c7b7ceab17532ef43ba8d0dd7",
       "path": "eng/PowerShell.Acceptance/Program.cs"
     },
     {
-      "sha256": "c6bfaf70117a2d0b1ef0fb41a30fdd9ecc8c8bb75280da7a0d945ca96a8ed19b",
-      "length": 1947,
+      "length": 19179,
+      "sha256": "e290ccb7e6a94d5083b490afea8dc53b50c1097eebf621b2b9299ba7ac70fe9f",
+      "path": "eng/PracticePolicy.Acceptance/packages.lock.json"
+    },
+    {
+      "length": 291,
+      "sha256": "0b482f2cab199241786b8fd5f50e7bd402d3f7e0a3f914bea7f11d612faf8c80",
+      "path": "eng/PracticePolicy.Acceptance/PracticePolicy.Acceptance.csproj"
+    },
+    {
+      "length": 4399,
+      "sha256": "f47d14f7394155ac2bf15b5499536f6d01bd929dffc9ed970b1bce83b2efa2f9",
+      "path": "eng/PracticePolicy.Acceptance/Program.cs"
+    },
+    {
+      "length": 1980,
+      "sha256": "5b1372c296d4a3f76fa5c58d36c30657af8d56b9878ad7f7926213d291b51017",
       "path": "eng/public-source-policy.json"
     },
     {
-      "sha256": "ebc08c47f1704a8ed0e6bf72eed02d63dedcdb2e8007a162eb7b84679c7c7d9b",
       "length": 7546,
+      "sha256": "ebc08c47f1704a8ed0e6bf72eed02d63dedcdb2e8007a162eb7b84679c7c7d9b",
       "path": "eng/README.md"
     },
     {
-      "sha256": "31cd180af058474234c93a3152a06153a531b3acb174771f9201fd8256500035",
       "length": 9986,
+      "sha256": "31cd180af058474234c93a3152a06153a531b3acb174771f9201fd8256500035",
       "path": "eng/Release.Common.ps1"
     },
     {
-      "sha256": "e648c7b0226da7b8b7996b991b89515d99d5a8944e4b63f242ce1df6d581b060",
       "length": 19162,
+      "sha256": "e648c7b0226da7b8b7996b991b89515d99d5a8944e4b63f242ce1df6d581b060",
       "path": "eng/Route.Acceptance/packages.lock.json"
     },
     {
-      "sha256": "c59ae0357c7cf9fbfc702b771b0ba7f8245b72962604e08f80cf7e7befbb54dc",
       "length": 4603,
+      "sha256": "c59ae0357c7cf9fbfc702b771b0ba7f8245b72962604e08f80cf7e7befbb54dc",
       "path": "eng/Route.Acceptance/Program.cs"
     },
     {
-      "sha256": "6fd465c8c915a4799fa2499a217bed656c9914d4503cabc3bced4da2ac20d2ce",
       "length": 216,
+      "sha256": "6fd465c8c915a4799fa2499a217bed656c9914d4503cabc3bced4da2ac20d2ce",
       "path": "eng/Route.Acceptance/Route.Acceptance.csproj"
     },
     {
-      "sha256": "651102ffdc3482351227e4654fe6dc6b7a559432fa96cd4c86f809ca3400888c",
       "length": 3295,
+      "sha256": "651102ffdc3482351227e4654fe6dc6b7a559432fa96cd4c86f809ca3400888c",
       "path": "eng/SnapshotFinalization.Acceptance/packages.lock.json"
     },
     {
-      "sha256": "4f7266c3cd4e2886f11167aea6a3af9adee8e41f05b5330970cbc23dac24947b",
       "length": 2587,
+      "sha256": "4f7266c3cd4e2886f11167aea6a3af9adee8e41f05b5330970cbc23dac24947b",
       "path": "eng/SnapshotFinalization.Acceptance/Program.cs"
     },
     {
-      "sha256": "dd1e39c9a1c44acdb771dd31ae5f8a3b53885c17632b4fcf13063690ce0386f8",
       "length": 303,
+      "sha256": "dd1e39c9a1c44acdb771dd31ae5f8a3b53885c17632b4fcf13063690ce0386f8",
       "path": "eng/SnapshotFinalization.Acceptance/SnapshotFinalization.Acceptance.csproj"
     },
     {
-      "sha256": "a547d4bf94157ea23febd42b0e716145b5bcc4ba9819e0c65a361e4ff18e53be",
       "length": 2229,
+      "sha256": "a547d4bf94157ea23febd42b0e716145b5bcc4ba9819e0c65a361e4ff18e53be",
       "path": "eng/Start-Local.ps1"
     },
     {
-      "sha256": "3ec37850d6362fe34ce8fe3ad8c371c750b416da775acce05ea8bca022ceb134",
       "length": 3139,
+      "sha256": "3ec37850d6362fe34ce8fe3ad8c371c750b416da775acce05ea8bca022ceb134",
       "path": "eng/Test-PublicTree.ps1"
     },
     {
-      "sha256": "6bbab63af1fbc4e9cf550dd35b8c5af74b9eb627673e343eaf58f9f41fce2755",
       "length": 1725,
+      "sha256": "6bbab63af1fbc4e9cf550dd35b8c5af74b9eb627673e343eaf58f9f41fce2755",
       "path": "eng/Test-ReleaseArchive.ps1"
     },
     {
-      "sha256": "8b45f9e7ee4a5aa75defabc9f4ed31e7bef2e808f6d3d9cf645ba29e7a7f941c",
       "length": 1906,
+      "sha256": "8b45f9e7ee4a5aa75defabc9f4ed31e7bef2e808f6d3d9cf645ba29e7a7f941c",
       "path": "eng/Test-ReproducibleRelease.ps1"
     },
     {
-      "sha256": "accae934fe2535149a24d6e8316f6e60b1296c878e4e75332ab681173aa3ef69",
       "length": 25380,
+      "sha256": "accae934fe2535149a24d6e8316f6e60b1296c878e4e75332ab681173aa3ef69",
       "path": "FileMapper.sln"
     },
     {
-      "sha256": "b149f6f668275a1b84ea502fa4a150d71ef941f845abf4acb856f2d09555dcb2",
       "length": 79,
+      "sha256": "b149f6f668275a1b84ea502fa4a150d71ef941f845abf4acb856f2d09555dcb2",
       "path": "global.json"
     },
     {
-      "sha256": "5956ce561a7bf9ab11ad3bf49fda723e8cfb0cc9999fa32f50cc64348202f510",
       "length": 292,
+      "sha256": "5956ce561a7bf9ab11ad3bf49fda723e8cfb0cc9999fa32f50cc64348202f510",
       "path": "NuGet.config"
     },
     {
-      "sha256": "3a9d87e806c2c87a011d33762745b6c98808dcd52784c17908e19d6fd167936e",
-      "length": 4734,
+      "length": 5196,
+      "sha256": "04a229d1893d9dabccff3d1150f746fb99be3516dffe03ba2c79358bcf27b11f",
       "path": "README.md"
     },
     {
-      "sha256": "ee58536d20503329932c7f919773ac99af78c339c67c5f53ba38dab7deee0d43",
       "length": 222,
+      "sha256": "ee58536d20503329932c7f919773ac99af78c339c67c5f53ba38dab7deee0d43",
       "path": "samples/route-demo/PipelineDemo.ps1"
     },
     {
-      "sha256": "e59a95917eb29a838dda31af6ce9cd2ef41aa57931b4e0d938b0f2b4226a5cea",
       "length": 517,
+      "sha256": "e59a95917eb29a838dda31af6ce9cd2ef41aa57931b4e0d938b0f2b4226a5cea",
       "path": "samples/route-demo/README.md"
     },
     {
-      "sha256": "862e6c5da883dced38333e5fdca6f1635bc7e2dab7a9a496a2ca96bb5f226bac",
       "length": 485,
+      "sha256": "862e6c5da883dced38333e5fdca6f1635bc7e2dab7a9a496a2ca96bb5f226bac",
       "path": "samples/route-demo/RouteDemo.cs"
     },
     {
-      "sha256": "ffa0123c95f3449a3f63eca93cb6a742f4ff61b4eb692ed799979b0ae76a4f4d",
       "length": 149,
+      "sha256": "ffa0123c95f3449a3f63eca93cb6a742f4ff61b4eb692ed799979b0ae76a4f4d",
       "path": "samples/route-demo/RouteDemo.csproj"
     },
     {
-      "sha256": "32def6361712de7a4e19f0d16fcc1d6dd4effe749666bda9d3f1a50b826f92e9",
       "length": 7484,
+      "sha256": "32def6361712de7a4e19f0d16fcc1d6dd4effe749666bda9d3f1a50b826f92e9",
       "path": "samples/semantic-powershell/cases.json"
     },
     {
-      "sha256": "bdfdff3ebc77ad396c2c6600b4b924dd5a2af9d0404d519f283f38dadebab61c",
       "length": 7875,
+      "sha256": "bdfdff3ebc77ad396c2c6600b4b924dd5a2af9d0404d519f283f38dadebab61c",
       "path": "samples/semantic-powershell/table-flow-2.1.0-cases.json"
     },
     {
-      "sha256": "6d926336edbe3a6c764e9287a7535ad881cd7282e8f36419132a0197ea2986fc",
       "length": 2361,
+      "sha256": "6d926336edbe3a6c764e9287a7535ad881cd7282e8f36419132a0197ea2986fc",
       "path": "samples/semantic-powershell/table-flow-2.1.0-README.md"
     },
     {
-      "sha256": "03e21f2285c04d52e222592a00def07886cbeed1090fa1d019281769f41670f7",
       "length": 2220,
+      "sha256": "03e21f2285c04d52e222592a00def07886cbeed1090fa1d019281769f41670f7",
       "path": "site/demo.js"
     },
     {
-      "sha256": "41a68cb35127094fb83f3855eff6a6d0328b01296f259e670db6b98ea31fb787",
       "length": 6951,
+      "sha256": "41a68cb35127094fb83f3855eff6a6d0328b01296f259e670db6b98ea31fb787",
       "path": "site/docs.html"
     },
     {
-      "sha256": "6edaae0b0242dde43e462cdcbb10abcbf37de3a05e3bec24e6983ddee5b8a816",
       "length": 1292,
+      "sha256": "6edaae0b0242dde43e462cdcbb10abcbf37de3a05e3bec24e6983ddee5b8a816",
       "path": "site/heldout-report-review.json"
     },
     {
-      "sha256": "c57815bd65e3e5e88d4bc7c520acc81ec5d8be44c4d6e3d8191c46dd9ffccb8c",
       "length": 1005485,
+      "sha256": "c57815bd65e3e5e88d4bc7c520acc81ec5d8be44c4d6e3d8191c46dd9ffccb8c",
       "path": "site/heldout-report.html"
     },
     {
-      "sha256": "1ae4de04cd0d343e9dbe6c06c28d9f1fb7c1b5de6fbfbfab3f7c91ea52cfe723",
       "length": 4817,
+      "sha256": "1ae4de04cd0d343e9dbe6c06c28d9f1fb7c1b5de6fbfbfab3f7c91ea52cfe723",
       "path": "site/index.html"
     },
     {
-      "sha256": "980f0db7b318345edbea9bab3796d8ba677c884e7b16e3c0d266a3cfe084c57b",
       "length": 231,
+      "sha256": "980f0db7b318345edbea9bab3796d8ba677c884e7b16e3c0d266a3cfe084c57b",
       "path": "site/mark.svg"
     },
     {
-      "sha256": "3a9d87e806c2c87a011d33762745b6c98808dcd52784c17908e19d6fd167936e",
-      "length": 4734,
+      "length": 5196,
+      "sha256": "04a229d1893d9dabccff3d1150f746fb99be3516dffe03ba2c79358bcf27b11f",
       "path": "site/README-public.md"
     },
     {
-      "sha256": "4c6c4559b6e0d9cf5a0e5804705b0a805a878569014c7e8bb529669e77bf68d4",
       "length": 808,
+      "sha256": "4c6c4559b6e0d9cf5a0e5804705b0a805a878569014c7e8bb529669e77bf68d4",
       "path": "site/README.md"
     },
     {
-      "sha256": "dc874c7d87dcdb8977e82e8839fa271f4448893062b448fe0fa3af4eac2948a2",
       "length": 5112,
+      "sha256": "dc874c7d87dcdb8977e82e8839fa271f4448893062b448fe0fa3af4eac2948a2",
       "path": "site/site.css"
     },
     {
-      "sha256": "59177ab386adb4e9ecaa1f295f80a2a7564d7d7f712ba5b072f1a3aa6882a654",
       "length": 206,
+      "sha256": "59177ab386adb4e9ecaa1f295f80a2a7564d7d7f712ba5b072f1a3aa6882a654",
       "path": "src/FileMapper.Actions.Robocopy/Acceptance/packages.lock.json"
     },
     {
-      "sha256": "4e4a150ce6992a3a8151af2942ea46a2d5695789b3eb203516f8279d8e82708b",
       "length": 18930,
+      "sha256": "4e4a150ce6992a3a8151af2942ea46a2d5695789b3eb203516f8279d8e82708b",
       "path": "src/FileMapper.Actions.Robocopy/Acceptance/Program.cs"
     },
     {
-      "sha256": "9336de0bf7c30d56d7892cff43ea2b53743dd8d0742e4f3b7d997c1a21fa9df5",
       "length": 199,
+      "sha256": "9336de0bf7c30d56d7892cff43ea2b53743dd8d0742e4f3b7d997c1a21fa9df5",
       "path": "src/FileMapper.Actions.Robocopy/Acceptance/Robocopy.Acceptance.csproj"
     },
     {
-      "sha256": "e8a501c14f849038dfa17798f319381711c713a5fcf75e3da47079b90e0bf576",
       "length": 14495,
+      "sha256": "e8a501c14f849038dfa17798f319381711c713a5fcf75e3da47079b90e0bf576",
       "path": "src/FileMapper.Actions.Robocopy/CatalogCompiler.cs"
     },
     {
-      "sha256": "90e9eb28ade05a0dd00ad9ce18b0fab171202a2eeae7437f2541e84c0933c0ec",
       "length": 14066,
+      "sha256": "90e9eb28ade05a0dd00ad9ce18b0fab171202a2eeae7437f2541e84c0933c0ec",
       "path": "src/FileMapper.Actions.Robocopy/ContainedWorker.cs"
     },
     {
-      "sha256": "fd49e153b0c510b38432cfb29cc0f94578bcf79fc5e0a5737c52161a39362719",
       "length": 297,
+      "sha256": "fd49e153b0c510b38432cfb29cc0f94578bcf79fc5e0a5737c52161a39362719",
       "path": "src/FileMapper.Actions.Robocopy/FileMapper.Actions.Robocopy.csproj"
     },
     {
-      "sha256": "54336b2b07527940e65c5b40bb58d6d1dffe07640728f69bfea630acb99959f8",
       "length": 5848,
+      "sha256": "54336b2b07527940e65c5b40bb58d6d1dffe07640728f69bfea630acb99959f8",
       "path": "src/FileMapper.Actions.Robocopy/Models.cs"
     },
     {
-      "sha256": "210c8d4419dd972edfb4c03f51ddb11ea3c286bc8e3f0f8594283d040743b8dd",
       "length": 5607,
+      "sha256": "210c8d4419dd972edfb4c03f51ddb11ea3c286bc8e3f0f8594283d040743b8dd",
       "path": "src/FileMapper.Actions.Robocopy/NativeJobFiles.cs"
     },
     {
-      "sha256": "b81f6e1bc585c86de7b4c17b44e681685842f36d8b1086350b7e131d63175113",
       "length": 88651,
+      "sha256": "b81f6e1bc585c86de7b4c17b44e681685842f36d8b1086350b7e131d63175113",
       "path": "src/FileMapper.Actions.Robocopy/option-catalog.json"
     },
     {
-      "sha256": "04ff2844dc71727af87865202eea9f89f1d40a66e233075f1fc346a427809370",
       "length": 124,
+      "sha256": "04ff2844dc71727af87865202eea9f89f1d40a66e233075f1fc346a427809370",
       "path": "src/FileMapper.Actions.Robocopy/packages.lock.json"
     },
     {
-      "sha256": "3234a189cbd057e0ae73c75e1155ce9a7bdd217780aa5832b82393eeb324e27a",
       "length": 7134,
+      "sha256": "3234a189cbd057e0ae73c75e1155ce9a7bdd217780aa5832b82393eeb324e27a",
       "path": "src/FileMapper.Actions.Robocopy/PathSafety.cs"
     },
     {
-      "sha256": "e909fe7f69ac4e49f6e27f28b0e097a78308e78a015ff7b577ca510559e65a6e",
       "length": 27857,
+      "sha256": "e909fe7f69ac4e49f6e27f28b0e097a78308e78a015ff7b577ca510559e65a6e",
       "path": "src/FileMapper.Actions.Robocopy/RobocopyBackend.cs"
     },
     {
-      "sha256": "79f6a93d3cf7f691efdf7ecc51c73708ed7bb8efda13a1873a5a08bb1b6d9d64",
       "length": 7155,
+      "sha256": "79f6a93d3cf7f691efdf7ecc51c73708ed7bb8efda13a1873a5a08bb1b6d9d64",
       "path": "src/FileMapper.Actions.Robocopy/TreeEvidence.cs"
     },
     {
-      "sha256": "db1c7542128aa85f09e73d13388cc9d727099d750920a73b8d77d5f42ff7d814",
       "length": 15310,
+      "sha256": "db1c7542128aa85f09e73d13388cc9d727099d750920a73b8d77d5f42ff7d814",
       "path": "src/FileMapper.Cli/ComputerCommands.cs"
     },
     {
-      "sha256": "d69b87ec2f7f153aae955ba6711df66141f5707fcf516e9032ab8e2864c916a1",
       "length": 335,
+      "sha256": "d69b87ec2f7f153aae955ba6711df66141f5707fcf516e9032ab8e2864c916a1",
       "path": "src/FileMapper.Cli/FileMapper.Cli.csproj"
     },
     {
-      "sha256": "afa7873a871053a5722cee451d57d16a7441009c3fbd1d32291aa447d76e9989",
       "length": 14046,
+      "sha256": "afa7873a871053a5722cee451d57d16a7441009c3fbd1d32291aa447d76e9989",
       "path": "src/FileMapper.Cli/HarvestCommands.cs"
     },
     {
-      "sha256": "1ad1e010d6e71c19d5771044c8adba4d6318562bf4aabe703147f8d94ac23c0c",
       "length": 10435,
+      "sha256": "1ad1e010d6e71c19d5771044c8adba4d6318562bf4aabe703147f8d94ac23c0c",
       "path": "src/FileMapper.Cli/HashingCommands.cs"
     },
     {
-      "sha256": "655cdad30007eec6564ac034de93dbe2cdb5df94d4b171890093a9b52341052e",
       "length": 9160,
+      "sha256": "655cdad30007eec6564ac034de93dbe2cdb5df94d4b171890093a9b52341052e",
       "path": "src/FileMapper.Cli/LearningCommands.cs"
     },
     {
-      "sha256": "2f8505f31892a1379a693f0db8bde2dd0861723549029a29c231686a7db4e98b",
       "length": 19239,
+      "sha256": "2f8505f31892a1379a693f0db8bde2dd0861723549029a29c231686a7db4e98b",
       "path": "src/FileMapper.Cli/packages.lock.json"
     },
     {
-      "sha256": "c27bcc60157c0473383d4ba567bf64c89bed013bb1cdeb83d6b368c583eab162",
       "length": 12203,
+      "sha256": "c27bcc60157c0473383d4ba567bf64c89bed013bb1cdeb83d6b368c583eab162",
       "path": "src/FileMapper.Cli/Program.cs"
     },
     {
-      "sha256": "168f3cbc580ec0ea470b3bc3e7ecaacbeb99428f58b23bed189ff25eeee09421",
       "length": 3495,
+      "sha256": "168f3cbc580ec0ea470b3bc3e7ecaacbeb99428f58b23bed189ff25eeee09421",
       "path": "src/FileMapper.Cli/README.md"
     },
     {
-      "sha256": "cc34d0e6db8c39150d0892d4afc8bdd83e3d7e4ee1ce60adb729ae5935104efb",
       "length": 11830,
+      "sha256": "cc34d0e6db8c39150d0892d4afc8bdd83e3d7e4ee1ce60adb729ae5935104efb",
       "path": "src/FileMapper.Cli/RobocopyCommands.cs"
     },
     {
-      "sha256": "204be904e1cb6ecc2e42c0f5d93ccaf35e3848367d7d94ca0a49607563b730fa",
       "length": 11826,
+      "sha256": "204be904e1cb6ecc2e42c0f5d93ccaf35e3848367d7d94ca0a49607563b730fa",
       "path": "src/FileMapper.Cli/SemanticCommands.cs"
     },
     {
-      "sha256": "038e848d2458894d28d34a121a840292f764602d0db530a31023ee8e1572a88a",
       "length": 4998,
+      "sha256": "038e848d2458894d28d34a121a840292f764602d0db530a31023ee8e1572a88a",
       "path": "src/FileMapper.Cli/WordLibraryCommands.cs"
     },
     {
-      "sha256": "c696d3c219fea5afdab71f60e6b18385a29e2f31b4a74b87735c9a85185e794a",
       "length": 143,
+      "sha256": "c696d3c219fea5afdab71f60e6b18385a29e2f31b4a74b87735c9a85185e794a",
       "path": "src/FileMapper.Collect.FileSystem/FileMapper.Collect.FileSystem.csproj"
     },
     {
-      "sha256": "77fa45add485bc6ffa896e209e2effc965843ade24778366cb844f682b1b99b5",
       "length": 4135,
+      "sha256": "77fa45add485bc6ffa896e209e2effc965843ade24778366cb844f682b1b99b5",
       "path": "src/FileMapper.Collect.FileSystem/FileReadRateLimiter.cs"
     },
     {
-      "sha256": "050a40d999773a210529bd2c1d25f09bdd21a82301f7d18b37325414700bc411",
       "length": 24065,
+      "sha256": "050a40d999773a210529bd2c1d25f09bdd21a82301f7d18b37325414700bc411",
       "path": "src/FileMapper.Collect.FileSystem/FileSystemCollector.cs"
     },
     {
-      "sha256": "5475522b6c6afc040cacbac9a196626e2ba583fc568eb4e8c8d6009797b66630",
       "length": 13446,
+      "sha256": "5475522b6c6afc040cacbac9a196626e2ba583fc568eb4e8c8d6009797b66630",
       "path": "src/FileMapper.Collect.FileSystem/GuardedContentReader.cs"
     },
     {
-      "sha256": "224f2a2cbc703f117b7176de401437b988342617709f9a68c6aa8978559cbb0f",
       "length": 21809,
+      "sha256": "224f2a2cbc703f117b7176de401437b988342617709f9a68c6aa8978559cbb0f",
       "path": "src/FileMapper.Collect.FileSystem/GuardedContentReader.Native.cs"
     },
     {
-      "sha256": "b6747c47869d92486a69630c6d0f0238b5c45410b62d00dc0527e0711bd205ca",
-      "length": 7432,
+      "length": 8130,
+      "sha256": "51776a7efb7146c62f1dcb2cc913eb84e634d4fcdc06d248d06ea7eec9c98bc8",
       "path": "src/FileMapper.Collect.FileSystem/NativeMetadata.cs"
     },
     {
-      "sha256": "b5ac4766e2ef12107252e0478e4f8ca0f0295501d0f435bf5b54d7f890daddf5",
       "length": 196,
+      "sha256": "b5ac4766e2ef12107252e0478e4f8ca0f0295501d0f435bf5b54d7f890daddf5",
       "path": "src/FileMapper.Collect.FileSystem/packages.lock.json"
     },
     {
-      "sha256": "f9967d02f3c8b1a32c95c77565ddcc26d46790a897110acc52d014a687a26e0d",
       "length": 1553,
+      "sha256": "f9967d02f3c8b1a32c95c77565ddcc26d46790a897110acc52d014a687a26e0d",
       "path": "src/FileMapper.Collect.Git/Acceptance/packages.lock.json"
     },
     {
-      "sha256": "3dabdd479fcdf6732b844c45f1af0cf2664559cfd2c4f82356dbc5f3a70049c9",
       "length": 23019,
+      "sha256": "3dabdd479fcdf6732b844c45f1af0cf2664559cfd2c4f82356dbc5f3a70049c9",
       "path": "src/FileMapper.Collect.Git/Acceptance/Program.cs"
     },
     {
-      "sha256": "a5a0f55d9acfd6483f7d21a9aa25044bc841bd99b5fe9fbdacf7f29e7872f272",
       "length": 195,
+      "sha256": "a5a0f55d9acfd6483f7d21a9aa25044bc841bd99b5fe9fbdacf7f29e7872f272",
       "path": "src/FileMapper.Collect.Git/Acceptance/Provenance.Acceptance.csproj"
     },
     {
-      "sha256": "2b26d8943c97062154ab559b80b0fe56e8b3ff69e9a3d4bff489078308689170",
       "length": 96,
+      "sha256": "2b26d8943c97062154ab559b80b0fe56e8b3ff69e9a3d4bff489078308689170",
       "path": "src/FileMapper.Collect.Git/AssemblyInfo.cs"
     },
     {
-      "sha256": "aca3c9b3070862c4621405f7f3697129f4520e03be5a35496e620f7f725b7132",
       "length": 271,
+      "sha256": "aca3c9b3070862c4621405f7f3697129f4520e03be5a35496e620f7f725b7132",
       "path": "src/FileMapper.Collect.Git/FileMapper.Collect.Git.csproj"
     },
     {
-      "sha256": "0017239535ccdb8531e6fd331bdfbc94f46be4a1ab0073bff1573fc3bb7879c1",
       "length": 3145,
+      "sha256": "0017239535ccdb8531e6fd331bdfbc94f46be4a1ab0073bff1573fc3bb7879c1",
       "path": "src/FileMapper.Collect.Git/GitCollector.cs"
     },
     {
-      "sha256": "eda4e418b9034f683499251c4f6f818e3e93a135b272ac66e9487f0812c6a416",
       "length": 4733,
+      "sha256": "eda4e418b9034f683499251c4f6f818e3e93a135b272ac66e9487f0812c6a416",
       "path": "src/FileMapper.Collect.Git/GitReader.cs"
     },
     {
-      "sha256": "3225e7032abd0b3903e01ec3a6bfc2006b7ad11993d6af4f4001d843bb2d92ec",
       "length": 14389,
+      "sha256": "3225e7032abd0b3903e01ec3a6bfc2006b7ad11993d6af4f4001d843bb2d92ec",
       "path": "src/FileMapper.Collect.Git/PackageProvenance.cs"
     },
     {
-      "sha256": "66a279d11f3957eb6afcdba4a27be952e8b58e76f46828c2cbc11c4c1233e184",
       "length": 1345,
+      "sha256": "66a279d11f3957eb6afcdba4a27be952e8b58e76f46828c2cbc11c4c1233e184",
       "path": "src/FileMapper.Collect.Git/packages.lock.json"
     },
     {
-      "sha256": "b16ce445161a36a60713ac2300821da891e234fc404cfb35bcbfd0392c76b255",
       "length": 10196,
+      "sha256": "b16ce445161a36a60713ac2300821da891e234fc404cfb35bcbfd0392c76b255",
       "path": "src/FileMapper.Collect.Git/ProvenanceGraph.cs"
     },
     {
-      "sha256": "20db043bfabdd164292920f99eba4456b294e532c629a663297ee0aac3321346",
       "length": 8270,
+      "sha256": "20db043bfabdd164292920f99eba4456b294e532c629a663297ee0aac3321346",
       "path": "src/FileMapper.Collect.Git/README.md"
     },
     {
-      "sha256": "d664a8d2117b64a3bc09286a5f8d8b8ba969b38084b556b43cdc4c4430f0c094",
       "length": 15112,
+      "sha256": "d664a8d2117b64a3bc09286a5f8d8b8ba969b38084b556b43cdc4c4430f0c094",
       "path": "src/FileMapper.Collect.Git/RepositoryHistory.cs"
     },
     {
-      "sha256": "b5e491c34c6f26cb93881ff841470290d1f7c00ca2cb906f4245f21778b2199a",
       "length": 9800,
+      "sha256": "b5e491c34c6f26cb93881ff841470290d1f7c00ca2cb906f4245f21778b2199a",
       "path": "src/FileMapper.Collect.Git/RepositoryOwnership.cs"
     },
     {
-      "sha256": "76264b90b076f6e101633808dc95a84964a127b89ce3c9f7fc0d21a08640114a",
       "length": 17854,
+      "sha256": "76264b90b076f6e101633808dc95a84964a127b89ce3c9f7fc0d21a08640114a",
       "path": "src/FileMapper.Collect.Git/SupplyChainImports.cs"
     },
     {
-      "sha256": "63df5ac528cf54d4eab5d306648a49cb547ab04b648189a687d6a38f8d392b5e",
       "length": 8490,
+      "sha256": "63df5ac528cf54d4eab5d306648a49cb547ab04b648189a687d6a38f8d392b5e",
       "path": "src/FileMapper.Domain/ContentHashing.cs"
     },
     {
-      "sha256": "00ec73210bc07bf161072276725ee798835335ccfd9196e922f7297a015f55ca",
       "length": 1814,
+      "sha256": "00ec73210bc07bf161072276725ee798835335ccfd9196e922f7297a015f55ca",
       "path": "src/FileMapper.Domain/Context.cs"
     },
     {
-      "sha256": "6fc0e5efb38043295abaca1118dd52bc6a71194c2b111c5b20c5460d6e891462",
       "length": 4490,
+      "sha256": "6fc0e5efb38043295abaca1118dd52bc6a71194c2b111c5b20c5460d6e891462",
       "path": "src/FileMapper.Domain/Contracts.cs"
     },
     {
-      "sha256": "8d654c44b7bebb6b31a9f2f606927f45b5072193adc4eef8cce3f3cf3b278df3",
       "length": 36,
+      "sha256": "8d654c44b7bebb6b31a9f2f606927f45b5072193adc4eef8cce3f3cf3b278df3",
       "path": "src/FileMapper.Domain/FileMapper.Domain.csproj"
     },
     {
-      "sha256": "04ff2844dc71727af87865202eea9f89f1d40a66e233075f1fc346a427809370",
       "length": 124,
+      "sha256": "04ff2844dc71727af87865202eea9f89f1d40a66e233075f1fc346a427809370",
       "path": "src/FileMapper.Domain/packages.lock.json"
     },
     {
-      "sha256": "87e7f05221c872812eb366bcf0060a946f150169050ff1b67c6729e32d414df5",
       "length": 3915,
+      "sha256": "87e7f05221c872812eb366bcf0060a946f150169050ff1b67c6729e32d414df5",
       "path": "src/FileMapper.Domain/PatternLearningPersistence.cs"
     },
     {
-      "sha256": "04b372b70d508e60fb83805cec4e7900a16b00dae2003dc411b02a953d9ae4f8",
       "length": 1327,
+      "sha256": "04b372b70d508e60fb83805cec4e7900a16b00dae2003dc411b02a953d9ae4f8",
       "path": "src/FileMapper.Domain/Projections.cs"
     },
     {
-      "sha256": "00056488eca5972138576cf3ccdf858e14afa020824ea847f825fb2abd7deca5",
       "length": 770,
+      "sha256": "00056488eca5972138576cf3ccdf858e14afa020824ea847f825fb2abd7deca5",
       "path": "src/FileMapper.Domain/ScanJobs.cs"
     },
     {
-      "sha256": "7214964ce8345d5076676181ba79752d5e3ea2bed206e936474308289b8a3d84",
       "length": 424,
+      "sha256": "7214964ce8345d5076676181ba79752d5e3ea2bed206e936474308289b8a3d84",
       "path": "src/FileMapper.Domain/SemanticArtifact.cs"
     },
     {
-      "sha256": "e03007ee5404615b885bc8c7f5ba168177b20940a392e41d76b006439a6afe4f",
       "length": 22180,
+      "sha256": "e03007ee5404615b885bc8c7f5ba168177b20940a392e41d76b006439a6afe4f",
       "path": "src/FileMapper.Engine/ComputerChallengeWorkspace.cs"
     },
     {
-      "sha256": "34ae724345372f8fdb602e8d92a776760ff88c2077fed3f0bcf107e6f633b5f4",
       "length": 9954,
+      "sha256": "34ae724345372f8fdb602e8d92a776760ff88c2077fed3f0bcf107e6f633b5f4",
       "path": "src/FileMapper.Engine/ContextBuilder.cs"
     },
     {
-      "sha256": "3986ffac1c51dcc41e7deef65350aea46b616f0bb76fbce8d251656807a03d77",
       "length": 8172,
+      "sha256": "3986ffac1c51dcc41e7deef65350aea46b616f0bb76fbce8d251656807a03d77",
       "path": "src/FileMapper.Engine/EditionPracticeWorkspace.cs"
     },
     {
-      "sha256": "aeebcbe9eff5886625d45c2aeaac8f1e4dee51b3a6ee93327cacf3d6b1caea31",
       "length": 5031,
+      "sha256": "aeebcbe9eff5886625d45c2aeaac8f1e4dee51b3a6ee93327cacf3d6b1caea31",
       "path": "src/FileMapper.Engine/Exporter.cs"
     },
     {
-      "sha256": "1ef7f67d0d8163005bde1ef9c43255ecd36ae60dbb1dfa4a186c2781a5763eb7",
       "length": 674,
+      "sha256": "1ef7f67d0d8163005bde1ef9c43255ecd36ae60dbb1dfa4a186c2781a5763eb7",
       "path": "src/FileMapper.Engine/FileMapper.Engine.csproj"
     },
     {
-      "sha256": "067c139285745bbafafdbdfbf9f0024b9bf12f4ab9ac116973eab1669a81119a",
       "length": 13637,
+      "sha256": "067c139285745bbafafdbdfbf9f0024b9bf12f4ab9ac116973eab1669a81119a",
       "path": "src/FileMapper.Engine/HashingCoordinator.cs"
     },
     {
-      "sha256": "21abd169e68f62c3490ced7ab7599ce444e52562135cb0938660a9a4051646ac",
       "length": 4418,
+      "sha256": "21abd169e68f62c3490ced7ab7599ce444e52562135cb0938660a9a4051646ac",
       "path": "src/FileMapper.Engine/HashingSpatialProjection.cs"
     },
     {
-      "sha256": "b51bf46cf87036487065c07c3aa23cf4ff9c30dff46865221c1c8afdd5a9f247",
       "length": 18387,
+      "sha256": "b51bf46cf87036487065c07c3aa23cf4ff9c30dff46865221c1c8afdd5a9f247",
       "path": "src/FileMapper.Engine/McpServer.cs"
     },
     {
-      "sha256": "adf390c090b671a67d142d5a9ad421eb5c3d5118635b954fa73e010db0a25d27",
       "length": 14863,
+      "sha256": "adf390c090b671a67d142d5a9ad421eb5c3d5118635b954fa73e010db0a25d27",
       "path": "src/FileMapper.Engine/McpTools.cs"
     },
     {
-      "sha256": "8d4957a99330f0edfa10e6a9bef6f7ecb98c544da7accf8fbf46e6b418050561",
       "length": 7646,
+      "sha256": "8d4957a99330f0edfa10e6a9bef6f7ecb98c544da7accf8fbf46e6b418050561",
       "path": "src/FileMapper.Engine/McpWire.cs"
     },
     {
-      "sha256": "9216d73ddfb00d974e623a89cc4dcfb30abbfecf3a3da50a836dd7b04303b22a",
       "length": 2360,
+      "sha256": "9216d73ddfb00d974e623a89cc4dcfb30abbfecf3a3da50a836dd7b04303b22a",
       "path": "src/FileMapper.Engine/NativeRequestJson.cs"
     },
     {
-      "sha256": "9aaff389251a137625cf5d5e96f6e9bf2eb753208992831b3731c5610f8723e9",
       "length": 29370,
+      "sha256": "9aaff389251a137625cf5d5e96f6e9bf2eb753208992831b3731c5610f8723e9",
       "path": "src/FileMapper.Engine/ObservedPatternDataset.cs"
     },
     {
-      "sha256": "8398277708b5ac1687521d0ba96d3d8ad362c1e3258085a7fe323d4e84835666",
       "length": 18701,
+      "sha256": "8398277708b5ac1687521d0ba96d3d8ad362c1e3258085a7fe323d4e84835666",
       "path": "src/FileMapper.Engine/packages.lock.json"
     },
     {
-      "sha256": "b263955e4cdd33fa0e93e91a50d4c64c34e97eff5b857e5a0d0150837eb02dea",
       "length": 16349,
+      "sha256": "b263955e4cdd33fa0e93e91a50d4c64c34e97eff5b857e5a0d0150837eb02dea",
       "path": "src/FileMapper.Engine/PatternLearningWorkspace.cs"
     },
     {
-      "sha256": "81991101ffcae17fc5f0b305bb5d76fd950121a22c193f34b8ecded4545c5444",
+      "length": 9090,
+      "sha256": "6d7ba134ec849efa2bda1ec2010916ce0cc598d29ca4e4762d828565b9193483",
+      "path": "src/FileMapper.Engine/PracticePolicyWorkspace.cs"
+    },
+    {
       "length": 9338,
+      "sha256": "81991101ffcae17fc5f0b305bb5d76fd950121a22c193f34b8ecded4545c5444",
       "path": "src/FileMapper.Engine/QueryEngine.cs"
     },
     {
-      "sha256": "fb8ad3f344e95d8928d421bef3a71948f4e6542b34fd38f4ceec8aafd091b702",
       "length": 10309,
+      "sha256": "fb8ad3f344e95d8928d421bef3a71948f4e6542b34fd38f4ceec8aafd091b702",
       "path": "src/FileMapper.Engine/ScanCoordinator.cs"
     },
     {
-      "sha256": "8ab93cba3c618a4a3093a7d3741c9fa3d75d1727eedfcd42ec9d55735a3f13dc",
       "length": 16420,
+      "sha256": "8ab93cba3c618a4a3093a7d3741c9fa3d75d1727eedfcd42ec9d55735a3f13dc",
       "path": "src/FileMapper.Engine/SemanticWorkspace.cs"
     },
     {
-      "sha256": "cd07e8de2d96ebf91f38253b5d809b2f5d08e0d3627e64a899102fbbb40e8ca8",
       "length": 21771,
+      "sha256": "cd07e8de2d96ebf91f38253b5d809b2f5d08e0d3627e64a899102fbbb40e8ca8",
       "path": "src/FileMapper.Engine/SourceHarvestConnectionStore.cs"
     },
     {
-      "sha256": "0f04dd88e034ac81bfc43cda62b0d57330a360fe9d7872356091231ff09549ee",
       "length": 24333,
+      "sha256": "0f04dd88e034ac81bfc43cda62b0d57330a360fe9d7872356091231ff09549ee",
       "path": "src/FileMapper.Engine/SourceHarvestWorkspace.cs"
     },
     {
-      "sha256": "7d61a465398bc6e3a1e9d34eeafd4aacf59da65e1378247cb171b7796d900a57",
       "length": 3661,
+      "sha256": "7d61a465398bc6e3a1e9d34eeafd4aacf59da65e1378247cb171b7796d900a57",
       "path": "src/FileMapper.Engine/SourceSemanticArtifacts.cs"
     },
     {
-      "sha256": "80608e7622a8828d0fac48d8729511037fa9b8523fa3d5a7522e166f19d25e2b",
       "length": 1499,
+      "sha256": "80608e7622a8828d0fac48d8729511037fa9b8523fa3d5a7522e166f19d25e2b",
       "path": "src/FileMapper.Engine/SourceSemanticCatalog.Contracts.cs"
     },
     {
-      "sha256": "0a8ee906ffc418d8ae0871e305485a141c927c6ebb2d12535b74714d60356366",
       "length": 13144,
+      "sha256": "0a8ee906ffc418d8ae0871e305485a141c927c6ebb2d12535b74714d60356366",
       "path": "src/FileMapper.Engine/SourceSemanticCatalog.cs"
     },
     {
-      "sha256": "c4ccfa1b264f4949e1753e1b56cf0ed8b6887d7e48957bf601e0a0c682143ca9",
       "length": 13140,
+      "sha256": "c4ccfa1b264f4949e1753e1b56cf0ed8b6887d7e48957bf601e0a0c682143ca9",
       "path": "src/FileMapper.Engine/SourceSemanticCatalog.IO.cs"
     },
     {
-      "sha256": "e5e456f41b728b8f5c5afef23a149ccb2b6ec58569d1748b4ecbb13adbbb03ef",
       "length": 18678,
+      "sha256": "e5e456f41b728b8f5c5afef23a149ccb2b6ec58569d1748b4ecbb13adbbb03ef",
       "path": "src/FileMapper.Engine/SourceSemanticCatalog.Projection.cs"
     },
     {
-      "sha256": "1674becbd1eed37d6b4ccaec791f3a2fbcf79549a6a20aaec4e41578133ed6c9",
       "length": 9128,
+      "sha256": "1674becbd1eed37d6b4ccaec791f3a2fbcf79549a6a20aaec4e41578133ed6c9",
       "path": "src/FileMapper.Engine/SourceSemanticCatalog.Proof.cs"
     },
     {
-      "sha256": "86de9781a8d9facabd4beba3edbb66346713738f9867a036d15f0e8a76a6b1cc",
       "length": 16839,
+      "sha256": "86de9781a8d9facabd4beba3edbb66346713738f9867a036d15f0e8a76a6b1cc",
       "path": "src/FileMapper.Engine/SourceSemanticCatalog.Read.cs"
     },
     {
-      "sha256": "ed763a8a7d71b07f06cda57118c9b6221e0f0d46ba3851c67067009b907848c1",
       "length": 3842,
+      "sha256": "ed763a8a7d71b07f06cda57118c9b6221e0f0d46ba3851c67067009b907848c1",
       "path": "src/FileMapper.Engine/SourceSemanticContracts.cs"
     },
     {
-      "sha256": "2aff8280f2b2d01c93a29201a81cbb9a6e33f6c56a7141259f5752b2dcef04b6",
       "length": 1137,
+      "sha256": "2aff8280f2b2d01c93a29201a81cbb9a6e33f6c56a7141259f5752b2dcef04b6",
       "path": "src/FileMapper.Engine/SourceSemanticCoordinator.Contracts.cs"
     },
     {
-      "sha256": "bc68eb65e6ff5e7dea4a6c7117518e436de885acdef3630ba4e6dbb1bc735f94",
       "length": 21563,
+      "sha256": "bc68eb65e6ff5e7dea4a6c7117518e436de885acdef3630ba4e6dbb1bc735f94",
       "path": "src/FileMapper.Engine/SourceSemanticCoordinator.cs"
     },
     {
-      "sha256": "250472060f13910fda28699cabc1faab6990d29249b46b505fc0bc990da7efa5",
       "length": 7953,
+      "sha256": "250472060f13910fda28699cabc1faab6990d29249b46b505fc0bc990da7efa5",
       "path": "src/FileMapper.Engine/SourceSemanticCoordinator.Persistence.cs"
     },
     {
-      "sha256": "6ebe9817a37c2f0d34fb3d654f07d512d94a088e3736d443defb6d1d7c9749e9",
       "length": 17799,
+      "sha256": "6ebe9817a37c2f0d34fb3d654f07d512d94a088e3736d443defb6d1d7c9749e9",
       "path": "src/FileMapper.Engine/SourceSemanticInputReader.cs"
     },
     {
-      "sha256": "2bb4ff486a4aa28d3f01451d49b97d6873a3ff86fb184c80b50c769e79e095a2",
       "length": 9361,
+      "sha256": "2bb4ff486a4aa28d3f01451d49b97d6873a3ff86fb184c80b50c769e79e095a2",
       "path": "src/FileMapper.Engine/SourceSemanticLinker.cs"
     },
     {
-      "sha256": "a7b8841b70ce2d6f85e8b65865ddd92b4112431195867aff0b29467c2b036bad",
       "length": 19528,
+      "sha256": "a7b8841b70ce2d6f85e8b65865ddd92b4112431195867aff0b29467c2b036bad",
       "path": "src/FileMapper.Engine/SourceSemanticWorkspace.cs"
     },
     {
-      "sha256": "a6433935194d83e1f847a7227ee928109bde67d076eb0e27c290a3f33c22e9a6",
       "length": 8531,
+      "sha256": "a6433935194d83e1f847a7227ee928109bde67d076eb0e27c290a3f33c22e9a6",
       "path": "src/FileMapper.Engine/SpatialWorkspace.cs"
     },
     {
-      "sha256": "c5898777cdb35a1ffaa4700ff2d234f7befd420531bd88925723e419fe9522fa",
       "length": 22897,
+      "sha256": "c5898777cdb35a1ffaa4700ff2d234f7befd420531bd88925723e419fe9522fa",
       "path": "src/FileMapper.Engine/WordLibraryWorkspace.cs"
     },
     {
-      "sha256": "2970109ecec81eb9959c2b339e56d500092a7495f0610f50d70e153b6c18ce6e",
       "length": 9096,
+      "sha256": "2970109ecec81eb9959c2b339e56d500092a7495f0610f50d70e153b6c18ce6e",
       "path": "src/FileMapper.Extract.CSharp/Acceptance/Corpus/Cases.cs"
     },
     {
-      "sha256": "30242429cbfda3d89b1025171f499ca4d37fabcf7a919fc4abc87c7d7a4b4dd5",
       "length": 4460,
+      "sha256": "30242429cbfda3d89b1025171f499ca4d37fabcf7a919fc4abc87c7d7a4b4dd5",
       "path": "src/FileMapper.Extract.CSharp/Acceptance/Corpus/labels.json"
     },
     {
-      "sha256": "c0c13b9f4cad0f2aa1627c8d9ae7b0cc8573698b9ebda72b5a795b2addddb003",
       "length": 448,
+      "sha256": "c0c13b9f4cad0f2aa1627c8d9ae7b0cc8573698b9ebda72b5a795b2addddb003",
       "path": "src/FileMapper.Extract.CSharp/Acceptance/CSharp.Acceptance.csproj"
     },
     {
-      "sha256": "efe0ff8c5fb0ce65731dd8809e2337da4bd05882be564d4f020ec96c4945121e",
       "length": 4444,
+      "sha256": "efe0ff8c5fb0ce65731dd8809e2337da4bd05882be564d4f020ec96c4945121e",
       "path": "src/FileMapper.Extract.CSharp/Acceptance/packages.lock.json"
     },
     {
-      "sha256": "fb19956116f5802153f4629a7d9c4390ec79d385d46a8a1344b2ae180ab17a89",
       "length": 6646,
+      "sha256": "fb19956116f5802153f4629a7d9c4390ec79d385d46a8a1344b2ae180ab17a89",
       "path": "src/FileMapper.Extract.CSharp/Acceptance/Program.cs"
     },
     {
-      "sha256": "69c53c9b1be4ec2263b44071bc585ad7f61157bb08244c85d31f54d4ef2f18b3",
       "length": 179,
+      "sha256": "69c53c9b1be4ec2263b44071bc585ad7f61157bb08244c85d31f54d4ef2f18b3",
       "path": "src/FileMapper.Extract.CSharp/Acceptance/TopLevel/Program.cs"
     },
     {
-      "sha256": "8c1c3950ffb69eee4370c099e2f3f7919f29b8fdb53b18c8876c2c272170c180",
       "length": 21833,
+      "sha256": "8c1c3950ffb69eee4370c099e2f3f7919f29b8fdb53b18c8876c2c272170c180",
       "path": "src/FileMapper.Extract.CSharp/CSharpExtractor.cs"
     },
     {
-      "sha256": "c67dde9b9ec6ab03c9506bfade281d29f51aa2757fd28d5b33a2d4b5da89857b",
       "length": 39127,
+      "sha256": "c67dde9b9ec6ab03c9506bfade281d29f51aa2757fd28d5b33a2d4b5da89857b",
       "path": "src/FileMapper.Extract.CSharp/CSharpFlowEngine.cs"
     },
     {
-      "sha256": "b6d932b42785ab0f290718c1f3ee8f6be1bd708fb9fe0e722c3aabf5f41927e0",
       "length": 256,
+      "sha256": "b6d932b42785ab0f290718c1f3ee8f6be1bd708fb9fe0e722c3aabf5f41927e0",
       "path": "src/FileMapper.Extract.CSharp/FileMapper.Extract.CSharp.csproj"
     },
     {
-      "sha256": "510aeaefb7ea18d6b0f337632c81dc8e12157ca962f74e5e8252ff6dbc4b0eaa",
       "length": 6960,
+      "sha256": "510aeaefb7ea18d6b0f337632c81dc8e12157ca962f74e5e8252ff6dbc4b0eaa",
       "path": "src/FileMapper.Extract.CSharp/FlowModels.cs"
     },
     {
-      "sha256": "9f8c6bbafcd39f7cebebec06c20406444cdcf9f48f22704aa6292b65031377ea",
       "length": 1161,
+      "sha256": "9f8c6bbafcd39f7cebebec06c20406444cdcf9f48f22704aa6292b65031377ea",
       "path": "src/FileMapper.Extract.CSharp/packages.lock.json"
     },
     {
-      "sha256": "e24afbbf96f400cca0c372ee12ab0bba48ce555942a30895595a311bbb6fcfdc",
       "length": 8465,
+      "sha256": "e24afbbf96f400cca0c372ee12ab0bba48ce555942a30895595a311bbb6fcfdc",
       "path": "src/FileMapper.Extract.CSharp/README.md"
     },
     {
-      "sha256": "46276ff1bc401ba1137c8af015f6be1389d0fe9665febbbcdf9169ceba2c02f0",
       "length": 12759,
+      "sha256": "46276ff1bc401ba1137c8af015f6be1389d0fe9665febbbcdf9169ceba2c02f0",
       "path": "src/FileMapper.Extract.CSharp/SuppliedSource.cs"
     },
     {
-      "sha256": "c451dba8245d50ddf9716adc64da37debfb3d0d652e699abab323ddde0925443",
       "length": 4611,
+      "sha256": "c451dba8245d50ddf9716adc64da37debfb3d0d652e699abab323ddde0925443",
       "path": "src/FileMapper.Extract.PowerShell/CommandCatalog.cs"
     },
     {
-      "sha256": "692be8fa1a0986997268bd1c6fb0a27d39697b60dde5b850592f9b9e73e646b7",
       "length": 308,
+      "sha256": "692be8fa1a0986997268bd1c6fb0a27d39697b60dde5b850592f9b9e73e646b7",
       "path": "src/FileMapper.Extract.PowerShell/FileMapper.Extract.PowerShell.csproj"
     },
     {
-      "sha256": "74e8724382c85d580551acec6422365663e646ecb4e129f0f54cebff90c8e03b",
       "length": 15066,
+      "sha256": "74e8724382c85d580551acec6422365663e646ecb4e129f0f54cebff90c8e03b",
       "path": "src/FileMapper.Extract.PowerShell/packages.lock.json"
     },
     {
-      "sha256": "9539f71606f4673d49101a695fbd34c0d091f60fc0349db30505b3f88cc51510",
       "length": 6092,
+      "sha256": "9539f71606f4673d49101a695fbd34c0d091f60fc0349db30505b3f88cc51510",
       "path": "src/FileMapper.Extract.PowerShell/PowerShellExtractor.cs"
     },
     {
-      "sha256": "9cff73a936f8bd3fc8209e78e65c671836450bb4c37bbf38b61d5d65cebe28f8",
       "length": 48157,
+      "sha256": "9cff73a936f8bd3fc8209e78e65c671836450bb4c37bbf38b61d5d65cebe28f8",
       "path": "src/FileMapper.Extract.PowerShell/PowerShellFlowAnalyzer.cs"
     },
     {
-      "sha256": "6d750edab5dfb37f6df33335f2a04ec206b2d4182668fe5639ad5cc702247cfb",
       "length": 10525,
+      "sha256": "6d750edab5dfb37f6df33335f2a04ec206b2d4182668fe5639ad5cc702247cfb",
       "path": "src/FileMapper.Extract.PowerShell/PowerShellMetadata.cs"
     },
     {
-      "sha256": "4bccbf53adfbc22c94382aa8ca00a9ec05751d3e1eeb9ee0af3e6806f89008b9",
       "length": 10190,
+      "sha256": "4bccbf53adfbc22c94382aa8ca00a9ec05751d3e1eeb9ee0af3e6806f89008b9",
       "path": "src/FileMapper.Extract.PowerShell/README.md"
     },
     {
-      "sha256": "d07db694484ffc5154c7680b4e8c2264340791cac1c75d01f36e42b015f1dd4f",
       "length": 5328,
+      "sha256": "d07db694484ffc5154c7680b4e8c2264340791cac1c75d01f36e42b015f1dd4f",
       "path": "src/FileMapper.Harvest/BoundedGitHubBlobs.cs"
     },
     {
-      "sha256": "84a10949b29e91408f427b09b443940a7bcf849ae0b04b920300a28553e0fb88",
       "length": 230,
+      "sha256": "84a10949b29e91408f427b09b443940a7bcf849ae0b04b920300a28553e0fb88",
       "path": "src/FileMapper.Harvest/FileMapper.Harvest.csproj"
     },
     {
-      "sha256": "f9d0eda72e63e93b6ff3704fcbb6b27eebd845643cdd289a8a842b4fa8c1b664",
       "length": 29384,
+      "sha256": "f9d0eda72e63e93b6ff3704fcbb6b27eebd845643cdd289a8a842b4fa8c1b664",
       "path": "src/FileMapper.Harvest/GitSourceCapture.cs"
     },
     {
-      "sha256": "2d0dec8fb5b19bc604d619802f457b7a08415de62536f834998e718f77fdde95",
       "length": 7491,
+      "sha256": "2d0dec8fb5b19bc604d619802f457b7a08415de62536f834998e718f77fdde95",
       "path": "src/FileMapper.Harvest/GitSourceProcess.cs"
     },
     {
-      "sha256": "3ab9f1299d9b92e122b1599d6d89c179a11fa495c81ac3ff2c7431a7096c10cc",
       "length": 1867,
+      "sha256": "3ab9f1299d9b92e122b1599d6d89c179a11fa495c81ac3ff2c7431a7096c10cc",
       "path": "src/FileMapper.Harvest/HarvestContracts.cs"
     },
     {
-      "sha256": "2bf4a8a97708c51c38fc36572c7c0a23b5e1d08d303e4d16ddd670dec365a75b",
       "length": 349,
+      "sha256": "2bf4a8a97708c51c38fc36572c7c0a23b5e1d08d303e4d16ddd670dec365a75b",
       "path": "src/FileMapper.Harvest/packages.lock.json"
     },
     {
-      "sha256": "9cbedd6a7ed3ab3070236d310b645b9c86206d67245c838f96d81cbde8c0b850",
       "length": 9294,
+      "sha256": "9cbedd6a7ed3ab3070236d310b645b9c86206d67245c838f96d81cbde8c0b850",
       "path": "src/FileMapper.Harvest/SourceBlobStore.cs"
     },
     {
-      "sha256": "df7086be3def2306d3329d066d77d9be9bc29ae32465bd8b776cf64b975a3743",
       "length": 24523,
+      "sha256": "df7086be3def2306d3329d066d77d9be9bc29ae32465bd8b776cf64b975a3743",
       "path": "src/FileMapper.Harvest/SourceLexicon.cs"
     },
     {
-      "sha256": "71b74dfdd12a9515e2d0e0586d738a8b52b8ce7129f70321d6e18c5d340df2ff",
       "length": 13182,
+      "sha256": "71b74dfdd12a9515e2d0e0586d738a8b52b8ce7129f70321d6e18c5d340df2ff",
       "path": "src/FileMapper.PowerShell/Cmdlets.cs"
     },
     {
-      "sha256": "0ed059cf4c99dc834a73453ea98d96368504b70c68a251e175c798499741f118",
       "length": 2374,
+      "sha256": "0ed059cf4c99dc834a73453ea98d96368504b70c68a251e175c798499741f118",
       "path": "src/FileMapper.PowerShell/ContextCmdlet.cs"
     },
     {
-      "sha256": "2a05733eb721f68f831b57bd4d19d9c8846ca9eda8e02f45ee354327791e7a1f",
       "length": 6455,
+      "sha256": "2a05733eb721f68f831b57bd4d19d9c8846ca9eda8e02f45ee354327791e7a1f",
       "path": "src/FileMapper.PowerShell/FileMapper.format.ps1xml"
     },
     {
-      "sha256": "180661f57fd671d3aff8a9c9b250223fc9f79045d56401912f6ba49f3b995192",
       "length": 392,
+      "sha256": "180661f57fd671d3aff8a9c9b250223fc9f79045d56401912f6ba49f3b995192",
       "path": "src/FileMapper.PowerShell/FileMapper.PowerShell.csproj"
     },
     {
-      "sha256": "194ad4fd56402a23603c2c26f1a590f39a238ee2cc03abc7db73aa4655fee332",
-      "length": 2230,
+      "length": 2244,
+      "sha256": "9c5c97547c2337a23e18ca40a5614504a29fd9897a28ed54fce1cacea97364ad",
       "path": "src/FileMapper.PowerShell/FileMapper.psd1"
     },
     {
-      "sha256": "141c7504637f0d7f6cd1653232c48a2f0798a0882ceed78f3c71bd9174f8a8a2",
       "length": 8496,
+      "sha256": "141c7504637f0d7f6cd1653232c48a2f0798a0882ceed78f3c71bd9174f8a8a2",
       "path": "src/FileMapper.PowerShell/HashingCmdlets.cs"
     },
     {
-      "sha256": "07cc0d799d7900eda656495b3e4f33a428a5d74357f9da8b1778fe4d72cd8cf5",
       "length": 5008,
+      "sha256": "07cc0d799d7900eda656495b3e4f33a428a5d74357f9da8b1778fe4d72cd8cf5",
       "path": "src/FileMapper.PowerShell/HashingModels.cs"
     },
     {
-      "sha256": "f8ee47d62bb00ed7fea03c046f6428cf668ac939cf4fcf9374cfcfbe6e5d0e25",
       "length": 13286,
+      "sha256": "f8ee47d62bb00ed7fea03c046f6428cf668ac939cf4fcf9374cfcfbe6e5d0e25",
       "path": "src/FileMapper.PowerShell/LearningCmdlets.cs"
     },
     {
-      "sha256": "f0c8be5689d72b1fae7ad08ca802299164e9454759be6db76043275c778942de",
       "length": 5302,
+      "sha256": "f0c8be5689d72b1fae7ad08ca802299164e9454759be6db76043275c778942de",
       "path": "src/FileMapper.PowerShell/LearningModels.cs"
     },
     {
-      "sha256": "1a852e3688605f93d26ea08ca193ea1e2fa572f0a6b8381ba82153f78017b26c",
       "length": 4844,
+      "sha256": "1a852e3688605f93d26ea08ca193ea1e2fa572f0a6b8381ba82153f78017b26c",
       "path": "src/FileMapper.PowerShell/Models.cs"
     },
     {
-      "sha256": "cbf8834f4d457c6a90a1727241205baa285b77d77a24fe235542449e663fc3b6",
       "length": 13850,
+      "sha256": "cbf8834f4d457c6a90a1727241205baa285b77d77a24fe235542449e663fc3b6",
       "path": "src/FileMapper.PowerShell/packages.lock.json"
     },
     {
-      "sha256": "de61e88dfdbe158ce2272e5be409c97680dfa4a046437f58da654d168a9a15d6",
       "length": 22310,
+      "sha256": "de61e88dfdbe158ce2272e5be409c97680dfa4a046437f58da654d168a9a15d6",
       "path": "src/FileMapper.PowerShell/README.md"
     },
     {
-      "sha256": "8d636668af5095b95da1aa91274d088627ac7f53846b8d7e4c72abc71820f27d",
       "length": 13071,
+      "sha256": "8d636668af5095b95da1aa91274d088627ac7f53846b8d7e4c72abc71820f27d",
       "path": "src/FileMapper.PowerShell/RobocopyCmdlets.cs"
     },
     {
-      "sha256": "2ce3d8072961ebceb94c22214e46f17842e7364cfa48a4fa1c50dd23a5df1cb6",
       "length": 5918,
+      "sha256": "2ce3d8072961ebceb94c22214e46f17842e7364cfa48a4fa1c50dd23a5df1cb6",
       "path": "src/FileMapper.PowerShell/RobocopyModels.cs"
     },
     {
-      "sha256": "66033ba1d89d75480f1b55c4bbeaeaeff14f1dc862ba78d78496010f1afa68d4",
       "length": 12611,
+      "sha256": "66033ba1d89d75480f1b55c4bbeaeaeff14f1dc862ba78d78496010f1afa68d4",
       "path": "src/FileMapper.PowerShell/SemanticCmdlets.cs"
     },
     {
-      "sha256": "71f653d56525eadee7ec21e3bbe224f1f1e6a83ac87144c1ef21d08f5626bf55",
       "length": 14025,
+      "sha256": "71f653d56525eadee7ec21e3bbe224f1f1e6a83ac87144c1ef21d08f5626bf55",
       "path": "src/FileMapper.PowerShell/SemanticExportCmdlet.cs"
     },
     {
-      "sha256": "d9bff55d7410a5e015070baea7f67cea79e04fac750e7c95e318f1662771be5e",
       "length": 10295,
+      "sha256": "d9bff55d7410a5e015070baea7f67cea79e04fac750e7c95e318f1662771be5e",
       "path": "src/FileMapper.PowerShell/SemanticGzipFraming.cs"
     },
     {
-      "sha256": "53450e681a68678b2a80ce067158531e75a8f11d893688dd104e9d97e852ba5a",
       "length": 7731,
+      "sha256": "53450e681a68678b2a80ce067158531e75a8f11d893688dd104e9d97e852ba5a",
       "path": "src/FileMapper.PowerShell/SemanticModels.cs"
     },
     {
-      "sha256": "6e94b878de1fe60f2c36cfa1b92c0a73b86b349e96523920fb8456a723a9a64f",
       "length": 155,
+      "sha256": "6e94b878de1fe60f2c36cfa1b92c0a73b86b349e96523920fb8456a723a9a64f",
       "path": "src/FileMapper.Semantics/FileMapper.Semantics.csproj"
     },
     {
-      "sha256": "b5ac4766e2ef12107252e0478e4f8ca0f0295501d0f435bf5b54d7f890daddf5",
       "length": 196,
+      "sha256": "b5ac4766e2ef12107252e0478e4f8ca0f0295501d0f435bf5b54d7f890daddf5",
       "path": "src/FileMapper.Semantics/packages.lock.json"
     },
     {
-      "sha256": "3513c2338cef4d7852e4dee5ce2f7f86e146c8c14b5251f1edd148fb6961cf6b",
       "length": 18842,
+      "sha256": "3513c2338cef4d7852e4dee5ce2f7f86e146c8c14b5251f1edd148fb6961cf6b",
       "path": "src/FileMapper.Semantics/PatternLearning.cs"
     },
     {
-      "sha256": "960089e0a63568708223cc4cbffd54ac0c9022a30918a34dfb4ce859a224b105",
       "length": 15124,
+      "sha256": "960089e0a63568708223cc4cbffd54ac0c9022a30918a34dfb4ce859a224b105",
       "path": "src/FileMapper.Semantics/PatternLearningFeatures.cs"
     },
     {
-      "sha256": "060447e6e0482380cc932808d1f944def1fa8b9b9c1cc3f6a840f5ba02af366e",
       "length": 3690,
+      "sha256": "060447e6e0482380cc932808d1f944def1fa8b9b9c1cc3f6a840f5ba02af366e",
       "path": "src/FileMapper.Semantics/PatternLearningMath.cs"
     },
     {
-      "sha256": "646562f02dab8a74fd83bf22fc316e77377a4bcae6d258d06e3b20b8a0735286",
       "length": 6552,
+      "sha256": "646562f02dab8a74fd83bf22fc316e77377a4bcae6d258d06e3b20b8a0735286",
       "path": "src/FileMapper.Semantics/PatternLearningModels.cs"
     },
     {
-      "sha256": "542eab04b05bb3184fd3e524981c1da4dbf40183b45cfe923bb78d0050087159",
       "length": 24028,
+      "sha256": "542eab04b05bb3184fd3e524981c1da4dbf40183b45cfe923bb78d0050087159",
       "path": "src/FileMapper.Semantics/SemanticGame.cs"
     },
     {
-      "sha256": "2bc968796ec1cf58d40e2b1078fc8efade4890724fa00ba790485f555324a488",
       "length": 17806,
+      "sha256": "2bc968796ec1cf58d40e2b1078fc8efade4890724fa00ba790485f555324a488",
       "path": "src/FileMapper.Semantics/SemanticObjects.cs"
     },
     {
-      "sha256": "d7cf272a73983e8a92bd05a79a96e643b515e53f502e444bf48b3eea99a6e8a2",
       "length": 3344,
+      "sha256": "d7cf272a73983e8a92bd05a79a96e643b515e53f502e444bf48b3eea99a6e8a2",
       "path": "src/FileMapper.Semantics/ShapeCatalog.cs"
     },
     {
-      "sha256": "8480260663a70f4ea603aa3fb9002736a967469b45f93ecfbcf0c51a536d395a",
-      "length": 24529,
+      "length": 25546,
+      "sha256": "5e1946989f8f8196bbb9a45c511b220749f84f730fa1c619c23e6a13d9d5b5d0",
       "path": "src/FileMapper.Semantics/SpatialComputer.cs"
     },
     {
-      "sha256": "fea4c79d47b4398263c798089ee804d7f6992abdf3d786592f474b73fbd8eb8c",
       "length": 24121,
+      "sha256": "fea4c79d47b4398263c798089ee804d7f6992abdf3d786592f474b73fbd8eb8c",
       "path": "src/FileMapper.Semantics/SpatialGame.cs"
     },
     {
-      "sha256": "2784ddca4b0f9f5436e43b32dcd20c5b14efff88abcd070ed53d32cbcd8ed937",
       "length": 5090,
+      "sha256": "2784ddca4b0f9f5436e43b32dcd20c5b14efff88abcd070ed53d32cbcd8ed937",
       "path": "src/FileMapper.Semantics/SpatialGameGeometry.cs"
     },
     {
-      "sha256": "0dbbb05f4afce2b4fdd24af5b906da8e9cae2e002270472554ca74f7149859b5",
       "length": 4296,
+      "sha256": "0dbbb05f4afce2b4fdd24af5b906da8e9cae2e002270472554ca74f7149859b5",
       "path": "src/FileMapper.Semantics/SpatialGameModels.cs"
     },
     {
-      "sha256": "74ec337c3947cab4e79b73a0df04c151b03c7a3ff088e1047fb83b932628f632",
       "length": 8928,
+      "sha256": "74ec337c3947cab4e79b73a0df04c151b03c7a3ff088e1047fb83b932628f632",
       "path": "src/FileMapper.Semantics/SpatialOpponent.cs"
     },
     {
-      "sha256": "54cbd96bd9616fc9cf8ad203d722fe4ffe3938fa07a67de865d9f9b3a437b972",
       "length": 692,
+      "sha256": "54cbd96bd9616fc9cf8ad203d722fe4ffe3938fa07a67de865d9f9b3a437b972",
       "path": "src/FileMapper.Service/EndpointCapabilities.cs"
     },
     {
-      "sha256": "4f002f330a9f8846f9fa03e217d124ceedc247424eaa3870325f04f57675f9d8",
       "length": 241,
+      "sha256": "4f002f330a9f8846f9fa03e217d124ceedc247424eaa3870325f04f57675f9d8",
       "path": "src/FileMapper.Service/FileMapper.Service.csproj"
     },
     {
-      "sha256": "3e1845abfefe4b3066e96604d4efc390e75f20db95e835416a3395c8cf9b17ab",
       "length": 6423,
+      "sha256": "3e1845abfefe4b3066e96604d4efc390e75f20db95e835416a3395c8cf9b17ab",
       "path": "src/FileMapper.Service/HarvestEndpoints.cs"
     },
     {
-      "sha256": "259e2c3c5b8bd2cbf29badc7365be1f19492d25ff7751eef92e437243df6bd2d",
       "length": 5644,
+      "sha256": "259e2c3c5b8bd2cbf29badc7365be1f19492d25ff7751eef92e437243df6bd2d",
       "path": "src/FileMapper.Service/HashingEndpoints.cs"
     },
     {
-      "sha256": "38099e397ed6fe78214a4b430acaa51e86c1db63b51b5ba62428a05acd321a6b",
-      "length": 10328,
+      "length": 11712,
+      "sha256": "ffb2cd54e97f42b269a71123efbf2325e755ad88d0de4b9775101a8e8e835df2",
       "path": "src/FileMapper.Service/LearningEndpoints.cs"
     },
     {
-      "sha256": "a89b21bb50b5a9a97daa3afbb7fcc131bdc3100838a977c8696f8ca403987ff1",
       "length": 6931,
+      "sha256": "a89b21bb50b5a9a97daa3afbb7fcc131bdc3100838a977c8696f8ca403987ff1",
       "path": "src/FileMapper.Service/LocalCredentials.cs"
     },
     {
-      "sha256": "d4a117bda350c5f0d370c6ad1a5f96bfa506171ea7ecbbf86a7c58d29544e9ed",
       "length": 17191,
+      "sha256": "d4a117bda350c5f0d370c6ad1a5f96bfa506171ea7ecbbf86a7c58d29544e9ed",
       "path": "src/FileMapper.Service/packages.lock.json"
     },
     {
-      "sha256": "01a476c890dc0f11a0f30ede1021ff55bc5b5931214aae6246b932ce3dac2239",
-      "length": 17022,
+      "length": 17081,
+      "sha256": "7a4d130987136559d8339997093a8454c1c9e5e7d957da97d863fb32fc205c64",
       "path": "src/FileMapper.Service/Program.cs"
     },
     {
-      "sha256": "2df6562e97e13afd9b6e2053962f9517171c0d9747b41a735379be2d14ab8cd2",
       "length": 3375,
+      "sha256": "2df6562e97e13afd9b6e2053962f9517171c0d9747b41a735379be2d14ab8cd2",
       "path": "src/FileMapper.Service/RobocopyEndpoints.cs"
     },
     {
-      "sha256": "dd85216c210a567bb8bb7d819ba5318f81f6a1e6e1cca9b84635a8f9c2633860",
       "length": 6084,
+      "sha256": "dd85216c210a567bb8bb7d819ba5318f81f6a1e6e1cca9b84635a8f9c2633860",
       "path": "src/FileMapper.Service/SemanticEndpoints.cs"
     },
     {
-      "sha256": "0619e5c3ac0606a2de6ed5d95670896475333ded0cefc844f59f8eae556a93d9",
       "length": 5597,
+      "sha256": "0619e5c3ac0606a2de6ed5d95670896475333ded0cefc844f59f8eae556a93d9",
       "path": "src/FileMapper.Service/SourceSemanticEndpoints.cs"
     },
     {
-      "sha256": "e2a2d831ad465a56f83d83acd9e1474b8fd4b850a5ebe08c8c0416591ae0232a",
       "length": 1054,
+      "sha256": "e2a2d831ad465a56f83d83acd9e1474b8fd4b850a5ebe08c8c0416591ae0232a",
       "path": "src/FileMapper.Service/WordLibraryEndpoints.cs"
     },
     {
-      "sha256": "61a1f509928220403acee13b8f4e5780dd4a02ee65858e2e3f88340f489c5926",
       "length": 22464,
+      "sha256": "61a1f509928220403acee13b8f4e5780dd4a02ee65858e2e3f88340f489c5926",
       "path": "src/FileMapper.Service/wwwroot/app.css"
     },
     {
-      "sha256": "2e1bca44820134d67ccb09ed291f4e82ac0645483f19f55593dfaaf3d3c6e272",
-      "length": 55329,
+      "length": 56381,
+      "sha256": "52d9f921b5792ebcace28f8fead14dd6ce2044a32106bad41a27717e6eb9c6ea",
       "path": "src/FileMapper.Service/wwwroot/app.js"
     },
     {
-      "sha256": "a6ad6ee9044683b6ee241e32349b698427d5694f6d00102228aafe4eda8a2f9e",
-      "length": 1558,
+      "length": 3087,
+      "sha256": "6b06bc49dd29165663087cf31c00f3e9e83b59e25e926aa46e9eadcb58995ff1",
       "path": "src/FileMapper.Service/wwwroot/edition-practice.css"
     },
     {
-      "sha256": "6d053957153b2df9f3fb0090ad3343ad9b3363955c6548d782d3b41bbd6e3d25",
-      "length": 29788,
+      "length": 38266,
+      "sha256": "13cca1a31bb7fe4bafb903169552fedf7ed58ecac22760d71177c177d179b202",
       "path": "src/FileMapper.Service/wwwroot/edition-practice.js"
     },
     {
-      "sha256": "d8ab38990de51bdcdbeead1ee8eb678518b8f4f0f9480b766fea2dd334122e1a",
       "length": 9257,
+      "sha256": "d8ab38990de51bdcdbeead1ee8eb678518b8f4f0f9480b766fea2dd334122e1a",
       "path": "src/FileMapper.Service/wwwroot/hashing-ui.css"
     },
     {
-      "sha256": "521217f117ffa95e44134275a828fb85c8837a6adbfcdfb63a292381edf5ab59",
       "length": 40165,
+      "sha256": "521217f117ffa95e44134275a828fb85c8837a6adbfcdfb63a292381edf5ab59",
       "path": "src/FileMapper.Service/wwwroot/hashing-ui.js"
     },
     {
-      "sha256": "1d29ce38b43c9d545518eca0bda375cda537bab233dd6e7da0f0e0e2635c3ed5",
-      "length": 19788,
+      "length": 19916,
+      "sha256": "e1e9931359f0cc07537b31c9942e4291e6255ee263e279f88ed6ad6aad139a62",
       "path": "src/FileMapper.Service/wwwroot/index.html"
     },
     {
-      "sha256": "b65854835251a511b5cea1313655345f3260be42436b2266544a0250352cf8ea",
       "length": 5181,
+      "sha256": "b65854835251a511b5cea1313655345f3260be42436b2266544a0250352cf8ea",
       "path": "src/FileMapper.Service/wwwroot/learning-arena.css"
     },
     {
-      "sha256": "e4fc1274dc7d6479d19816d7b9ef3858b2b35537b4e5d71754acff6e1e88bc93",
       "length": 49682,
+      "sha256": "e4fc1274dc7d6479d19816d7b9ef3858b2b35537b4e5d71754acff6e1e88bc93",
       "path": "src/FileMapper.Service/wwwroot/learning-arena.js"
     },
     {
-      "sha256": "92a767e3a343b6bfc346180ab6619246379a3a68adcbce78b43f670479093219",
       "length": 3721,
+      "sha256": "92a767e3a343b6bfc346180ab6619246379a3a68adcbce78b43f670479093219",
       "path": "src/FileMapper.Service/wwwroot/robocopy-ui.css"
     },
     {
-      "sha256": "31f9bda83435cca8e7a9762c20ccf35285a5c5ff04866af9955dbea9f7e9a53b",
       "length": 20603,
+      "sha256": "31f9bda83435cca8e7a9762c20ccf35285a5c5ff04866af9955dbea9f7e9a53b",
       "path": "src/FileMapper.Service/wwwroot/robocopy-ui.js"
     },
     {
-      "sha256": "eb1883069a8955904a1a8624c78c4d69ed72b5868573a28acfc1e26e09af8ac5",
       "length": 13182,
+      "sha256": "eb1883069a8955904a1a8624c78c4d69ed72b5868573a28acfc1e26e09af8ac5",
       "path": "src/FileMapper.Service/wwwroot/semantic-model-ui.css"
     },
     {
-      "sha256": "795fb992167ebc9a5ea33efa803ef5328ca6de65530189db27cf7b76e1a72531",
       "length": 36440,
+      "sha256": "795fb992167ebc9a5ea33efa803ef5328ca6de65530189db27cf7b76e1a72531",
       "path": "src/FileMapper.Service/wwwroot/semantic-model-ui.js"
     },
     {
-      "sha256": "ff9d741bcbaba2091112b5a0f6443f3657de4496554f749f6f348a7b071556cd",
       "length": 4331,
+      "sha256": "ff9d741bcbaba2091112b5a0f6443f3657de4496554f749f6f348a7b071556cd",
       "path": "src/FileMapper.Service/wwwroot/source-harvest.css"
     },
     {
-      "sha256": "d5766f5ece57e6c847108770467b00569a4f32fd7cf89732c2007c436b647128",
       "length": 18955,
+      "sha256": "d5766f5ece57e6c847108770467b00569a4f32fd7cf89732c2007c436b647128",
       "path": "src/FileMapper.Service/wwwroot/source-harvest.js"
     },
     {
-      "sha256": "2e863a9453b7577457f750a87f246dbe2d548ca106469104b347e8ecf84a53e6",
       "length": 11160,
+      "sha256": "2e863a9453b7577457f750a87f246dbe2d548ca106469104b347e8ecf84a53e6",
       "path": "src/FileMapper.Service/wwwroot/source-semantics.css"
     },
     {
-      "sha256": "414ccd417c4a2084e94c5d61159d37276d8cb8948c8403e64b3e26ce10b454a3",
       "length": 50411,
+      "sha256": "414ccd417c4a2084e94c5d61159d37276d8cb8948c8403e64b3e26ce10b454a3",
       "path": "src/FileMapper.Service/wwwroot/source-semantics.js"
     },
     {
-      "sha256": "223fcd4c65b2d67ed3f31581631cb84fe07461fafc3189f60bce0c5327dbb8e9",
       "length": 5081,
+      "sha256": "223fcd4c65b2d67ed3f31581631cb84fe07461fafc3189f60bce0c5327dbb8e9",
       "path": "src/FileMapper.Service/wwwroot/spatial-live.css"
     },
     {
-      "sha256": "4da338549d8890c8e6759ece2478749d4d7ca691e79c28196219cf4aea93f0f4",
       "length": 18360,
+      "sha256": "4da338549d8890c8e6759ece2478749d4d7ca691e79c28196219cf4aea93f0f4",
       "path": "src/FileMapper.Service/wwwroot/spatial-live.js"
     },
     {
-      "sha256": "ff3b4f4aa914aa6dff3e84f36ddd698c146f80b5bb91038ddc70c7b334fda055",
       "length": 14436,
+      "sha256": "ff3b4f4aa914aa6dff3e84f36ddd698c146f80b5bb91038ddc70c7b334fda055",
       "path": "src/FileMapper.Service/wwwroot/spatial-renderer.css"
     },
     {
-      "sha256": "47c3cf690065f1df40fd0525f82635d38a1556b6231e135e64ac88c67f41980c",
       "length": 34739,
+      "sha256": "47c3cf690065f1df40fd0525f82635d38a1556b6231e135e64ac88c67f41980c",
       "path": "src/FileMapper.Service/wwwroot/spatial-renderer.js"
     },
     {
-      "sha256": "3b7df7fec83e90fd5fcd80ef12509af08cfd6dcf4e0073b9f53f62ab0d8985da",
-      "length": 13121,
+      "length": 2247,
+      "sha256": "12b9225ebc0d7f518a623a8031cafda3eb9979a3b5d3473ae7e9e18ccd399544",
+      "path": "src/FileMapper.Service/wwwroot/storage-landscape.css"
+    },
+    {
+      "length": 11386,
+      "sha256": "1dd2a581edf24a756a9c75bdca982384cf965b1414ba12350edf2e0c790d26a0",
+      "path": "src/FileMapper.Service/wwwroot/storage-landscape.js"
+    },
+    {
+      "length": 13626,
+      "sha256": "9b48769bb0fbf865c764cda0c9661f3f62ad3e08c78140369bfdd7329a3e8490",
       "path": "src/FileMapper.Service/wwwroot/voxel-ui.css"
     },
     {
-      "sha256": "3bedbd2ee25c97a3dc4db3efac87f92822e6fb24245e46e26e7168ca6e0efbea",
       "length": 1101,
+      "sha256": "3bedbd2ee25c97a3dc4db3efac87f92822e6fb24245e46e26e7168ca6e0efbea",
       "path": "src/FileMapper.Service/wwwroot/word-library.css"
     },
     {
-      "sha256": "3b72259b0ce71ffd813d3d0f1d632a4e9775eaabc149c2c51b4f1bd756404752",
       "length": 15377,
+      "sha256": "3b72259b0ce71ffd813d3d0f1d632a4e9775eaabc149c2c51b4f1bd756404752",
       "path": "src/FileMapper.Service/wwwroot/word-library.js"
     },
     {
-      "sha256": "28323b44f22d3712c5d170a866fcf9630b362d25fecdba1021ef141772a73328",
       "length": 65956,
+      "sha256": "28323b44f22d3712c5d170a866fcf9630b362d25fecdba1021ef141772a73328",
       "path": "src/FileMapper.Storage/CompactSourceHarvestIndex.cs"
     },
     {
-      "sha256": "05f60892c2d707211630f894e2ac4bc7e01e93e57ac527a66369951f34682e00",
       "length": 1834,
+      "sha256": "05f60892c2d707211630f894e2ac4bc7e01e93e57ac527a66369951f34682e00",
       "path": "src/FileMapper.Storage/CompactSourceIndexContracts.cs"
     },
     {
-      "sha256": "4cceb89159e7c159096272621b7e5899f6ca48440745d82746fb64e5b8d2868a",
       "length": 294,
+      "sha256": "4cceb89159e7c159096272621b7e5899f6ca48440745d82746fb64e5b8d2868a",
       "path": "src/FileMapper.Storage/FileMapper.Storage.csproj"
     },
     {
-      "sha256": "ef65892e9b1a54271a2669d59929e656ad527d864aaa0df80a868d9571d05afa",
       "length": 1011,
+      "sha256": "ef65892e9b1a54271a2669d59929e656ad527d864aaa0df80a868d9571d05afa",
       "path": "src/FileMapper.Storage/ISourceHarvestReader.cs"
     },
     {
-      "sha256": "4f649a1279e955dce284948ead2d7a4a61b6850b8701887cfeb47eb7b82fb7fc",
       "length": 2950,
+      "sha256": "4f649a1279e955dce284948ead2d7a4a61b6850b8701887cfeb47eb7b82fb7fc",
       "path": "src/FileMapper.Storage/MapStore.Backup.cs"
     },
     {
-      "sha256": "8f10d0e089d8dec1f742d85434fb842f7de83f6d59267b4fc693049ee67e0f0e",
       "length": 7042,
+      "sha256": "8f10d0e089d8dec1f742d85434fb842f7de83f6d59267b4fc693049ee67e0f0e",
       "path": "src/FileMapper.Storage/MapStore.Context.cs"
     },
     {
-      "sha256": "6376454e482d8b98a1ca5279ba97cad1fa1c6d1cb85a43d58002b70538e3200c",
       "length": 22809,
+      "sha256": "6376454e482d8b98a1ca5279ba97cad1fa1c6d1cb85a43d58002b70538e3200c",
       "path": "src/FileMapper.Storage/MapStore.cs"
     },
     {
-      "sha256": "1b7ec4acb82efce4a802fdf066ad0246b1b982d557912a6d3be2fafcc7e40db9",
       "length": 5918,
+      "sha256": "1b7ec4acb82efce4a802fdf066ad0246b1b982d557912a6d3be2fafcc7e40db9",
       "path": "src/FileMapper.Storage/MapStore.Findings.cs"
     },
     {
-      "sha256": "e041afce55f22fc0cd3ea89a1f2df2affbcb9341c7829551cfeae0b3007c024a",
       "length": 22018,
+      "sha256": "e041afce55f22fc0cd3ea89a1f2df2affbcb9341c7829551cfeae0b3007c024a",
       "path": "src/FileMapper.Storage/MapStore.Hashing.Attempts.cs"
     },
     {
-      "sha256": "f2ea03613b1c1bc1bbb0fd7017c1faa0612e9d31ef68a9b28c765f06112a4b9c",
       "length": 6490,
+      "sha256": "f2ea03613b1c1bc1bbb0fd7017c1faa0612e9d31ef68a9b28c765f06112a4b9c",
       "path": "src/FileMapper.Storage/MapStore.Hashing.Control.cs"
     },
     {
-      "sha256": "33e3c2b40b3fff76a273f16fea708815b835b77667339b3ded5b14e23a4d61a6",
       "length": 25342,
+      "sha256": "33e3c2b40b3fff76a273f16fea708815b835b77667339b3ded5b14e23a4d61a6",
       "path": "src/FileMapper.Storage/MapStore.Hashing.cs"
     },
     {
-      "sha256": "70a43823c9c378f010c98a2fd076ced89d95b7ce54403923d608e03cd355ca5f",
       "length": 8637,
+      "sha256": "70a43823c9c378f010c98a2fd076ced89d95b7ce54403923d608e03cd355ca5f",
       "path": "src/FileMapper.Storage/MapStore.Hashing.Lifecycle.cs"
     },
     {
-      "sha256": "e0f68b511f43cb8904acee608ee1aa8d064b9361e810f3b7d744f6a410b3727d",
       "length": 7310,
+      "sha256": "e0f68b511f43cb8904acee608ee1aa8d064b9361e810f3b7d744f6a410b3727d",
       "path": "src/FileMapper.Storage/MapStore.Hashing.Queries.cs"
     },
     {
-      "sha256": "7e23af1189af83ea5c7e191768e15fa5c2d45b396741819fcd77bb14fec8d0b6",
       "length": 14848,
+      "sha256": "7e23af1189af83ea5c7e191768e15fa5c2d45b396741819fcd77bb14fec8d0b6",
       "path": "src/FileMapper.Storage/MapStore.Hashing.Results.cs"
     },
     {
-      "sha256": "b53c2edb9e7348a56a474bb9257a6488ae97deb9cb9cfcfbf91c81b4035fc87c",
       "length": 14199,
+      "sha256": "b53c2edb9e7348a56a474bb9257a6488ae97deb9cb9cfcfbf91c81b4035fc87c",
       "path": "src/FileMapper.Storage/MapStore.Jobs.cs"
     },
     {
-      "sha256": "3141e3f9168db15f91c1cc95b5de07069bc88e51d64656453894c55e56ab2367",
       "length": 3864,
+      "sha256": "3141e3f9168db15f91c1cc95b5de07069bc88e51d64656453894c55e56ab2367",
       "path": "src/FileMapper.Storage/MapStore.Ownership.cs"
     },
     {
-      "sha256": "e6bb774892e8e9b8cbeab2f6cad689318ff69d2c494dc5f9ec25efa7fe5d8f29",
       "length": 61418,
+      "sha256": "e6bb774892e8e9b8cbeab2f6cad689318ff69d2c494dc5f9ec25efa7fe5d8f29",
       "path": "src/FileMapper.Storage/MapStore.PatternLearning.cs"
     },
     {
-      "sha256": "d18569b8cccf6a79c489524eca80d23537b9a532c9bc99fcc20a81f11b04a6ad",
       "length": 7142,
+      "sha256": "d18569b8cccf6a79c489524eca80d23537b9a532c9bc99fcc20a81f11b04a6ad",
       "path": "src/FileMapper.Storage/MapStore.Projections.cs"
     },
     {
-      "sha256": "de1ab29a5d2f85e8b3b004a37901d1d19c79f59db8cff0c3e0afa82029e67bd7",
       "length": 3241,
+      "sha256": "de1ab29a5d2f85e8b3b004a37901d1d19c79f59db8cff0c3e0afa82029e67bd7",
       "path": "src/FileMapper.Storage/MapStore.Route.cs"
     },
     {
-      "sha256": "fd08155cd5eb4794b80ff6d6130bacce735b5bf92bdd14e3f540c3a65071561c",
-      "length": 6848,
+      "length": 6996,
+      "sha256": "94637b261c3df098def56b69f800382b7295365f392145dc38de1097eb4ff6d5",
       "path": "src/FileMapper.Storage/MapStore.SemanticArtifacts.cs"
     },
     {
-      "sha256": "452600b5d3e7d6ba527ae9cb8a716670d2f1b7f0324c214c1c57339445e27a59",
       "length": 8563,
+      "sha256": "452600b5d3e7d6ba527ae9cb8a716670d2f1b7f0324c214c1c57339445e27a59",
       "path": "src/FileMapper.Storage/MapStore.Semantics.cs"
     },
     {
-      "sha256": "8a76b5540f06b1b51425cc856e65d90f6caaefce5d4df84249af7bb6b6065fdf",
       "length": 8916,
+      "sha256": "8a76b5540f06b1b51425cc856e65d90f6caaefce5d4df84249af7bb6b6065fdf",
       "path": "src/FileMapper.Storage/MapStore.SemanticSelections.cs"
     },
     {
-      "sha256": "c5e7398813786dae9a18f0ed06e4ec059566c0f4fb60ae8f50400552c2fb3279",
       "length": 12317,
+      "sha256": "c5e7398813786dae9a18f0ed06e4ec059566c0f4fb60ae8f50400552c2fb3279",
       "path": "src/FileMapper.Storage/MapStore.SnapshotLifecycle.cs"
     },
     {
-      "sha256": "4d5442031c5f9b0d6c5d8049ecfa8804d7eb131a29cfea67c7bb5b0e5ca691fa",
       "length": 21418,
+      "sha256": "4d5442031c5f9b0d6c5d8049ecfa8804d7eb131a29cfea67c7bb5b0e5ca691fa",
       "path": "src/FileMapper.Storage/MapStore.StorageProjectionReads.cs"
     },
     {
-      "sha256": "51450284abe98ad9efe354cd94e8843a6aae0c556b4628621a95c7e63cd9a2c3",
       "length": 26151,
+      "sha256": "51450284abe98ad9efe354cd94e8843a6aae0c556b4628621a95c7e63cd9a2c3",
       "path": "src/FileMapper.Storage/MapStore.StorageProjections.cs"
     },
     {
-      "sha256": "e2e2d9b1e6e3fde4e48c00b6c18ab0932b8d8483f8c44674991e54e8f54ba785",
       "length": 3080,
+      "sha256": "e2e2d9b1e6e3fde4e48c00b6c18ab0932b8d8483f8c44674991e54e8f54ba785",
       "path": "src/FileMapper.Storage/packages.lock.json"
     },
     {
-      "sha256": "4a53cafb7a24e646912e0318b321dfb4636ee793908a387c711eb44cc579e892",
       "length": 24633,
+      "sha256": "4a53cafb7a24e646912e0318b321dfb4636ee793908a387c711eb44cc579e892",
       "path": "src/FileMapper.Storage/PublicWordLibrary.cs"
     },
     {
-      "sha256": "676190d45ae586f0424c8979b742557c0abd58715131c12f1d6971dd42ccd1e6",
       "length": 7156,
+      "sha256": "676190d45ae586f0424c8979b742557c0abd58715131c12f1d6971dd42ccd1e6",
       "path": "src/FileMapper.Storage/PublicWordLibrary.Verify.cs"
     },
     {
-      "sha256": "fe969bb7929053ea76d15b80dd6f86caf0e2632c99ddf3765be46a5108d755dd",
       "length": 868,
+      "sha256": "fe969bb7929053ea76d15b80dd6f86caf0e2632c99ddf3765be46a5108d755dd",
       "path": "src/FileMapper.Storage/PublicWordLibraryContracts.cs"
     },
     {
-      "sha256": "fe56250560e0ff3537a857c81ff2949c42ce9b64eaee164b96fedccb0dc398a0",
       "length": 4439,
+      "sha256": "fe56250560e0ff3537a857c81ff2949c42ce9b64eaee164b96fedccb0dc398a0",
       "path": "src/FileMapper.Storage/PublicWordLibraryReader.cs"
     },
     {
-      "sha256": "24c7b1529ed4d1f8182097954720abf812ad5bbfedcc0b6d34f9135274e9bb62",
       "length": 53291,
+      "sha256": "24c7b1529ed4d1f8182097954720abf812ad5bbfedcc0b6d34f9135274e9bb62",
       "path": "src/FileMapper.Storage/SourceHarvestIndex.cs"
     },
     {
-      "sha256": "7962fa1d9ca098e5ed7117dc4e71f21476e54cf3f70fb338beadbae68bbb21fe",
       "length": 2211,
+      "sha256": "7962fa1d9ca098e5ed7117dc4e71f21476e54cf3f70fb338beadbae68bbb21fe",
       "path": "src/FileMapper.Storage/SourceIndexedDocument.cs"
     },
     {
-      "sha256": "452eab45a7fb1bacb720f489f9998565c20a16523797c8da6bdef5e3108501a1",
       "length": 3216,
+      "sha256": "452eab45a7fb1bacb720f489f9998565c20a16523797c8da6bdef5e3108501a1",
       "path": "src/FileMapper.Storage/SourceSqliteCancellation.cs"
     }
   ]

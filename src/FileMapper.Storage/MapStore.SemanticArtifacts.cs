@@ -13,7 +13,7 @@ public sealed partial class MapStore
     {
         cancellationToken.ThrowIfCancellationRequested();
         RequireWritable(); ArtifactHash(hash); if (parentHash is not null) ArtifactHash(parentHash);
-        if (kind is not ("spatial-arena/1" or "spatial-replay/1" or "edition-practice-arena/1" or "edition-practice-episode/1")) throw new ArgumentException("Unknown semantic artifact kind.");
+        if (kind is not ("spatial-arena/1" or "spatial-replay/1" or "edition-practice-arena/1" or "edition-practice-episode/1" or "edition-practice-policy/1")) throw new ArgumentException("Unknown semantic artifact kind.");
         if (payload is null || Encoding.UTF8.GetByteCount(payload) > 16 * 1024 * 1024 ||
             Convert.ToHexStringLower(SHA256.HashData(Encoding.UTF8.GetBytes(payload))) != hash)
             throw new ArgumentException("Artifact exceeds 16 MiB or differs from its SHA256 commitment.");
@@ -29,7 +29,7 @@ public sealed partial class MapStore
         if (parentHash is not null)
         {
             using var parent = Command(db, "SELECT kind FROM semantic_artifacts WHERE hash=$h", ("$h", parentHash)); parent.Transaction = tx;
-            if (parent.ExecuteScalar() is not string parentKind || !((kind == "spatial-replay/1" && parentKind == "spatial-arena/1") || (kind == "edition-practice-episode/1" && parentKind == "edition-practice-arena/1")))
+            if (parent.ExecuteScalar() is not string parentKind || !((kind == "spatial-replay/1" && parentKind == "spatial-arena/1") || (kind == "edition-practice-episode/1" && parentKind == "edition-practice-arena/1") || (kind == "edition-practice-policy/1" && parentKind == "edition-practice-policy/1")))
                 throw new ArgumentException("A replay must reference a locally saved arena.");
         }
         else if (kind is "spatial-replay/1" or "edition-practice-episode/1") throw new ArgumentException("Replay parent arena is required.");
@@ -59,7 +59,7 @@ public sealed partial class MapStore
     }
     public Page<SemanticArtifactSummary> ListSemanticArtifacts(string? kind = null, int offset = 0, int limit = 50)
     {
-        if (kind is not (null or "spatial-arena/1" or "spatial-replay/1" or "edition-practice-arena/1" or "edition-practice-episode/1")) throw new ArgumentException("Unknown artifact kind.");
+        if (kind is not (null or "spatial-arena/1" or "spatial-replay/1" or "edition-practice-arena/1" or "edition-practice-episode/1" or "edition-practice-policy/1")) throw new ArgumentException("Unknown artifact kind.");
         ValidatePage(offset, limit); if (limit > 100) throw new ArgumentOutOfRangeException(nameof(limit));
         using var db = OpenArtifactRead(); if (!HasArtifactSchema(db)) return new([], 0, offset, limit);
         using var tx = db.BeginTransaction(deferred: true);

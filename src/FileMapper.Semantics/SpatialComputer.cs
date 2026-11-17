@@ -210,6 +210,7 @@ public sealed record ExpertTrainingReceipt(string Schema, string FeatureSchema, 
     string EpisodeHash, ExpertReview Review, string ParentPolicyHash, ExpertPolicyModel Policy,
     int Moves, int Updates, string CandidateTraceHash, string ReceiptHash,
     string Attribution = "reviewer and external actor identity are declared; replay verifies moves, not identity", int UpdateAttempts = 0, int CandidateLimit = 64);
+public sealed record ExpertStep(string StateHash, string ModelHash, SpatialMove Move, int CandidatesEvaluated);
 public sealed record ExpertComparison(string ManifestHash, string ChallengeHash, string Partition, GameEpisode Before, GameEpisode After, long RewardDelta);
 
 /// <summary>Bounded pairwise imitation of reviewed choices. Game outcomes are features, never semantic labels.</summary>
@@ -263,6 +264,15 @@ public static class SpatialExpertComputer
         if (receipt is null || receipt.ReceiptHash != HashReceipt(receipt)) throw new ArgumentException("Receipt hash differs.");
         var expected = Train(challenge, episode, receipt.Review, parent, manifest, token);
         if (CanonicalJson.Serialize(expected) != CanonicalJson.Serialize(receipt with { Review = receipt.Review with { ReviewedAt = receipt.Review.ReviewedAt.ToUniversalTime() } })) throw new ArgumentException("Training receipt does not reproduce.");
+    }
+    /// <summary>One bounded deterministic expert-ranking decision for an already replayed practice state.</summary>
+    public static ExpertStep Choose(SpatialState state, ExpertPolicyModel model, CancellationToken token = default)
+    {
+        Validate(model);
+        if (state is null || state.IsOver) throw new ArgumentException("A live replay state is required.");
+        var options = Candidates(state, null, token);
+        var selected = Rank(options, model.Weights);
+        return new(state.StateHash, model.Hash, selected.Move, options.Count);
     }
     public static GameEpisode Play(SpatialChallenge challenge, GameEpisodeSource source, GameMoveActor actor,
         ExpertPolicyModel model, CancellationToken token = default)

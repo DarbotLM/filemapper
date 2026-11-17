@@ -30,6 +30,7 @@ builder.Services.AddSingleton<SemanticWorkspace>();
 builder.Services.AddSingleton<PatternLearningWorkspace>();
 builder.Services.AddSingleton<SpatialWorkspace>();
 builder.Services.AddSingleton<EditionPracticeWorkspace>();
+builder.Services.AddSingleton<PracticePolicyWorkspace>();
 builder.Services.AddSingleton(_ => new SourceSemanticCatalog(dataDirectory));
 // Deferred initialization keeps the installer's health probe free of semantic writer admission.
 builder.Services.AddSingleton(services =>

@@ -44,6 +44,24 @@ public static class LearningEndpoints
         }).RequireCapability("read");
         app.MapGet("/api/practice/editions", async (int? offset, int? limit, HttpContext context, WordLibraryWorkspace library) =>
             await Bounded(context, ct => library.PracticePage(offset ?? 0, limit ?? 20, ct))).RequireCapability("read");
+        app.MapGet("/api/practice/policies", (int? offset, int? limit, MapStore db) => db.ListSemanticArtifacts("edition-practice-policy/1", offset ?? 0, limit ?? 50)).RequireCapability("read");
+        app.MapPost("/api/practice/policies", async (HttpContext context, PracticePolicyWorkspace workspace) =>
+        {
+            var request=await Read<PracticePolicyCreateRequest>(context);
+            return await Bounded(context, ct => workspace.Create(request,ct));
+        }).RequireCapability("learn");
+        app.MapGet("/api/practice/policies/{hash}", async (string hash, HttpContext context, PracticePolicyWorkspace workspace) =>
+            await Bounded(context, ct => workspace.Load(hash,ct))).RequireCapability("read");
+        app.MapPost("/api/practice/policies/train", async (HttpContext context, PracticePolicyWorkspace workspace) =>
+        {
+            var request=await Read<PracticePolicyTrainRequest>(context);
+            return await Bounded(context, ct => workspace.Train(request,ct));
+        }).RequireCapability("learn");
+        app.MapPost("/api/practice/policy-step", async (HttpContext context, PracticePolicyWorkspace workspace) =>
+        {
+            var request=await Read<PracticePolicyStepRequest>(context);
+            return await Bounded(context, ct => workspace.Choose(request,ct));
+        }).RequireCapability("read");
         app.MapGet("/api/practice/arenas", (int? offset, int? limit, MapStore db) => db.ListSemanticArtifacts("edition-practice-arena/1", offset ?? 0, limit ?? 50)).RequireCapability("read");
         app.MapPost("/api/practice/arenas", async (HttpContext context, EditionPracticeWorkspace workspace) =>
         {

@@ -1,6 +1,6 @@
 @{
     RootModule = 'FileMapper.PowerShell.dll'
-    ModuleVersion = '0.3.11'
+    ModuleVersion = '0.3.12'
     GUID = '5c656205-c8ae-461c-aaf0-8b36552b4e8b'
     Author = 'FileMapper'
     Description = 'Native typed cmdlets for the authenticated local FileMapper service.'

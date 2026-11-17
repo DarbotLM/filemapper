@@ -1,34 +1,36 @@
 <!doctype html>
-<html lang="en" data-ui-version="0.3.11">
+<html lang="en" data-ui-version="0.3.12">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
   <meta name="description" content="FileMapper local filesystem and semantic intelligence workspace">
   <title>FileMapper · Spatial atlas</title>
-  <link rel="stylesheet" href="/app.css?v=0.3.11">
-  <link rel="stylesheet" href="/voxel-ui.css?v=0.3.11">
-  <link rel="stylesheet" href="/spatial-renderer.css?v=0.3.11">
-  <link rel="stylesheet" href="/spatial-live.css?v=0.3.11">
-  <script src="/spatial-renderer.js?v=0.3.11" defer></script>
-  <script src="/spatial-live.js?v=0.3.11" defer></script>
-  <link rel="stylesheet" href="/robocopy-ui.css?v=0.3.11">
-  <script src="/robocopy-ui.js?v=0.3.11" defer></script>
-  <link rel="stylesheet" href="/semantic-model-ui.css?v=0.3.11">
-  <script src="/semantic-model-ui.js?v=0.3.11" defer></script>
-  <link rel="stylesheet" href="/learning-arena.css?v=0.3.11">
-  <script src="/learning-arena.js?v=0.3.11" defer></script>
-  <link rel="stylesheet" href="/source-harvest.css?v=0.3.11">
-  <script src="/source-harvest.js?v=0.3.11" defer></script>
-  <link rel="stylesheet" href="/source-semantics.css?v=0.3.11">
-  <script src="/source-semantics.js?v=0.3.11" defer></script>
-  <link rel="stylesheet" href="/hashing-ui.css?v=0.3.11">
-  <script src="/hashing-ui.js?v=0.3.11" defer></script>
-  <link rel="stylesheet" href="/word-library.css?v=0.3.11">
-  <script src="/word-library.js?v=0.3.11" defer></script>
-  <link rel="stylesheet" href="/edition-practice.css?v=0.3.11">
-  <script src="/edition-practice.js?v=0.3.11" defer></script>
-  <script src="/app.js?v=0.3.11" defer></script>
+  <link rel="stylesheet" href="/app.css?v=0.3.12">
+  <link rel="stylesheet" href="/voxel-ui.css?v=0.3.12.1">
+  <link rel="stylesheet" href="/spatial-renderer.css?v=0.3.12">
+  <link rel="stylesheet" href="/spatial-live.css?v=0.3.12">
+  <script src="/spatial-renderer.js?v=0.3.12" defer></script>
+  <script src="/spatial-live.js?v=0.3.12" defer></script>
+  <link rel="stylesheet" href="/robocopy-ui.css?v=0.3.12">
+  <script src="/robocopy-ui.js?v=0.3.12" defer></script>
+  <link rel="stylesheet" href="/semantic-model-ui.css?v=0.3.12">
+  <script src="/semantic-model-ui.js?v=0.3.12" defer></script>
+  <link rel="stylesheet" href="/learning-arena.css?v=0.3.12">
+  <script src="/learning-arena.js?v=0.3.12" defer></script>
+  <link rel="stylesheet" href="/source-harvest.css?v=0.3.12">
+  <script src="/source-harvest.js?v=0.3.12" defer></script>
+  <link rel="stylesheet" href="/source-semantics.css?v=0.3.12">
+  <script src="/source-semantics.js?v=0.3.12" defer></script>
+  <link rel="stylesheet" href="/hashing-ui.css?v=0.3.12">
+  <script src="/hashing-ui.js?v=0.3.12" defer></script>
+  <link rel="stylesheet" href="/word-library.css?v=0.3.12">
+  <script src="/word-library.js?v=0.3.12" defer></script>
+  <link rel="stylesheet" href="/edition-practice.css?v=0.3.12">
+  <script src="/edition-practice.js?v=0.3.12" defer></script>
+  <link rel="stylesheet" href="/storage-landscape.css?v=0.3.12.1">
+  <script src="/storage-landscape.js?v=0.3.12.1" defer></script>
+  <script src="/app.js?v=0.3.12" defer></script>
 </head>
 <body data-view="spatial">
   <a class="skip-link" href="#main">Skip to workspace</a>
@@ -52,7 +54,7 @@
       <button class="nav-item" data-view="duplicates" aria-label="Duplicates" title="Duplicates"><span aria-hidden="true">▱</span><span class="nav-label">Duplicates</span></button>
       <button class="nav-item" data-view="activity" aria-label="Scan activity" title="Scan activity"><span aria-hidden="true">◷</span><span class="nav-label">Scan activity</span></button>
     </nav>
-    <div class="sidebar-bottom"><div class="privacy-note"><span class="small-dot" aria-hidden="true"></span><div>Your map stays here.<small>Local service · local evidence</small></div></div><button id="connection-button" class="connection-button"><span id="connection-dot" class="status-dot"></span><span id="connection-label">Connect workspace</span><span aria-hidden="true">↗</span></button><p class="build-label">FILEMAPPER <span id="build-detail">UI 0.3.11 · DEVELOPMENT</span></p></div>
+    <div class="sidebar-bottom"><div class="privacy-note"><span class="small-dot" aria-hidden="true"></span><div>Your map stays here.<small>Local service · local evidence</small></div></div><button id="connection-button" class="connection-button"><span id="connection-dot" class="status-dot"></span><span id="connection-label">Connect workspace</span><span aria-hidden="true">↗</span></button><p class="build-label">FILEMAPPER <span id="build-detail">UI 0.3.12 · DEVELOPMENT</span></p></div>
   </aside>
   <div class="app-shell">
     <header class="topbar"><div class="breadcrumb"><span>Workspace</span><span aria-hidden="true">/</span><strong id="breadcrumb-view">Spatial atlas</strong></div><div class="topbar-actions"><span class="local-indicator" id="service-build" title="Checking the running FileMapper build">Build…</span><button class="icon-button" id="refresh-button" aria-label="Refresh workspace" title="Refresh workspace">↻</button><button id="new-scan-button" class="button primary compact"><span aria-hidden="true">＋</span> New scan</button></div></header>
@@ -63,7 +65,7 @@
       <section id="view-overview" class="view-panel" aria-label="Overview" hidden>
         <section class="atlas-banner" aria-label="Spatial workspace"><div><p class="eyebrow">9BIT / SEMANTIC OBJECT WORKSPACE</p><h2>A new perspective<br>on your files<span>.</span></h2><p>Same evidence. Another dimension. Orbit the map, flip an object, and follow its observed layers.</p><button class="button primary" data-goto="spatial">Open spatial atlas <span aria-hidden="true">↗</span></button></div><div class="voxel-emblem" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span>FILES → SHAPES → RELATIONSHIPS</span></div><span class="atlas-edition">SPATIAL UI · 02</span></section>
         <div class="metric-grid" id="metrics"><article class="metric-card"><div class="metric-title">Logical storage<span aria-hidden="true">▥</span></div><div id="metric-logical" class="metric-value">—</div><p>Distinct file identities</p></article><article class="metric-card"><div class="metric-title">Allocated storage<span aria-hidden="true">▧</span></div><div id="metric-allocated" class="metric-value">—</div><p id="allocated-note">Physical allocation where known</p></article><article class="metric-card"><div class="metric-title">Files mapped<span aria-hidden="true">▱</span></div><div id="metric-files" class="metric-value">—</div><p id="metric-entries-note">Stable identities, linked locations</p></article><article class="metric-card"><div class="metric-title">Recorded diagnostics<span aria-hidden="true">◇</span></div><div id="metric-errors" class="metric-value">—</div><p>Recorded as evidence</p></article></div>
-        <div class="overview-grid"><section class="panel storage-panel"><div class="panel-heading"><div><p class="eyebrow">STORAGE LANDSCAPE</p><h2>Where the bytes live</h2></div><select id="metric-select" aria-label="Treemap measurement"><option value="logical">Logical bytes</option><option value="allocated">Allocated bytes</option></select></div><div id="treemap" class="treemap" aria-label="Largest files proportional treemap"></div><div class="panel-footer"><span id="treemap-caption">Scan a folder to reveal its storage landscape.</span><button class="text-button" data-goto="explorer">Explore files <span aria-hidden="true">↗</span></button></div></section><section class="panel insights-panel"><div class="panel-heading"><div><p class="eyebrow">AT A GLANCE</p><h2>Map composition</h2></div><select id="breakdown-select" aria-label="Storage grouping"><option value="extension">File type</option><option value="owner">Owner</option><option value="age">File age</option></select></div><div id="composition" class="composition"></div><div class="pagination"><span id="breakdown-page"></span><button id="breakdown-prev" class="text-button" aria-label="Previous storage groups">←</button><button id="breakdown-next" class="text-button" aria-label="Next storage groups">→</button></div><div class="insight-callout"><span aria-hidden="true">✧</span><div><strong>Go beyond file names</strong><p>Connect code symbols, calls, and evidence. Semantic analysis requires a scan with content hashing enabled.</p><button id="analyze-button" class="button secondary">Analyze this snapshot <span aria-hidden="true">↗</span></button></div></div></section></div>
+        <div class="overview-grid"><section class="panel storage-panel"><div class="panel-heading"><div><p class="eyebrow">STORAGE LANDSCAPE</p><h2>Where the bytes live</h2></div><select id="metric-select" aria-label="Storage shape measurement"><option value="logical">Logical bytes</option><option value="allocated">Allocated bytes</option></select></div><div id="treemap" class="sl-host" aria-label="3D storage landscape"></div><div class="panel-footer"><span id="treemap-caption">Scan a folder to reveal its storage landscape.</span><button class="text-button" data-goto="explorer">Explore files <span aria-hidden="true">↗</span></button></div></section><section class="panel insights-panel"><div class="panel-heading"><div><p class="eyebrow">AT A GLANCE</p><h2>Map composition</h2></div><select id="breakdown-select" aria-label="Storage grouping"><option value="extension">File type</option><option value="owner">Owner</option><option value="age">File age</option></select></div><div id="composition" class="composition"></div><div class="pagination"><span id="breakdown-page"></span><button id="breakdown-prev" class="text-button" aria-label="Previous storage groups">←</button><button id="breakdown-next" class="text-button" aria-label="Next storage groups">→</button></div><div class="insight-callout"><span aria-hidden="true">✧</span><div><strong>Go beyond file names</strong><p>Connect code symbols, calls, and evidence. Semantic analysis requires a scan with content hashing enabled.</p><button id="analyze-button" class="button secondary">Analyze this snapshot <span aria-hidden="true">↗</span></button></div></div></section></div>
         <section class="panel"><div class="panel-heading"><div><p class="eyebrow">STORAGE HOTSPOTS</p><h2>Largest files</h2></div><button class="text-button" data-goto="explorer">View all files <span aria-hidden="true">→</span></button></div><div id="largest-files"></div></section>
         <div class="workspace-footnote"><span>◈ Evidence-backed by design</span><span>Unknown measurements stay unknown. Incomplete scans stay visible.</span></div>
       </section>

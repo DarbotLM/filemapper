@@ -80,3 +80,5 @@ body[data-view=spatial] .scope-strip .badge{font-size:9px;padding:2px 5px}
   body[data-view=spatial] main{padding:12px 10px 20px}
   body[data-view=spatial] .page-heading h1{font-size:22px}
 }
+/* Use explicit face visibility to avoid backface compositor dropouts over translucent cards. */
+.live-tile-inner{display:block;transform:none!important;transform-style:flat;transition:none}.live-tile-face{display:block;backface-visibility:visible}.live-tile-back{display:none;transform:none}.metric-card.is-flipped .live-tile-face:not(.live-tile-back){display:none}.metric-card.is-flipped .live-tile-back{display:block}
