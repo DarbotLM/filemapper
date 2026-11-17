@@ -13,11 +13,12 @@ public static class FileIdentityReader
     public static NativeMetadata Read(string path,bool reparsePoint=false)
     {
         if(!OperatingSystem.IsWindows()) return new(null,null,1,null,null,"Native identity and allocation are unavailable on this platform.");
+        var nativePath=NativePath(path);
         var flags=0x02000000u | (reparsePoint ? 0x00200000u : 0u);
-        using var handle=CreateFileW(path,0x00020000,7,IntPtr.Zero,3,flags,IntPtr.Zero);
+        using var handle=CreateFileW(nativePath,0x00020000,7,IntPtr.Zero,3,flags,IntPtr.Zero);
         if(handle.IsInvalid)
         {
-            using var fallback=CreateFileW(path,0,7,IntPtr.Zero,3,flags,IntPtr.Zero);
+            using var fallback=CreateFileW(nativePath,0,7,IntPtr.Zero,3,flags,IntPtr.Zero);
             if(fallback.IsInvalid) { var code=Marshal.GetLastWin32Error();return new(null,null,1,null,code,new Win32Exception(code).Message); }
             return ReadHandle(fallback);
         }
@@ -65,7 +66,7 @@ public static class FileIdentityReader
     {
         if(!OperatingSystem.IsWindows()) return [];
         var result=new List<(string,long)>();
-        var handle=FindFirstStreamW(path,0,out var data,0);
+        var handle=FindFirstStreamW(NativePath(path),0,out var data,0);
         if(handle==new IntPtr(-1))
         {
             var error=Marshal.GetLastWin32Error();
@@ -83,6 +84,15 @@ public static class FileIdentityReader
         }
         finally { FindClose(handle); }
         return result;
+    }
+
+    // Managed enumeration supports long paths even when the Win32 process policy
+    // does not. Bind metadata and stream enumeration to the same extended path.
+    private static string NativePath(string path)
+    {
+        if(path.StartsWith(@"\\?\",StringComparison.Ordinal) || path.StartsWith(@"\\.\",StringComparison.Ordinal)) return path;
+        var full=Path.GetFullPath(path);
+        return full.StartsWith(@"\\",StringComparison.Ordinal) ? @"\\?\UNC\"+full[2..] : @"\\?\"+full;
     }
 
     [StructLayout(LayoutKind.Sequential)]

@@ -121,7 +121,7 @@ internal static class WindowsCorpus
         Directory.CreateDirectory(denied);
         await File.WriteAllTextAsync(Path.Combine(denied, "unobserved.txt"), "not a deletion", token);
         var deniedInfo = new DirectoryInfo(denied);
-        var original = deniedInfo.GetAccessControl();
+        var originalDacl = deniedInfo.GetAccessControl().GetSecurityDescriptorBinaryForm();
         try
         {
             var security = deniedInfo.GetAccessControl();
@@ -132,7 +132,16 @@ internal static class WindowsCorpus
             report.Check("access-denied-is-incomplete", deniedSnapshot.ErrorCount > 0 && deniedSnapshot.Completeness != "complete",
                 $"snapshot={deniedSnapshot.Id}; completeness={deniedSnapshot.Completeness}; errors={deniedSnapshot.ErrorCount}");
         }
-        finally { deniedInfo.SetAccessControl(original); }
+        finally
+        {
+            // An untouched DirectorySecurity has no modified sections; persisting
+            // it is a no-op. Mark the original DACL as modified before restoring.
+            var restore = new DirectorySecurity();
+            restore.SetSecurityDescriptorBinaryForm(originalDacl, AccessControlSections.Access);
+            deniedInfo.SetAccessControl(restore);
+        }
+        report.Check("denial-fixture-restored", Directory.EnumerateFiles(denied).Any(p => Path.GetFileName(p) == "unobserved.txt"),
+            "Original DACL restored and fixture contents enumerable after access-denied observation.");
         report.Limitations.Add("This controlled directory corpus is not a complete adversarial NTFS volume, privilege matrix, or mutation stress test. EFS, mount points and live rename/replace races remain separate acceptance cases.");
         report.Limitations.Add("Allocation checks assert independent metamorphic properties and sparse/compressed inequalities; they do not claim an external extent-by-extent allocation oracle.");
     }
