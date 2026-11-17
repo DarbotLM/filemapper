@@ -1,0 +1,2 @@
+# Reviewed standalone artifact: preserve its exact SHA-256 across checkouts.
+site/heldout-report.html -text

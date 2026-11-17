@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../FileMapper.Semantics/FileMapper.Semantics.csproj" />
+    <InternalsVisibleTo Include="BoundedCapture.Acceptance" />
+  </ItemGroup>
+</Project>

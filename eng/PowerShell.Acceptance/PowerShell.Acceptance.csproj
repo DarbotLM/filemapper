@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType></PropertyGroup><ItemGroup><ProjectReference Include="../../src/FileMapper.Extract.PowerShell/FileMapper.Extract.PowerShell.csproj"/><ProjectReference Include="../../src/FileMapper.Storage/FileMapper.Storage.csproj"/></ItemGroup></Project>

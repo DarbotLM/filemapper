@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><ItemGroup><ProjectReference Include="../FileMapper.Domain/FileMapper.Domain.csproj" /></ItemGroup></Project>

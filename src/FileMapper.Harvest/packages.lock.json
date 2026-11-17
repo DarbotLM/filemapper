@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net11.0": {
+      "filemapper.domain": {
+        "type": "Project"
+      },
+      "filemapper.semantics": {
+        "type": "Project",
+        "dependencies": {
+          "FileMapper.Domain": "[0.3.6, )"
+        }
+      }
+    },
+    "net11.0/linux-x64": {},
+    "net11.0/win-x64": {}
+  }
+}

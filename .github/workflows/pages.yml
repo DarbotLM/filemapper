@@ -1,0 +1,33 @@
+name: Deploy public synthetic site
+on:
+  push:
+    branches: [main]
+    paths: ['site/**', 'eng/Build-Pages.ps1', 'eng/Test-PublicTree.ps1', 'src/FileMapper.Service/wwwroot/spatial-renderer.*', '.github/workflows/pages.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Build synthetic-only static payload
+        shell: pwsh
+        run: ./eng/Build-Pages.ps1 -OutputDirectory artifacts/pages
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: artifacts/pages
+      - uses: actions/deploy-pages@v4
+        id: deployment
+

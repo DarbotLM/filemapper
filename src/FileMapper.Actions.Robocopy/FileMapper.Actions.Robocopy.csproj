@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles></PropertyGroup>
+  <ItemGroup><EmbeddedResource Include="option-catalog.json" /><Compile Remove="Acceptance/**/*.cs" /></ItemGroup>
+</Project>

@@ -1,0 +1,3031 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "filemapper-robocopy-installed-options-v1",
+  "status": "planning only; no copy invocation performed",
+  "installedBinary": {
+    "binary": "C:\\WINDOWS\\System32\\robocopy.exe",
+    "fileVersion": "10.0.26100.8951 (WinBuild.160101.0800)",
+    "productVersion": "10.0.26100.8951",
+    "sha256": "02403f678f06a88793d6f2a1a38cf6d0168d6796036675110d1044a47c04398c",
+    "arguments": [
+      "/?"
+    ],
+    "useShellExecute": false,
+    "exitCode": 16,
+    "observedAt": "2026-11-15T22:30:13.3596801+00:00",
+    "stdout": "installed-help.txt",
+    "stderr": "installed-help.stderr.txt",
+    "targetWritesPerformed": false
+  },
+  "installedHelpSha256": "219789348d907b8625deaa8ac11b045598b9de9662f81f7db559899f21895fa1",
+  "coverage": {
+    "installedHelpSyntaxRows": 97,
+    "distinctInstalledOptionSwitches": 96,
+    "helpInvocationSwitches": 1,
+    "catalogSwitches": 97,
+    "unmappedInstalledSwitches": [],
+    "helpDuplicateForms": {
+      "LFSM": [
+        "/LFSM",
+        "/LFSM:n[KMG]"
+      ]
+    },
+    "meaning": "Complete catalog of this installed /? surface, not a guarantee of undocumented options or future Windows versions."
+  },
+  "sources": [
+    {
+      "kind": "actual-installed-help",
+      "path": "installed-help.txt"
+    },
+    {
+      "kind": "official-reference",
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy"
+    },
+    {
+      "kind": "official-return-codes",
+      "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/backup-and-storage/return-codes-used-robocopy-utility"
+    },
+    {
+      "kind": "official-archive-base-codes",
+      "url": "https://learn.microsoft.com/en-us/archive/blogs/deploymentguys/robocopy-exit-codes"
+    }
+  ],
+  "positionals": [
+    {
+      "id": "source",
+      "type": "absoluteDirectory",
+      "required": true
+    },
+    {
+      "id": "destination",
+      "type": "absoluteDirectory",
+      "required": true
+    },
+    {
+      "id": "files",
+      "type": "filePatternList",
+      "default": [
+        "*.*"
+      ],
+      "rejectOptionShapedItems": true
+    }
+  ],
+  "nativeDefaults": {
+    "COPY": "DAT",
+    "DCOPY": "DA",
+    "MTWhenPresent": 8,
+    "R": 1000000,
+    "W": 30,
+    "filePattern": "*.*",
+    "LFSMWhenPresent": "10 percent of destination volume size"
+  },
+  "wrapperDefaultProposals": {
+    "transferMode": "Z",
+    "recursive": "E",
+    "fileComponents": "DAT",
+    "directoryComponents": "DAT",
+    "reparse": "XJ",
+    "retryCount": 2,
+    "retryWaitSeconds": 2,
+    "threading": "off unless selected",
+    "nativeLogging": "managed UNILOG plus TEE",
+    "extraAuditArguments": [
+      "FP",
+      "BYTES",
+      "TS"
+    ],
+    "mutatingOptionsSelectedByDefault": [],
+    "note": "Wrapper choices are explicit plan fields and differ from some native defaults."
+  },
+  "tileCategories": [
+    "copy",
+    "destructive",
+    "help",
+    "jobs",
+    "links",
+    "logging",
+    "metadata",
+    "performance",
+    "preview",
+    "retry",
+    "schedule",
+    "scope",
+    "selection"
+  ],
+  "options": [
+    {
+      "id": "S",
+      "switch": "/S",
+      "installedHelp": [
+        {
+          "syntax": "/S",
+          "helpLine": 16
+        }
+      ],
+      "tileCategory": "scope",
+      "semantics": "Descend into nonempty source subdirectories.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "E",
+      "switch": "/E",
+      "installedHelp": [
+        {
+          "syntax": "/E",
+          "helpLine": 17
+        }
+      ],
+      "tileCategory": "scope",
+      "semantics": "Include empty subdirectories while descending.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "LEV",
+      "switch": "/LEV",
+      "installedHelp": [
+        {
+          "syntax": "/LEV:n",
+          "helpLine": 18
+        }
+      ],
+      "tileCategory": "scope",
+      "semantics": "Limit traversal to the requested number of levels.",
+      "parameter": {
+        "type": "integer",
+        "minimum": 1,
+        "boundSource": "wrapper policy; native help does not give an upper range"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "Z",
+      "switch": "/Z",
+      "installedHelp": [
+        {
+          "syntax": "/Z",
+          "helpLine": 20
+        }
+      ],
+      "tileCategory": "copy",
+      "semantics": "Enable restartable transfer behavior.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "transfer-mode"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "B",
+      "switch": "/B",
+      "installedHelp": [
+        {
+          "syntax": "/B",
+          "helpLine": 21
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Use backup-mode access under the caller's available privileges.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "metadata-or-privilege-sensitive"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "ads-skip-ignored-in-backup",
+        "transfer-mode",
+        "security-capability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "ZB",
+      "switch": "/ZB",
+      "installedHelp": [
+        {
+          "syntax": "/ZB",
+          "helpLine": 22
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Begin restartably and attempt backup-mode access after an access denial.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "metadata-or-privilege-sensitive"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "ads-skip-ignored-in-backup",
+        "transfer-mode",
+        "security-capability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "J",
+      "switch": "/J",
+      "installedHelp": [
+        {
+          "syntax": "/J",
+          "helpLine": 23
+        }
+      ],
+      "tileCategory": "performance",
+      "semantics": "Request unbuffered file I/O.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "EFSRAW",
+      "switch": "/EFSRAW",
+      "installedHelp": [
+        {
+          "syntax": "/EFSRAW",
+          "helpLine": 24
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Transfer encrypted files using the EFS raw representation.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "metadata-or-privilege-sensitive"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "native-mt-conflicts",
+        "native-lfsm-conflicts",
+        "security-capability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "COPY",
+      "switch": "/COPY",
+      "installedHelp": [
+        {
+          "syntax": "/COPY:copyflag[s]",
+          "helpLine": 26
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Choose file data, attribute, timestamp, stream and security components.",
+      "parameter": {
+        "type": "flagSet",
+        "allowedCharacters": "DATXSOU",
+        "nativeDefault": "DAT"
+      },
+      "effects": [
+        "configures-copy-job",
+        "metadata-or-privilege-sensitive"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "ads-skip-ignored-in-backup",
+        "file-copy-components",
+        "security-fix-components",
+        "timestamp-fix-components",
+        "security-capability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested",
+      "conditionalApproval": "Any execution needs reviewed write scope; existing-data overwrite, security/owner/audit and broad metadata repair effects can require additional destructive approval."
+    },
+    {
+      "id": "SEC",
+      "switch": "/SEC",
+      "installedHelp": [
+        {
+          "syntax": "/SEC",
+          "helpLine": 31
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Request file data, attributes, timestamps and ACLs; shorthand for COPY:DATS.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "metadata-or-privilege-sensitive"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "file-copy-components",
+        "security-fix-components",
+        "security-capability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested",
+      "conditionalApproval": "Any execution needs reviewed write scope; existing-data overwrite, security/owner/audit and broad metadata repair effects can require additional destructive approval."
+    },
+    {
+      "id": "COPYALL",
+      "switch": "/COPYALL",
+      "installedHelp": [
+        {
+          "syntax": "/COPYALL",
+          "helpLine": 32
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Request DATSOU file components; directory extended attributes are separate.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "metadata-or-privilege-sensitive"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "file-copy-components",
+        "security-fix-components",
+        "security-capability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested",
+      "conditionalApproval": "Any execution needs reviewed write scope; existing-data overwrite, security/owner/audit and broad metadata repair effects can require additional destructive approval."
+    },
+    {
+      "id": "NOCOPY",
+      "switch": "/NOCOPY",
+      "installedHelp": [
+        {
+          "syntax": "/NOCOPY",
+          "helpLine": 33
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Disable file information copying without disabling other requested actions.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "file-copy-components"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "SECFIX",
+      "switch": "/SECFIX",
+      "installedHelp": [
+        {
+          "syntax": "/SECFIX",
+          "helpLine": 34
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Apply selected security components to skipped files as well.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "destination-security-update"
+      ],
+      "destructiveApprovalRequired": true,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "security-fix-components",
+        "security-capability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "TIMFIX",
+      "switch": "/TIMFIX",
+      "installedHelp": [
+        {
+          "syntax": "/TIMFIX",
+          "helpLine": 35
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Apply requested timestamp correction to skipped files as well.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "destination-time-update"
+      ],
+      "destructiveApprovalRequired": true,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "timestamp-fix-components"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "PURGE",
+      "switch": "/PURGE",
+      "installedHelp": [
+        {
+          "syntax": "/PURGE",
+          "helpLine": 37
+        }
+      ],
+      "tileCategory": "destructive",
+      "semantics": "Remove destination-only entries within the selected scope.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "destination-delete"
+      ],
+      "destructiveApprovalRequired": true,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "mirror-delete-selection",
+        "move-mirror",
+        "placeholder-data",
+        "repeat-approval"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "MIR",
+      "switch": "/MIR",
+      "installedHelp": [
+        {
+          "syntax": "/MIR",
+          "helpLine": 38
+        }
+      ],
+      "tileCategory": "destructive",
+      "semantics": "Mirror the selected tree, including destination-only removal; retain MIR as its own intent.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "destination-delete-and-possible-root-security-change"
+      ],
+      "destructiveApprovalRequired": true,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "mirror-delete-selection",
+        "move-mirror",
+        "placeholder-data",
+        "repeat-approval"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "MOV",
+      "switch": "/MOV",
+      "installedHelp": [
+        {
+          "syntax": "/MOV",
+          "helpLine": 40
+        }
+      ],
+      "tileCategory": "destructive",
+      "semantics": "Delete source files following native copy completion.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "source-file-delete"
+      ],
+      "destructiveApprovalRequired": true,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "move-mirror",
+        "placeholder-data",
+        "repeat-approval"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "MOVE",
+      "switch": "/MOVE",
+      "installedHelp": [
+        {
+          "syntax": "/MOVE",
+          "helpLine": 41
+        }
+      ],
+      "tileCategory": "destructive",
+      "semantics": "Delete source files and directories following native copy completion.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "source-file-and-directory-delete"
+      ],
+      "destructiveApprovalRequired": true,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "move-mirror",
+        "placeholder-data",
+        "repeat-approval"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "A+",
+      "switch": "/A+",
+      "installedHelp": [
+        {
+          "syntax": "/A+:[RASHCNET]",
+          "helpLine": 43
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Set the chosen attributes on copied entries.",
+      "parameter": {
+        "type": "flagSet",
+        "allowedCharacters": "RASHCNET"
+      },
+      "effects": [
+        "configures-copy-job",
+        "metadata-or-privilege-sensitive"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "attribute-overlap"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested",
+      "conditionalApproval": "Any execution needs reviewed write scope; existing-data overwrite, security/owner/audit and broad metadata repair effects can require additional destructive approval."
+    },
+    {
+      "id": "A-",
+      "switch": "/A-",
+      "installedHelp": [
+        {
+          "syntax": "/A-:[RASHCNETO]",
+          "helpLine": 44
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Clear the chosen attributes on copied entries.",
+      "parameter": {
+        "type": "flagSet",
+        "allowedCharacters": "RASHCNETO"
+      },
+      "effects": [
+        "configures-copy-job",
+        "metadata-or-privilege-sensitive"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "attribute-overlap"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested",
+      "conditionalApproval": "Any execution needs reviewed write scope; existing-data overwrite, security/owner/audit and broad metadata repair effects can require additional destructive approval."
+    },
+    {
+      "id": "CREATE",
+      "switch": "/CREATE",
+      "installedHelp": [
+        {
+          "syntax": "/CREATE",
+          "helpLine": 46
+        }
+      ],
+      "tileCategory": "copy",
+      "semantics": "Create directories and empty file placeholders rather than transferring payloads.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "placeholder-data"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "FAT",
+      "switch": "/FAT",
+      "installedHelp": [
+        {
+          "syntax": "/FAT",
+          "helpLine": 47
+        }
+      ],
+      "tileCategory": "copy",
+      "semantics": "Restrict destination naming to the 8.3 form.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "256",
+      "switch": "/256",
+      "installedHelp": [
+        {
+          "syntax": "/256",
+          "helpLine": 48
+        }
+      ],
+      "tileCategory": "scope",
+      "semantics": "Disable native long-path handling.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "MON",
+      "switch": "/MON",
+      "installedHelp": [
+        {
+          "syntax": "/MON:n",
+          "helpLine": 50
+        }
+      ],
+      "tileCategory": "schedule",
+      "semantics": "Keep monitoring and repeat after the specified change threshold is exceeded.",
+      "parameter": {
+        "type": "nonnegativeInteger",
+        "minimum": 0,
+        "nativeUpperBound": "not stated in installed help; wrapper resource limits apply"
+      },
+      "effects": [
+        "configures-copy-job",
+        "may-wait-or-run-indefinitely-unless-wrapper-bounded"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "exclude-and-record-difference",
+      "ruleIds": [
+        "preview-side-effects",
+        "repeat-approval"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "MOT",
+      "switch": "/MOT",
+      "installedHelp": [
+        {
+          "syntax": "/MOT:m",
+          "helpLine": 51
+        }
+      ],
+      "tileCategory": "schedule",
+      "semantics": "Check for changes on the supplied minute interval and repeat when changed.",
+      "parameter": {
+        "type": "positiveIntegerMinutes",
+        "minimum": 1,
+        "boundSource": "wrapper policy"
+      },
+      "effects": [
+        "configures-copy-job",
+        "may-wait-or-run-indefinitely-unless-wrapper-bounded"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "exclude-and-record-difference",
+      "ruleIds": [
+        "preview-side-effects",
+        "repeat-approval"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "RH",
+      "switch": "/RH",
+      "installedHelp": [
+        {
+          "syntax": "/RH:hhmm-hhmm",
+          "helpLine": 53
+        }
+      ],
+      "tileCategory": "schedule",
+      "semantics": "Constrain when new copy work may start to a local-time window.",
+      "parameter": {
+        "type": "localTimeWindow",
+        "pattern": "HHmm-HHmm",
+        "requireValidHoursAndMinutes": true,
+        "timezone": "record Windows timezone and DST state; overnight semantics need fixture coverage"
+      },
+      "effects": [
+        "configures-copy-job",
+        "may-wait-or-run-indefinitely-unless-wrapper-bounded"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "per-file-run-window"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "PF",
+      "switch": "/PF",
+      "installedHelp": [
+        {
+          "syntax": "/PF",
+          "helpLine": 54
+        }
+      ],
+      "tileCategory": "schedule",
+      "semantics": "Recheck the run-hours window for each file.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "per-file-run-window"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "IPG",
+      "switch": "/IPG",
+      "installedHelp": [
+        {
+          "syntax": "/IPG:n",
+          "helpLine": 56
+        }
+      ],
+      "tileCategory": "performance",
+      "semantics": "Insert an I/O packet gap measured in milliseconds.",
+      "parameter": {
+        "type": "nonnegativeInteger",
+        "minimum": 0,
+        "nativeUpperBound": "not stated in installed help; wrapper resource limits apply"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "native-mt-conflicts"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "SJ",
+      "switch": "/SJ",
+      "installedHelp": [
+        {
+          "syntax": "/SJ",
+          "helpLine": 58
+        }
+      ],
+      "tileCategory": "links",
+      "semantics": "Recreate junction entries instead of copying their targets.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "link-policy"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "SL",
+      "switch": "/SL",
+      "installedHelp": [
+        {
+          "syntax": "/SL",
+          "helpLine": 59
+        }
+      ],
+      "tileCategory": "links",
+      "semantics": "Recreate symbolic links instead of copying their targets.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "link-policy"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "MT",
+      "switch": "/MT",
+      "installedHelp": [
+        {
+          "syntax": "/MT[:n]",
+          "helpLine": 61
+        }
+      ],
+      "tileCategory": "performance",
+      "semantics": "Enable native multithreaded transfer, optionally choosing the thread count.",
+      "parameter": {
+        "type": "integer",
+        "optional": true,
+        "minimum": 1,
+        "maximum": 128,
+        "nativeDefaultWhenSwitchPresent": 8,
+        "boundSource": "installed-help"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "native-mt-conflicts",
+        "native-lfsm-conflicts"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "DCOPY",
+      "switch": "/DCOPY",
+      "installedHelp": [
+        {
+          "syntax": "/DCOPY:copyflag[s]",
+          "helpLine": 66
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Choose directory data, attributes, timestamps, extended attributes and stream behavior.",
+      "parameter": {
+        "type": "flagSet",
+        "allowedCharacters": "DATEX",
+        "nativeDefault": "DA"
+      },
+      "effects": [
+        "configures-copy-job",
+        "metadata-or-privilege-sensitive"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "directory-copy-components",
+        "security-capability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested",
+      "conditionalApproval": "Any execution needs reviewed write scope; existing-data overwrite, security/owner/audit and broad metadata repair effects can require additional destructive approval."
+    },
+    {
+      "id": "NODCOPY",
+      "switch": "/NODCOPY",
+      "installedHelp": [
+        {
+          "syntax": "/NODCOPY",
+          "helpLine": 69
+        }
+      ],
+      "tileCategory": "metadata",
+      "semantics": "Disable directory metadata copying.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "directory-copy-components"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "NOOFFLOAD",
+      "switch": "/NOOFFLOAD",
+      "installedHelp": [
+        {
+          "syntax": "/NOOFFLOAD",
+          "helpLine": 71
+        }
+      ],
+      "tileCategory": "performance",
+      "semantics": "Avoid the Windows copy-offload optimization.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "COMPRESS",
+      "switch": "/COMPRESS",
+      "installedHelp": [
+        {
+          "syntax": "/COMPRESS",
+          "helpLine": 73
+        }
+      ],
+      "tileCategory": "performance",
+      "semantics": "Ask for transfer compression where the transport supports it.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "SPARSE",
+      "switch": "/SPARSE",
+      "installedHelp": [
+        {
+          "syntax": "/SPARSE[:Y/N]",
+          "helpLine": 75
+        }
+      ],
+      "tileCategory": "performance",
+      "semantics": "Select whether native copying retains sparse-file state.",
+      "parameter": {
+        "type": "enum",
+        "values": [
+          "Y",
+          "N"
+        ],
+        "optional": true,
+        "nativeDefaultWhenSwitchPresent": "Y",
+        "defaultSource": "Microsoft Robocopy reference; installed help omits default"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "NOCLONE",
+      "switch": "/NOCLONE",
+      "installedHelp": [
+        {
+          "syntax": "/NOCLONE",
+          "helpLine": 77
+        }
+      ],
+      "tileCategory": "performance",
+      "semantics": "Disable attempts to optimize using block cloning.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "IOMAXSIZE",
+      "switch": "/IOMAXSIZE",
+      "installedHelp": [
+        {
+          "syntax": "/IoMaxSize:n[KMG]",
+          "helpLine": 81
+        }
+      ],
+      "tileCategory": "performance",
+      "semantics": "Request a maximum byte count per native read/write cycle.",
+      "parameter": {
+        "type": "byteQuantity",
+        "minimum": 1,
+        "suffixes": [
+          "K",
+          "M",
+          "G"
+        ],
+        "emittedForm": "unsuffixed integer bytes after explicit UI unit conversion",
+        "boundSource": "positive wrapper policy; native requested values may be adjusted"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "throttle-threshold"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "IORATE",
+      "switch": "/IORATE",
+      "installedHelp": [
+        {
+          "syntax": "/IoRate:n[KMG]",
+          "helpLine": 83
+        }
+      ],
+      "tileCategory": "performance",
+      "semantics": "Request a maximum transfer byte rate; the native tool may adjust it.",
+      "parameter": {
+        "type": "byteQuantity",
+        "minimum": 1,
+        "suffixes": [
+          "K",
+          "M",
+          "G"
+        ],
+        "emittedForm": "unsuffixed integer bytes after explicit UI unit conversion",
+        "boundSource": "positive wrapper policy; native requested values may be adjusted"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "throttle-threshold"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "THRESHOLD",
+      "switch": "/THRESHOLD",
+      "installedHelp": [
+        {
+          "syntax": "/Threshold:n[KMG]",
+          "helpLine": 85
+        }
+      ],
+      "tileCategory": "performance",
+      "semantics": "Apply throttling only from this file-size threshold upward.",
+      "parameter": {
+        "type": "byteQuantity",
+        "minimum": 1,
+        "suffixes": [
+          "K",
+          "M",
+          "G"
+        ],
+        "emittedForm": "unsuffixed integer bytes after explicit UI unit conversion",
+        "boundSource": "positive wrapper policy; native requested values may be adjusted"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "throttle-threshold"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "A",
+      "switch": "/A",
+      "installedHelp": [
+        {
+          "syntax": "/A",
+          "helpLine": 90
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Include only entries marked with the archive attribute.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "archive-selection"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "M",
+      "switch": "/M",
+      "installedHelp": [
+        {
+          "syntax": "/M",
+          "helpLine": 91
+        }
+      ],
+      "tileCategory": "destructive",
+      "semantics": "Select archive-marked files and clear their source archive attribute after copying.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "source-archive-reset"
+      ],
+      "destructiveApprovalRequired": true,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "archive-selection",
+        "repeat-approval"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "IA",
+      "switch": "/IA",
+      "installedHelp": [
+        {
+          "syntax": "/IA:[RASHCNETO]",
+          "helpLine": 92
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Include entries with any requested attribute bit.",
+      "parameter": {
+        "type": "flagSet",
+        "allowedCharacters": "RASHCNETO"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "XA",
+      "switch": "/XA",
+      "installedHelp": [
+        {
+          "syntax": "/XA:[RASHCNETO]",
+          "helpLine": 93
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude entries with any requested attribute bit.",
+      "parameter": {
+        "type": "flagSet",
+        "allowedCharacters": "RASHCNETO"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "XF",
+      "switch": "/XF",
+      "installedHelp": [
+        {
+          "syntax": "/XF file [file]...",
+          "helpLine": 95
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude matching file names, paths or wildcard patterns.",
+      "parameter": {
+        "type": "argumentList",
+        "minimumItems": 1,
+        "grammar": "typed name/path/pattern items; no leading slash, NUL or control characters; each item is a separate argument"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "XD",
+      "switch": "/XD",
+      "installedHelp": [
+        {
+          "syntax": "/XD dirs [dirs]...",
+          "helpLine": 96
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude matching directory names or paths.",
+      "parameter": {
+        "type": "argumentList",
+        "minimumItems": 1,
+        "grammar": "typed name/path/pattern items; no leading slash, NUL or control characters; each item is a separate argument"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "XC",
+      "switch": "/XC",
+      "installedHelp": [
+        {
+          "syntax": "/XC",
+          "helpLine": 98
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude the native changed-file class.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "XN",
+      "switch": "/XN",
+      "installedHelp": [
+        {
+          "syntax": "/XN",
+          "helpLine": 99
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude source entries newer than their destination counterpart.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "XO",
+      "switch": "/XO",
+      "installedHelp": [
+        {
+          "syntax": "/XO",
+          "helpLine": 100
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude source entries older than their destination counterpart.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "XX",
+      "switch": "/XX",
+      "installedHelp": [
+        {
+          "syntax": "/XX",
+          "helpLine": 101
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude destination-only extras from the selected operation.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "mirror-delete-selection"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "XL",
+      "switch": "/XL",
+      "installedHelp": [
+        {
+          "syntax": "/XL",
+          "helpLine": 102
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude source-only entries absent from the destination.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "IS",
+      "switch": "/IS",
+      "installedHelp": [
+        {
+          "syntax": "/IS",
+          "helpLine": 103
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Include the native same-file class.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "IT",
+      "switch": "/IT",
+      "installedHelp": [
+        {
+          "syntax": "/IT",
+          "helpLine": 104
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Include the native tweaked-file class.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "MAX",
+      "switch": "/MAX",
+      "installedHelp": [
+        {
+          "syntax": "/MAX:n",
+          "helpLine": 106
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude files exceeding the requested byte size.",
+      "parameter": {
+        "type": "integerBytes",
+        "minimum": 0,
+        "maximum": 9223372036854775807,
+        "boundSource": "wrapper Int64 policy; verify native bounds in isolated acceptance"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "size-range"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "MIN",
+      "switch": "/MIN",
+      "installedHelp": [
+        {
+          "syntax": "/MIN:n",
+          "helpLine": 107
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude files below the requested byte size.",
+      "parameter": {
+        "type": "integerBytes",
+        "minimum": 0,
+        "maximum": 9223372036854775807,
+        "boundSource": "wrapper Int64 policy; verify native bounds in isolated acceptance"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "size-range"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "MAXAGE",
+      "switch": "/MAXAGE",
+      "installedHelp": [
+        {
+          "syntax": "/MAXAGE:n",
+          "helpLine": 109
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude files older than a supplied modification-age or calendar-date boundary.",
+      "parameter": {
+        "type": "ageOrDate",
+        "alternatives": [
+          {
+            "type": "integerDays",
+            "minimum": 0,
+            "exclusiveMaximum": 1900
+          },
+          {
+            "type": "calendarDate",
+            "format": "YYYYMMDD",
+            "requireValidDate": true
+          }
+        ],
+        "timeZone": "native local filesystem time; display timezone and resolved interpretation"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "age-range"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "MINAGE",
+      "switch": "/MINAGE",
+      "installedHelp": [
+        {
+          "syntax": "/MINAGE:n",
+          "helpLine": 110
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude files newer than a supplied modification-age or calendar-date boundary.",
+      "parameter": {
+        "type": "ageOrDate",
+        "alternatives": [
+          {
+            "type": "integerDays",
+            "minimum": 0,
+            "exclusiveMaximum": 1900
+          },
+          {
+            "type": "calendarDate",
+            "format": "YYYYMMDD",
+            "requireValidDate": true
+          }
+        ],
+        "timeZone": "native local filesystem time; display timezone and resolved interpretation"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "age-range"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "MAXLAD",
+      "switch": "/MAXLAD",
+      "installedHelp": [
+        {
+          "syntax": "/MAXLAD:n",
+          "helpLine": 111
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude files not accessed since the supplied boundary.",
+      "parameter": {
+        "type": "ageOrDate",
+        "alternatives": [
+          {
+            "type": "integerDays",
+            "minimum": 0,
+            "exclusiveMaximum": 1900
+          },
+          {
+            "type": "calendarDate",
+            "format": "YYYYMMDD",
+            "requireValidDate": true
+          }
+        ],
+        "timeZone": "native local filesystem time; display timezone and resolved interpretation"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "age-range"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "MINLAD",
+      "switch": "/MINLAD",
+      "installedHelp": [
+        {
+          "syntax": "/MINLAD:n",
+          "helpLine": 112
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Exclude files accessed since the supplied boundary.",
+      "parameter": {
+        "type": "ageOrDate",
+        "alternatives": [
+          {
+            "type": "integerDays",
+            "minimum": 0,
+            "exclusiveMaximum": 1900
+          },
+          {
+            "type": "calendarDate",
+            "format": "YYYYMMDD",
+            "requireValidDate": true
+          }
+        ],
+        "timeZone": "native local filesystem time; display timezone and resolved interpretation"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "age-range"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "FFT",
+      "switch": "/FFT",
+      "installedHelp": [
+        {
+          "syntax": "/FFT",
+          "helpLine": 115
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Compare file times using two-second precision.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "DST",
+      "switch": "/DST",
+      "installedHelp": [
+        {
+          "syntax": "/DST",
+          "helpLine": 116
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Apply native one-hour daylight-saving compensation when comparing times.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "XJ",
+      "switch": "/XJ",
+      "installedHelp": [
+        {
+          "syntax": "/XJ",
+          "helpLine": 118
+        }
+      ],
+      "tileCategory": "links",
+      "semantics": "Skip junctions and symbolic-link entries according to this installed version's help.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "link-policy"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "XJD",
+      "switch": "/XJD",
+      "installedHelp": [
+        {
+          "syntax": "/XJD",
+          "helpLine": 119
+        }
+      ],
+      "tileCategory": "links",
+      "semantics": "Skip directory junctions and directory symbolic-link entries.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "link-policy"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "XJF",
+      "switch": "/XJF",
+      "installedHelp": [
+        {
+          "syntax": "/XJF",
+          "helpLine": 120
+        }
+      ],
+      "tileCategory": "links",
+      "semantics": "Skip file symbolic-link entries.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "link-policy"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "IM",
+      "switch": "/IM",
+      "installedHelp": [
+        {
+          "syntax": "/IM",
+          "helpLine": 122
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Include the differing-change-time class where both filesystems support it.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "R",
+      "switch": "/R",
+      "installedHelp": [
+        {
+          "syntax": "/R:n",
+          "helpLine": 126
+        }
+      ],
+      "tileCategory": "retry",
+      "semantics": "Set failed-copy retry count explicitly.",
+      "parameter": {
+        "type": "nonnegativeInteger",
+        "minimum": 0,
+        "nativeUpperBound": "not stated in installed help; wrapper resource limits apply"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "W",
+      "switch": "/W",
+      "installedHelp": [
+        {
+          "syntax": "/W:n",
+          "helpLine": 127
+        }
+      ],
+      "tileCategory": "retry",
+      "semantics": "Set seconds between native retries explicitly.",
+      "parameter": {
+        "type": "nonnegativeInteger",
+        "minimum": 0,
+        "nativeUpperBound": "not stated in installed help; wrapper resource limits apply"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "REG",
+      "switch": "/REG",
+      "installedHelp": [
+        {
+          "syntax": "/REG",
+          "helpLine": 129
+        }
+      ],
+      "tileCategory": "jobs",
+      "semantics": "Persist retry defaults in the caller's registry; this is a settings mutation.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "registry-write"
+      ],
+      "destructiveApprovalRequired": true,
+      "previewHandling": "exclude-and-record-difference",
+      "ruleIds": [
+        "preview-side-effects"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "TBD",
+      "switch": "/TBD",
+      "installedHelp": [
+        {
+          "syntax": "/TBD",
+          "helpLine": 131
+        }
+      ],
+      "tileCategory": "retry",
+      "semantics": "Wait/retry when a share name is not yet defined.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job",
+        "may-wait-or-run-indefinitely-unless-wrapper-bounded"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "LFSM",
+      "switch": "/LFSM",
+      "installedHelp": [
+        {
+          "syntax": "/LFSM",
+          "helpLine": 133
+        },
+        {
+          "syntax": "/LFSM:n[KMG]",
+          "helpLine": 135
+        }
+      ],
+      "tileCategory": "retry",
+      "semantics": "Pause copying near a destination free-space floor; optionally set the floor explicitly.",
+      "parameter": {
+        "type": "byteQuantity",
+        "optional": true,
+        "minimum": 1,
+        "suffixes": [
+          "K",
+          "M",
+          "G"
+        ],
+        "nativeDefaultWhenSwitchPresent": "10 percent of destination volume size"
+      },
+      "effects": [
+        "configures-copy-job",
+        "may-wait-or-run-indefinitely-unless-wrapper-bounded"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "native-lfsm-conflicts"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "L",
+      "switch": "/L",
+      "installedHelp": [
+        {
+          "syntax": "/L",
+          "helpLine": 140
+        }
+      ],
+      "tileCategory": "preview",
+      "semantics": "Enumerate intended file operations without carrying them out.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "preview-side-effects",
+        "preview-observability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "X",
+      "switch": "/X",
+      "installedHelp": [
+        {
+          "syntax": "/X",
+          "helpLine": 141
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Include all detected destination extras in reporting.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "preview-observability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "V",
+      "switch": "/V",
+      "installedHelp": [
+        {
+          "syntax": "/V",
+          "helpLine": 142
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Include verbose and skipped-entry reporting.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "preview-observability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "TS",
+      "switch": "/TS",
+      "installedHelp": [
+        {
+          "syntax": "/TS",
+          "helpLine": 143
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Add source timestamps to native records.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "preview-observability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "FP",
+      "switch": "/FP",
+      "installedHelp": [
+        {
+          "syntax": "/FP",
+          "helpLine": 144
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Use full path names in native records.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "preview-observability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "BYTES",
+      "switch": "/BYTES",
+      "installedHelp": [
+        {
+          "syntax": "/BYTES",
+          "helpLine": 145
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Use byte counts in native size output.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "preview-observability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "NS",
+      "switch": "/NS",
+      "installedHelp": [
+        {
+          "syntax": "/NS",
+          "helpLine": 147
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Suppress size fields in native output.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "force-observability-in-preview",
+      "ruleIds": [
+        "preview-observability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "NC",
+      "switch": "/NC",
+      "installedHelp": [
+        {
+          "syntax": "/NC",
+          "helpLine": 148
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Suppress native file-class fields.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "force-observability-in-preview",
+      "ruleIds": [
+        "preview-observability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "NFL",
+      "switch": "/NFL",
+      "installedHelp": [
+        {
+          "syntax": "/NFL",
+          "helpLine": 149
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Suppress file-name listings.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "force-observability-in-preview",
+      "ruleIds": [
+        "preview-observability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "NDL",
+      "switch": "/NDL",
+      "installedHelp": [
+        {
+          "syntax": "/NDL",
+          "helpLine": 150
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Suppress directory-name listings.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "force-observability-in-preview",
+      "ruleIds": [
+        "preview-observability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "NP",
+      "switch": "/NP",
+      "installedHelp": [
+        {
+          "syntax": "/NP",
+          "helpLine": 152
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Suppress native transfer percentage output.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "ETA",
+      "switch": "/ETA",
+      "installedHelp": [
+        {
+          "syntax": "/ETA",
+          "helpLine": 153
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Request native estimated arrival/completion information.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "LOG",
+      "switch": "/LOG",
+      "installedHelp": [
+        {
+          "syntax": "/LOG:file",
+          "helpLine": 155
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Write the native status stream to a replacing text log.",
+      "parameter": {
+        "type": "managedOutputPath",
+        "mustBeOutsideCopyTrees": true,
+        "noReparseAncestors": true
+      },
+      "effects": [
+        "configures-copy-job",
+        "log-file-write-even-in-preview"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "one-native-log"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested",
+      "conditionalApproval": "New managed artifacts only by default; replacing an existing file requires explicit approved artifact scope."
+    },
+    {
+      "id": "LOG+",
+      "switch": "/LOG+",
+      "installedHelp": [
+        {
+          "syntax": "/LOG+:file",
+          "helpLine": 156
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Append the native status stream to a text log.",
+      "parameter": {
+        "type": "managedOutputPath",
+        "mustBeOutsideCopyTrees": true,
+        "noReparseAncestors": true
+      },
+      "effects": [
+        "configures-copy-job",
+        "log-file-write-even-in-preview"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "one-native-log"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested",
+      "conditionalApproval": "New managed artifacts only by default; replacing an existing file requires explicit approved artifact scope."
+    },
+    {
+      "id": "UNILOG",
+      "switch": "/UNILOG",
+      "installedHelp": [
+        {
+          "syntax": "/UNILOG:file",
+          "helpLine": 158
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Write the native status stream to a replacing Unicode log.",
+      "parameter": {
+        "type": "managedOutputPath",
+        "mustBeOutsideCopyTrees": true,
+        "noReparseAncestors": true
+      },
+      "effects": [
+        "configures-copy-job",
+        "log-file-write-even-in-preview"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "one-native-log"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested",
+      "conditionalApproval": "New managed artifacts only by default; replacing an existing file requires explicit approved artifact scope."
+    },
+    {
+      "id": "UNILOG+",
+      "switch": "/UNILOG+",
+      "installedHelp": [
+        {
+          "syntax": "/UNILOG+:file",
+          "helpLine": 159
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Append the native status stream to a Unicode log.",
+      "parameter": {
+        "type": "managedOutputPath",
+        "mustBeOutsideCopyTrees": true,
+        "noReparseAncestors": true
+      },
+      "effects": [
+        "configures-copy-job",
+        "log-file-write-even-in-preview"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [
+        "one-native-log"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested",
+      "conditionalApproval": "New managed artifacts only by default; replacing an existing file requires explicit approved artifact scope."
+    },
+    {
+      "id": "TEE",
+      "switch": "/TEE",
+      "installedHelp": [
+        {
+          "syntax": "/TEE",
+          "helpLine": 161
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Keep console output when native logging is active.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "NJH",
+      "switch": "/NJH",
+      "installedHelp": [
+        {
+          "syntax": "/NJH",
+          "helpLine": 163
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Suppress the native job header.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "force-observability-in-preview",
+      "ruleIds": [
+        "preview-observability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "NJS",
+      "switch": "/NJS",
+      "installedHelp": [
+        {
+          "syntax": "/NJS",
+          "helpLine": 164
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Suppress the native job summary.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "force-observability-in-preview",
+      "ruleIds": [
+        "preview-observability"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "UNICODE",
+      "switch": "/UNICODE",
+      "installedHelp": [
+        {
+          "syntax": "/UNICODE",
+          "helpLine": 166
+        }
+      ],
+      "tileCategory": "logging",
+      "semantics": "Request Unicode status output.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "JOB",
+      "switch": "/JOB",
+      "installedHelp": [
+        {
+          "syntax": "/JOB:jobname",
+          "helpLine": 171
+        }
+      ],
+      "tileCategory": "jobs",
+      "semantics": "Load a native job definition; FileMapper must first import and validate it as data.",
+      "parameter": {
+        "type": "importedJobReference",
+        "nativePassthroughAllowed": false,
+        "grammar": "bounded .rcj read, parsed known fields, canonical typed plan, imported document hash retained"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "import-and-expand-before-preview",
+      "ruleIds": [
+        "preview-side-effects"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "SAVE",
+      "switch": "/SAVE",
+      "installedHelp": [
+        {
+          "syntax": "/SAVE:jobname",
+          "helpLine": 172
+        }
+      ],
+      "tileCategory": "jobs",
+      "semantics": "Write a native job definition to an approved output path.",
+      "parameter": {
+        "type": "managedOutputPath",
+        "mustBeOutsideCopyTrees": true,
+        "noReparseAncestors": true
+      },
+      "effects": [
+        "configures-copy-job",
+        "job-file-write"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "exclude-and-record-difference",
+      "ruleIds": [
+        "preview-side-effects",
+        "template-only"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested",
+      "conditionalApproval": "New managed artifacts only by default; replacing an existing file requires explicit approved artifact scope."
+    },
+    {
+      "id": "QUIT",
+      "switch": "/QUIT",
+      "installedHelp": [
+        {
+          "syntax": "/QUIT",
+          "helpLine": 173
+        }
+      ],
+      "tileCategory": "jobs",
+      "semantics": "Stop after native command-line processing rather than copying.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "template-artifact-only",
+      "ruleIds": [
+        "template-only"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "NOSD",
+      "switch": "/NOSD",
+      "installedHelp": [
+        {
+          "syntax": "/NOSD",
+          "helpLine": 174
+        }
+      ],
+      "tileCategory": "jobs",
+      "semantics": "Represent a job template without a source directory.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "template-artifact-only",
+      "ruleIds": [
+        "template-only"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "NODD",
+      "switch": "/NODD",
+      "installedHelp": [
+        {
+          "syntax": "/NODD",
+          "helpLine": 175
+        }
+      ],
+      "tileCategory": "jobs",
+      "semantics": "Represent a job template without a destination directory.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "template-artifact-only",
+      "ruleIds": [
+        "template-only"
+      ],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "IF",
+      "switch": "/IF",
+      "installedHelp": [
+        {
+          "syntax": "/IF",
+          "helpLine": 176
+        }
+      ],
+      "tileCategory": "selection",
+      "semantics": "Supply an additional include-file list.",
+      "parameter": {
+        "type": "argumentList",
+        "minimumItems": 1,
+        "grammar": "typed name/path/pattern items; no leading slash, NUL or control characters; each item is a separate argument"
+      },
+      "effects": [
+        "configures-copy-job"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "retain-with-L-and-validate",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    },
+    {
+      "id": "?",
+      "switch": "/?",
+      "installedHelp": [
+        {
+          "helpLine": null,
+          "syntax": "/?"
+        }
+      ],
+      "tileCategory": "help",
+      "semantics": "Display the installed help text without a copy job.",
+      "parameter": {
+        "type": "booleanSwitch"
+      },
+      "effects": [
+        "read-only-tool-help"
+      ],
+      "destructiveApprovalRequired": false,
+      "previewHandling": "help-only",
+      "ruleIds": [],
+      "implementationStatus": "planned, not implemented or copy-tested"
+    }
+  ],
+  "rules": [
+    {
+      "id": "native-mt-conflicts",
+      "kind": "native-incompatibility",
+      "severity": "error",
+      "options": [
+        "MT",
+        "IPG",
+        "EFSRAW"
+      ],
+      "semantics": "MT conflicts with either IPG or EFSRAW; the latter two are not asserted to conflict with each other."
+    },
+    {
+      "id": "native-lfsm-conflicts",
+      "kind": "native-incompatibility",
+      "severity": "error",
+      "options": [
+        "LFSM",
+        "MT",
+        "EFSRAW"
+      ],
+      "semantics": "LFSM conflicts with MT and EFSRAW."
+    },
+    {
+      "id": "ads-skip-ignored-in-backup",
+      "kind": "native-interaction",
+      "severity": "error",
+      "options": [
+        "COPY",
+        "B",
+        "ZB"
+      ],
+      "semantics": "COPY:X is ineffective under B/ZB. Reject a plan that requires ADS exclusion while requesting either backup mode."
+    },
+    {
+      "id": "transfer-mode",
+      "kind": "wrapper-canonicalization",
+      "severity": "error",
+      "options": [
+        "Z",
+        "B",
+        "ZB"
+      ],
+      "semantics": "Represent restartable/backup/fallback as one explicit transfer mode; no order-dependent conflicting modes."
+    },
+    {
+      "id": "file-copy-components",
+      "kind": "wrapper-canonicalization",
+      "severity": "error",
+      "options": [
+        "COPY",
+        "SEC",
+        "COPYALL",
+        "NOCOPY"
+      ],
+      "semantics": "Expand security shorthands to explicit components. Reject inconsistent repeated declarations; never resolve by last-option order."
+    },
+    {
+      "id": "directory-copy-components",
+      "kind": "wrapper-canonicalization",
+      "severity": "error",
+      "options": [
+        "DCOPY",
+        "NODCOPY"
+      ],
+      "semantics": "Choose explicit directory components or none, not both."
+    },
+    {
+      "id": "security-fix-components",
+      "kind": "documented-requirement",
+      "severity": "error",
+      "options": [
+        "SECFIX",
+        "COPY",
+        "SEC",
+        "COPYALL"
+      ],
+      "semantics": "SECFIX requires explicitly requested S, O or U components."
+    },
+    {
+      "id": "timestamp-fix-components",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "TIMFIX",
+        "COPY"
+      ],
+      "semantics": "A timestamp-fix plan must explicitly request T and disclose that skipped entries can change."
+    },
+    {
+      "id": "throttle-threshold",
+      "kind": "wrapper-policy",
+      "severity": "warning",
+      "options": [
+        "THRESHOLD",
+        "IORATE",
+        "IOMAXSIZE"
+      ],
+      "semantics": "THRESHOLD without a rate or I/O-size request has no configured throttling to modify."
+    },
+    {
+      "id": "attribute-overlap",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "A+",
+        "A-"
+      ],
+      "semantics": "The same attribute cannot be requested for both setting and clearing."
+    },
+    {
+      "id": "archive-selection",
+      "kind": "wrapper-canonicalization",
+      "severity": "error",
+      "options": [
+        "A",
+        "M"
+      ],
+      "semantics": "Choose archive-only selection or archive selection with source reset; M requires source-mutation approval."
+    },
+    {
+      "id": "size-range",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "MIN",
+        "MAX"
+      ],
+      "semantics": "When both exist, MIN must not exceed MAX."
+    },
+    {
+      "id": "age-range",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "MINAGE",
+        "MAXAGE",
+        "MINLAD",
+        "MAXLAD"
+      ],
+      "semantics": "Resolve age/date boundaries and reject empty/inverted ranges; never compare mixed raw day/date integers."
+    },
+    {
+      "id": "one-native-log",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "LOG",
+        "LOG+",
+        "UNILOG",
+        "UNILOG+"
+      ],
+      "semantics": "Select one native log destination/mode. Audit stream capture remains separate and mandatory."
+    },
+    {
+      "id": "mirror-delete-selection",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "MIR",
+        "PURGE",
+        "XX"
+      ],
+      "semantics": "Reject XX with MIR/PURGE because excluding extras obscures destructive intent. Retain MIR identity due destination-root security differences."
+    },
+    {
+      "id": "move-mirror",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "MOV",
+        "MOVE",
+        "MIR",
+        "PURGE"
+      ],
+      "semantics": "One mutation intent per reviewed plan: file move, tree move or destination reconciliation."
+    },
+    {
+      "id": "placeholder-data",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "CREATE",
+        "MOV",
+        "MOVE",
+        "MIR",
+        "PURGE"
+      ],
+      "semantics": "Placeholder generation cannot combine with source removal or destination pruning."
+    },
+    {
+      "id": "link-policy",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "SJ",
+        "SL",
+        "XJ",
+        "XJD",
+        "XJF"
+      ],
+      "semantics": "Default is skip-all XJ. Exclude and recreate choices cannot overlap for the same link class; follow-target plans need separate scoped review."
+    },
+    {
+      "id": "preview-side-effects",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "L",
+        "REG",
+        "SAVE",
+        "MON",
+        "MOT",
+        "JOB"
+      ],
+      "semantics": "Preview compiler excludes registry/job writes and repeat monitoring. JOB is parsed before preview. All argument differences are recorded."
+    },
+    {
+      "id": "preview-observability",
+      "kind": "wrapper-policy",
+      "severity": "transform",
+      "options": [
+        "L",
+        "NS",
+        "NC",
+        "NFL",
+        "NDL",
+        "NJH",
+        "NJS",
+        "TS",
+        "FP",
+        "BYTES",
+        "V",
+        "X"
+      ],
+      "semantics": "Preview forces visible classes, names, byte counts, timestamps, header and summary; requested suppressed presentation options remain in the execution plan, with differences disclosed."
+    },
+    {
+      "id": "template-only",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "QUIT",
+        "NOSD",
+        "NODD",
+        "SAVE"
+      ],
+      "semantics": "These job-editing forms cannot be submitted as successful copy work. Generate/import templates through the separate artifact workflow."
+    },
+    {
+      "id": "per-file-run-window",
+      "kind": "wrapper-policy",
+      "severity": "warning",
+      "options": [
+        "PF",
+        "RH"
+      ],
+      "semantics": "PF without RH has no configured run window."
+    },
+    {
+      "id": "repeat-approval",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "MON",
+        "MOT",
+        "MIR",
+        "PURGE",
+        "MOV",
+        "MOVE",
+        "M"
+      ],
+      "semantics": "Every destructive repeat requires renewed approval; unattended native destructive monitoring is not implicitly authorized."
+    },
+    {
+      "id": "security-capability",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [
+        "B",
+        "ZB",
+        "SEC",
+        "COPYALL",
+        "SECFIX",
+        "COPY",
+        "DCOPY",
+        "EFSRAW"
+      ],
+      "semantics": "Check actual OS token privileges and source/destination filesystem capabilities. HTTP role permission is not OS elevation; unsupported metadata is not silently dropped."
+    },
+    {
+      "id": "global-path-boundary",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [],
+      "semantics": "Reject identical/ancestor-overlap/physical-alias endpoints, protected paths, device/stream paths, reparse boundary escapes, logs/backup beneath either tree, and unapproved UNC destinations."
+    },
+    {
+      "id": "fresh-approval",
+      "kind": "wrapper-policy",
+      "severity": "error",
+      "options": [],
+      "semantics": "Execution requires immutable plan hash, successful complete preview, matching binary/policy/endpoints, unexpired one-use approval and fresh preconditions; any plan edit invalidates approval."
+    }
+  ],
+  "exitCodeContract": {
+    "nativeRawExitCodeRequired": true,
+    "normalCopyFailureThreshold": 8,
+    "bits": {
+      "1": "copied work reported",
+      "2": "destination extras reported",
+      "4": "mismatches reported",
+      "8": "copy failures reported",
+      "16": "serious/start/usage failure category; retained even if output elaborates differently"
+    },
+    "unknownBits": "retain raw code; mark unrecognized outcome and do not claim verified completion",
+    "codes0through7": "no native failure bit, but extras/mismatches remain visible and verification is separate",
+    "preview": "exit bits describe list-only analysis, not files actually copied",
+    "cancellation": "separate terminal state regardless of exit code; partial changes possible",
+    "helpObservation": {
+      "arguments": [
+        "/?"
+      ],
+      "exitCode": 16,
+      "classification": "help output captured; not a copy failure or copy attempt"
+    }
+  },
+  "knownDocumentationDifferences": [
+    {
+      "option": "XJ/XJD/XJF",
+      "difference": "Installed help explicitly includes symbolic-link exclusions; the current reference table describes junctions more narrowly. Pin binary and test each link class before claiming coverage."
+    },
+    {
+      "option": "MIR",
+      "difference": "The reference distinguishes destination-root security behavior from E+PURGE; preserve intent rather than blindly canonicalizing the two."
+    },
+    {
+      "option": "SPARSE",
+      "difference": "The reference states default yes; installed help gives optional Y/N without default."
+    }
+  ],
+  "validation": {
+    "catalogCompleteness": "97 installed syntax rows map to96 distinct switches; /? adds one catalog entry; exact set assertion passed",
+    "nativeBehavior": "not executed except /?; all combination, privilege, encoding, cancellation and write behavior requires isolated future fixtures"
+  },
+  "processInvocation": {
+    "executable": "verified absolute Windows system Robocopy path, version/hash pinned",
+    "shell": false,
+    "argumentTransport": "ProcessStartInfo.ArgumentList; no raw command-string execution",
+    "workingDirectory": "private managed job directory",
+    "stdio": "both redirected and drained concurrently as bounded raw streams",
+    "containment": "private bootstrap already inside kill-on-close Windows Job Object before spawning Robocopy; fail closed if containment unavailable",
+    "environment": "remove bearer/installer credentials; inherit no secret credential arguments",
+    "cancellation": "persist request, terminate contained tree, await process and pipe completion; cancelled is not success",
+    "recovery": "interrupted on uncertain crash outcome; no automatic destructive replay"
+  },
+  "approvalContract": {
+    "dryRunFirst": true,
+    "previewSwitch": "/L",
+    "previewSideEffects": "only private managed journal/log artifacts; exclude REG/SAVE and unreviewed JOB, bound monitoring",
+    "allExecutionRequiresReviewedPlan": true,
+    "destructiveApprovalAdditional": true,
+    "boundFields": [
+      "planHash",
+      "previewHash",
+      "binaryHash",
+      "policyHash",
+      "catalogHash",
+      "sourceIdentity",
+      "destinationIdentity",
+      "effectiveArguments",
+      "executionIdentity",
+      "approvedMutationScope",
+      "rollbackStatement",
+      "expiry",
+      "singleUseNonce"
+    ],
+    "invalidators": [
+      "plan edit",
+      "endpoint/binary/privilege change",
+      "failed fresh preconditions",
+      "expired or replayed approval"
+    ],
+    "noAtomicFilesystemClaim": true,
+    "rollback": "verified separate backup/snapshot, or explicit irreversibility; no inverse MIR promise"
+  },
+  "credentialRoles": {
+    "reader": [
+      "read"
+    ],
+    "scanner": [
+      "read",
+      "scan"
+    ],
+    "planner": [
+      "read",
+      "plan"
+    ],
+    "operator": [
+      "read",
+      "scan",
+      "plan"
+    ],
+    "newExecutorOptInOnly": [
+      "execute"
+    ],
+    "newExplicitLocalApprover": [
+      "approve-destructive"
+    ],
+    "mustChangeExistingMiddleware": "Replace blanket non-GET scan mapping with explicit endpoint capabilities before adding mutation routes.",
+    "nativeCredentials": "Current OS identity and existing SMB session; no Robocopy password switch or shell credential command."
+  },
+  "progressPolicy": {
+    "source": "observed native output/process/journal events only",
+    "percent": "native per-file percentage when available; no invented aggregate denominator",
+    "estimate": "ETA labeled native estimate",
+    "unknownFields": "null/unavailable when suppressed or unparsable",
+    "states": [
+      "queued",
+      "run-window-wait",
+      "retrying",
+      "low-space-wait",
+      "copying",
+      "verifying",
+      "cancelling",
+      "cancelled",
+      "interrupted",
+      "failed",
+      "completed",
+      "completed-with-differences"
+    ],
+    "logging": "raw stdout/stderr retained with encoding, sequence, times and hashes; output treated as untrusted text; budget exhaustion explicit"
+  }
+}

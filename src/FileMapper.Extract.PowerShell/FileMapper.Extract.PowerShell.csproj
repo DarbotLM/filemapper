@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><ItemGroup><ProjectReference Include="../FileMapper.Domain/FileMapper.Domain.csproj"/><ProjectReference Include="../FileMapper.Extract.CSharp/FileMapper.Extract.CSharp.csproj"/><PackageReference Include="System.Management.Automation" Version="7.6.10"/></ItemGroup></Project>

@@ -1,0 +1,3 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup><ProjectReference Include="../FileMapper.Domain/FileMapper.Domain.csproj" /><ProjectReference Include="../FileMapper.Harvest/FileMapper.Harvest.csproj" /><PackageReference Include="Microsoft.Data.Sqlite" Version="11.0.0" /></ItemGroup>
+</Project>

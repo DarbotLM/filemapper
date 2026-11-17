@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType><AssemblyName>filemapper</AssemblyName></PropertyGroup><ItemGroup><ProjectReference Include="../FileMapper.Engine/FileMapper.Engine.csproj"/><ProjectReference Include="../FileMapper.Actions.Robocopy/FileMapper.Actions.Robocopy.csproj"/></ItemGroup></Project>

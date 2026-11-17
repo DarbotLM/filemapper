@@ -1,0 +1,51 @@
+name: build
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - run: dotnet restore FileMapper.sln --locked-mode
+      - run: dotnet build FileMapper.sln -c Release --no-restore
+      - run: dotnet run --project src/FileMapper.Cli -c Release --no-build -- --help
+      - name: Validate persisted semantics and synthetic query correctness
+        run: |
+          dotnet run --project benchmarks/FileMapper.Acceptance -c Release --no-build -- semantic --output artifacts/acceptance/semantic
+          dotnet run --project benchmarks/FileMapper.Acceptance -c Release --no-build -- storage --output artifacts/acceptance/storage --files 10000 --samples 5
+      - name: Validate native NTFS fixtures
+        if: runner.os == 'Windows'
+        run: dotnet run --project benchmarks/FileMapper.Acceptance -c Release --no-build -- filesystem --output artifacts/acceptance/filesystem
+      - name: Validate graph context and cancellation
+        run: dotnet run --project eng/Context.Acceptance/Context.Acceptance.csproj -c Release --no-build -- artifacts/acceptance/context
+      - name: Validate labeled language corpora
+        run: |
+          dotnet run --project src/FileMapper.Extract.CSharp/Acceptance/CSharp.Acceptance.csproj -c Release --no-build -- src/FileMapper.Extract.CSharp/Acceptance/Corpus artifacts/acceptance/csharp.json
+          dotnet run --project eng/PowerShell.Acceptance/PowerShell.Acceptance.csproj -c Release --no-build -- samples/semantic-powershell/cases.json artifacts/acceptance/powershell artifacts/acceptance/powershell.json
+          dotnet run --project eng/PowerShell.Acceptance/PowerShell.Acceptance.csproj -c Release --no-build -- samples/semantic-powershell/table-flow-2.1.0-cases.json artifacts/acceptance/powershell-tables artifacts/acceptance/powershell-tables.json
+      - run: dotnet list FileMapper.sln package --vulnerable --include-transitive
+      - name: Create release artifacts and SBOM
+        shell: pwsh
+        run: |
+          $rid = if ($IsWindows) { 'win-x64' } else { 'linux-x64' }
+          ./eng/Build-Release.ps1 -RuntimeIdentifier $rid -OutputDirectory artifacts/ci-release
+      - name: Validate staged Windows installation
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: ./eng/Install-Local.ps1 -PackageDirectory artifacts/ci-release/package -InstallRoot artifacts/ci-install -DataDirectory artifacts/ci-data -StageOnly
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: filemapper-acceptance-${{ matrix.os }}
+          path: artifacts/acceptance/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: filemapper-development-${{ matrix.os }}
+          path: artifacts/ci-release/

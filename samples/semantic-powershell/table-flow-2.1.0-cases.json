@@ -1,0 +1,256 @@
+[
+  {
+    "id": "member-splat-kill",
+    "label": "safe",
+    "script": "$inputValue=Read-Host\n$binding=@{Command=$inputValue}\n$binding.Command='Get-Date'\nInvoke-Expression @binding",
+    "rules": []
+  },
+  {
+    "id": "index-kill",
+    "label": "safe",
+    "script": "$t=@{Command=(Read-Host)}\n$t['Command']='Get-Date'\nInvoke-Expression $t.Command",
+    "rules": []
+  },
+  {
+    "id": "case-insensitive-literal",
+    "label": "safe",
+    "script": "$t=@{cOMMand=(Read-Host)}\n$t.COMMAND='Get-Date'\nInvoke-Expression @t",
+    "rules": []
+  },
+  {
+    "id": "static-key-variable",
+    "label": "safe",
+    "script": "$t=@{Command=(Read-Host)}\n$key='Command'\n$t[$key]='Get-Date'\nInvoke-Expression @t",
+    "rules": []
+  },
+  {
+    "id": "member-retaint",
+    "label": "vulnerable",
+    "script": "$t=@{Command='safe'}\n$t.Command=Read-Host\nInvoke-Expression @t",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "unrelated-field",
+    "label": "safe",
+    "script": "$t=@{Other=(Read-Host);Command='Get-Date'}\n$t.Other='safe'\nInvoke-Expression @t",
+    "rules": []
+  },
+  {
+    "id": "unrelated-retained",
+    "label": "vulnerable",
+    "script": "$t=@{Command=(Read-Host);Other='safe'}\n$t.Other='replacement'\nInvoke-Expression @t",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "alias-retaint",
+    "label": "vulnerable",
+    "script": "$t=@{Command='safe'}\n$a=$t\n$a.Command=Read-Host\nInvoke-Expression @t",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "alias-kill",
+    "label": "safe",
+    "script": "$t=@{Command=(Read-Host)}\n$a=$t\n$a.Command='Get-Date'\nInvoke-Expression @t",
+    "rules": []
+  },
+  {
+    "id": "alias-rebind",
+    "label": "vulnerable",
+    "script": "$t=@{Command=(Read-Host)}\n$a=$t\n$t=@{Command='safe'}\nInvoke-Expression @a",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "one-branch-kill",
+    "label": "vulnerable",
+    "script": "param($condition)\n$t=@{Command=(Read-Host)}\nif($condition){$t.Command='safe'}\nInvoke-Expression @t",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "both-branches-kill",
+    "label": "safe",
+    "script": "param($condition)\n$t=@{Command=(Read-Host)}\nif($condition){$t.Command='Get-Date'}else{$t.Command='Get-Location'}\nInvoke-Expression @t",
+    "rules": []
+  },
+  {
+    "id": "compound-old-source",
+    "label": "vulnerable",
+    "script": "$t=@{Command=(Read-Host)}\n$t.Command += 'suffix'\nInvoke-Expression @t",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "compound-new-source",
+    "label": "vulnerable",
+    "script": "$t=@{Command='prefix'}\n$t.Command += (Read-Host)\nInvoke-Expression @t",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "dynamic-key-new-source",
+    "label": "vulnerable",
+    "script": "param($key)\n$t=@{Command='safe'}\n$t[$key]=Read-Host\nInvoke-Expression @t",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "function-mutation",
+    "label": "vulnerable",
+    "script": "function Set-Input($bag){$bag.Command=Read-Host}\n$t=@{Command='safe'}\nSet-Input $t\nInvoke-Expression @t",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "nested-table-kill",
+    "label": "safe",
+    "script": "$t=@{Inner=@{Command=(Read-Host)}}\n$t.Inner.Command='Get-Date'\nInvoke-Expression $t.Inner.Command",
+    "rules": []
+  },
+  {
+    "id": "scalar-before-kill",
+    "label": "vulnerable",
+    "script": "$t=@{Command=(Read-Host)}\n$before=$t.Command\n$t.Command='safe'\nInvoke-Expression $before",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "numeric-string-distinct",
+    "label": "vulnerable",
+    "script": "$t=@{1=(Read-Host);'1'='safe'}\n$t['1']='safe'\nInvoke-Expression $t[1]",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "method-mutation-candidate",
+    "label": "vulnerable",
+    "script": "$t=@{Command='safe'}\n$t.set_Item('Command',(Read-Host))\nInvoke-Expression @t",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "computed-key-does-not-kill",
+    "label": "vulnerable",
+    "script": "$t=@{Command=(Read-Host)}; $t[('Command'+'Command')]='safe'; Invoke-Expression @t",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "array-key-does-not-kill",
+    "label": "vulnerable",
+    "script": "$t=@{Command=(Read-Host)}; $t[@('Command')]='safe'; Invoke-Expression @t",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "key-is-not-value",
+    "label": "safe",
+    "script": "param($key); $t=@{$key='Get-Date'}; Invoke-Expression @t",
+    "rules": []
+  },
+  {
+    "id": "secret-key-whole-container",
+    "label": "vulnerable",
+    "script": "$key=$env:API_KEY; $t=@{$key='constant'}; Invoke-WebRequest -Uri 'https://example.test' -Headers $t",
+    "rules": [
+      "FM-PS-0008"
+    ],
+    "RequiredSourceKind": "secret"
+  },
+  {
+    "id": "unknown-entry-trace-cap",
+    "label": "vulnerable",
+    "script": "$t=@{Command='safe'}\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\n$t[$key] = Read-Host\nInvoke-Expression @t",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input",
+    "RequireTruncated": true,
+    "ExpectedFindingCount": 16
+  },
+  {
+    "id": "adapted-keys-flow",
+    "label": "vulnerable",
+    "script": "$u=Read-Host; $bag=@{$u='Get-Date'}; Invoke-Expression ($bag.Keys -join '')",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "dynamic-adapted-keys-flow",
+    "label": "vulnerable",
+    "script": "param($member); $u=Read-Host; $bag=@{$u='Get-Date'}; Invoke-Expression ($bag.$member -join '')",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "dynamic-index-remains-value-only",
+    "label": "safe",
+    "script": "param($key,$index); $bag=@{$key='Get-Date'}; Invoke-Expression $bag[$index]",
+    "rules": []
+  },
+  {
+    "id": "adapted-values-ignore-key-taint",
+    "label": "safe",
+    "script": "param($key); $bag=@{$key='Get-Date'}; Invoke-Expression ($bag.Values -join '')",
+    "rules": []
+  },
+  {
+    "id": "adapted-keys-ignore-value-taint",
+    "label": "safe",
+    "script": "$bag=@{literal=(Read-Host)}; Invoke-Expression ($bag.Keys -join '')",
+    "rules": []
+  },
+  {
+    "id": "literal-keys-shadows-adapter",
+    "label": "vulnerable",
+    "script": "$bag=@{Keys=(Read-Host)}; Invoke-Expression ($bag.Keys -join '')",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  },
+  {
+    "id": "literal-values-shadows-adapter",
+    "label": "vulnerable",
+    "script": "$bag=@{Values=(Read-Host)}; Invoke-Expression ($bag.Values -join '')",
+    "rules": [
+      "FM-PS-0001"
+    ],
+    "RequiredSourceKind": "user-input"
+  }
+]
